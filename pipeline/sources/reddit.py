@@ -8,7 +8,11 @@ API = "https://arctic-shift.photon-reddit.com/api/posts/search"
 def fetch_sub(sub, start, end, max_pages=200):
     out, after = [], iso(start)
     for _ in range(max_pages):
-        data = http.get(API, {"subreddit": sub, "after": after, "before": iso(end), "limit": 100, "sort": "asc"})
+        try:
+            data = http.get(API, {"subreddit": sub, "after": after, "before": iso(end), "limit": 100, "sort": "asc"}, delay=1.0)
+        except Exception as e:  # keep what we have rather than losing the subreddit
+            print(f"reddit/{sub}: page failed after retries ({e}); keeping {len(out)} items", flush=True)
+            break
         posts = data.get("data") or []
         if not posts: break
         for p in posts:

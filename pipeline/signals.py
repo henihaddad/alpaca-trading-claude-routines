@@ -38,10 +38,14 @@ def hour_key(ts):
     return ts[:13] + ":00:00Z"
 
 def load_items(raw_dir):
+    seen = set()
     for f in sorted(glob.glob(os.path.join(raw_dir, "*.jsonl"))):
         with open(f) as fh:
             for line in fh:
-                if line.strip(): yield json.loads(line)
+                if not line.strip(): continue
+                it = json.loads(line); key = (it["source"], it["id"])
+                if key in seen: continue
+                seen.add(key); yield it
 
 def build(raw_dir, baseline_days=7):
     feats = defaultdict(lambda: defaultdict(float))   # (symbol, hour) -> feature -> value

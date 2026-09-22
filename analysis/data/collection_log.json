@@ -1,0 +1,401 @@
+{
+  "run_at_utc": "2026-09-22T14:48:56Z",
+  "files": {
+    "account.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/account"
+      ],
+      "http_status": 200,
+      "item_count": 1
+    },
+    "positions.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/positions"
+      ],
+      "http_status": 200,
+      "item_count": 3
+    },
+    "orders_all.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/orders?status=all&limit=500&after=2026-08-01T00%3A00%3A00Z&direction=asc&nested=true"
+      ],
+      "http_status": [
+        200
+      ],
+      "item_count": 4,
+      "pages": 1
+    },
+    "activities_fill.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/account/activities/FILL?after=2026-08-01T00%3A00%3A00Z&page_size=100&direction=asc"
+      ],
+      "http_status": [
+        200
+      ],
+      "item_count": 5,
+      "pages": 1
+    },
+    "activities_all.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/account/activities?after=2026-08-01T00%3A00%3A00Z&page_size=100&direction=asc"
+      ],
+      "http_status": [
+        200
+      ],
+      "item_count": 8,
+      "pages": 1
+    },
+    "portfolio_history.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/account/portfolio/history?period=3M&timeframe=1D&extended_hours=true"
+      ],
+      "http_status": [
+        200
+      ],
+      "item_count": 64,
+      "params_used": {
+        "period": "3M",
+        "timeframe": "1D",
+        "extended_hours": "true"
+      }
+    },
+    "portfolio_history_1h.json": {
+      "endpoints": [
+        "https://paper-api.alpaca.markets/v2/account/portfolio/history?period=1M&timeframe=1H&extended_hours=true",
+        "https://paper-api.alpaca.markets/v2/account/portfolio/history?period=30D&timeframe=1H&extended_hours=true"
+      ],
+      "http_status": [
+        400,
+        200
+      ],
+      "item_count": 347,
+      "params_used": {
+        "period": "30D",
+        "timeframe": "1H",
+        "extended_hours": "true"
+      },
+      "fallback_errors": [
+        "{\"code\": 400, \"message\": \"invalid timeframe provided: 1H. Valid timeframe for days > 30 is 1D: bad request\"}"
+      ]
+    },
+    "symbols.json": {
+      "endpoints": [],
+      "http_status": null,
+      "item_count": 3,
+      "stocks": 2,
+      "crypto": 1,
+      "aliases": {
+        "BTCUSD": "BTC/USD"
+      }
+    },
+    "bars_daily/QQQ.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v2/stocks/QQQ/bars?timeframe=1Day&start=2026-07-15&end=2026-09-22&limit=10000&adjustment=split&feed=sip",
+        "https://data.alpaca.markets/v2/stocks/QQQ/bars?timeframe=1Day&start=2026-07-15&end=2026-09-22&limit=10000&adjustment=split&feed=iex"
+      ],
+      "http_status": [
+        403,
+        200
+      ],
+      "item_count": 49,
+      "feed": "iex",
+      "fallback_errors": [
+        "feed=sip: {\"message\": \"subscription does not permit querying recent SIP data\"}"
+      ]
+    },
+    "bars_hourly/QQQ.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v2/stocks/QQQ/bars?timeframe=1Hour&start=2026-08-01&end=2026-09-22&limit=10000&adjustment=split&feed=sip",
+        "https://data.alpaca.markets/v2/stocks/QQQ/bars?timeframe=1Hour&start=2026-08-01&end=2026-09-22&limit=10000&adjustment=split&feed=iex",
+        "https://data.alpaca.markets/v2/stocks/QQQ/bars?timeframe=1Hour&start=2026-08-01&end=2026-09-22&limit=10000&adjustment=split&feed=iex&page_token=UVFRfE18MTc4ODU0ODQwMDAwMDAwMDAwMA%3D%3D"
+      ],
+      "http_status": [
+        403,
+        200,
+        200
+      ],
+      "item_count": 315,
+      "feed": "iex",
+      "fallback_errors": [
+        "feed=sip: {\"message\": \"subscription does not permit querying recent SIP data\"}"
+      ]
+    },
+    "bars_daily/SPY.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Day&start=2026-07-15&end=2026-09-22&limit=10000&adjustment=split&feed=sip",
+        "https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Day&start=2026-07-15&end=2026-09-22&limit=10000&adjustment=split&feed=iex"
+      ],
+      "http_status": [
+        403,
+        200
+      ],
+      "item_count": 49,
+      "feed": "iex",
+      "fallback_errors": [
+        "feed=sip: {\"message\": \"subscription does not permit querying recent SIP data\"}"
+      ]
+    },
+    "bars_hourly/SPY.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Hour&start=2026-08-01&end=2026-09-22&limit=10000&adjustment=split&feed=sip",
+        "https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Hour&start=2026-08-01&end=2026-09-22&limit=10000&adjustment=split&feed=iex",
+        "https://data.alpaca.markets/v2/stocks/SPY/bars?timeframe=1Hour&start=2026-08-01&end=2026-09-22&limit=10000&adjustment=split&feed=iex&page_token=U1BZfE18MTc4ODg4MzIwMDAwMDAwMDAwMA%3D%3D"
+      ],
+      "http_status": [
+        403,
+        200,
+        200
+      ],
+      "item_count": 312,
+      "feed": "iex",
+      "fallback_errors": [
+        "feed=sip: {\"message\": \"subscription does not permit querying recent SIP data\"}"
+      ]
+    },
+    "bars_daily/BTC-USD.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Day&start=2026-07-15&limit=10000"
+      ],
+      "http_status": [
+        200
+      ],
+      "item_count": 70,
+      "feed": "crypto-us"
+    },
+    "bars_hourly/BTC-USD.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3ODYyMDEyMDAwMDAwMDAwMDA%3D",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3ODY5MzIwMDAwMDAwMDAwMDA%3D",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3ODc1NTEyMDAwMDAwMDAwMDA%3D",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3ODgxNjY4MDAwMDAwMDAwMDA%3D",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3ODg3OTMyMDAwMDAwMDAwMDA%3D",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3ODk0MzA0MDAwMDAwMDAwMDA%3D",
+        "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=BTC%2FUSD&timeframe=1Hour&start=2026-08-01&limit=10000&page_token=QlRDL1VTRHxNfDE3OTAwMzg4MDAwMDAwMDAwMDA%3D"
+      ],
+      "http_status": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "item_count": 1263,
+      "feed": "crypto-us"
+    },
+    "news/BTC-USD.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NTk0MjY4MDAwMDAwMDAwMHw2MDk1NTcyMw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NjM4MDM5NzAwMDAwMDAwMHw2MTA4MzMzMQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NjYyNDY0MjAwMDAwMDAwMHw2MTE2NjE4MQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NzAwMjI3NDAwMDAwMDAwMHw2MTI2MjY4MA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NzIwNjAwMjAwMDAwMDAwMHw2MTMyMDg2OQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NzMyNzEwNzAwMDAwMDAwMHw2MTM1OTc2Nw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NzYyNjg2NzAwMDAwMDAwMHw2MTM5OTg3OQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4NzgzODk1NzAwMDAwMDAwMHw2MTQ2NDE4NQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4ODI1MzgwNTAwMDAwMDAwMHw2MTU0MDc3Mw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4ODQ2MDA2NTAwMDAwMDAwMHw2MTYxMzI3OQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4ODg4MDgwNzAwMDAwMDAwMHw2MTY2MzQ3Nw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4OTExMDc4NTAwMDAwMDAwMHw2MTczMjE4Ng%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4OTUyMjA1MzAwMDAwMDAwMHw2MTc4MTU4NA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=BTC%2FUSD&page_token=MTc4OTc1MDg0MTAwMDAwMDAwMHw2MTg3NTcyOQ%3D%3D"
+      ],
+      "http_status": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "item_count": 745,
+      "query_symbol_used": "BTC%2FUSD",
+      "pages": 15,
+      "truncated_at_page_limit": false
+    },
+    "news/QQQ.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=QQQ",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=QQQ&page_token=MTc4NjYzMDAzOTAwMDAwMDAwMHw2MTE3NzIwNA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=QQQ&page_token=MTc4NzMzNDgzMDAwMDAwMDAwMHw2MTM2MzkyNg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=QQQ&page_token=MTc4ODI4MTM3NjAwMDAwMDAwMHw2MTU1NTc1Ng%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=QQQ&page_token=MTc4OTA0OTIxMjAwMDAwMDAwMHw2MTcxNTA5OQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=QQQ&page_token=MTc4OTk4ODQwNTAwMDAwMDAwMHw2MTg5MDIyMQ%3D%3D"
+      ],
+      "http_status": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "item_count": 259,
+      "query_symbol_used": "QQQ",
+      "pages": 6,
+      "truncated_at_page_limit": false
+    },
+    "news/SPY.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NTg1MjAxNTAwMDAwMDAwMHw2MDkwODgwOA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NjAyNTk5MzAwMDAwMDAwMHw2MDk5OTc0MA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NjIxMTA3MDAwMDAwMDAwMHw2MTA2MjA5Mg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NjU0ODk5NzAwMDAwMDAwMHw2MTE0ODI5OA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NjcyMTA0MDAwMDAwMDAwMHw2MTIxNDczMg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NzA2MTYxNjAwMDAwMDAwMHw2MTI3NDQyMQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NzIyOTg2NjAwMDAwMDAwMHw2MTMyNjkzOA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NzM0NTI2NDAwMDAwMDAwMHw2MTM2ODgwMw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NzY2NjQwNzAwMDAwMDAwMHw2MTQwOTM0MA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NzgxMzExNzAwMDAwMDAwMHw2MTQ1MzQzMQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4NzkyNTY4NDAwMDAwMDAwMHw2MTQ5MzA5OA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4ODIwMzcyOTAwMDAwMDAwMHw2MTUzMjc4OA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4ODMxOTE5ODAwMDAwMDAwMHw2MTU2NjIwNA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4ODQ0MDc4MTAwMDAwMDAwMHw2MTYwMDkyMQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4ODUzODU5MjAwMDAwMDAwMHw2MTYzNDIxMg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4ODk1MTU2OTAwMDAwMDAwMHw2MTY4MDQ2OA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&symbols=SPY&page_token=MTc4OTU4MTEwMTAwMDAwMDAwMHw2MTgyNDMwMQ%3D%3D"
+      ],
+      "http_status": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "item_count": 882,
+      "query_symbol_used": "SPY",
+      "pages": 18,
+      "truncated_at_page_limit": false
+    },
+    "news/_market_general.json": {
+      "endpoints": [
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTY3OTI4OTAwMDAwMDAwMHw2MDg2MTk2NQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTczODk4MjAwMDAwMDAwMHw2MDg2MzcyMA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc1MTE3NjAwMDAwMDAwMHw2MDg2NTQ5Mg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc1MzMxMzAwMDAwMDAwMHw2MDg2NjYyNA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc1NDkwNjAwMDAwMDAwMHw2MDg2NzU0Mw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc1NjMwODAwMDAwMDAwMHw2MDg2ODE0NA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc1ODQ1ODAwMDAwMDAwMHw2MDg2OTIwMA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc1OTcyMjAwMDAwMDAwMHw2MDg2OTg1OA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc2MTE4MTAwMDAwMDAwMHw2MDg3MDY2MQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc2MzQxMDAwMDAwMDAwMHw2MDg3MTc0NA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc2NTU5NDAwMDAwMDAwMHw2MDg3MzYyOQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc2NzU1MTAwMDAwMDAwMHw2MDg3NTg0NQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc3MTAxOTAwMDAwMDAwMHw2MDg3ODE2Mg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc3MjYzNDAwMDAwMDAwMHw2MDg3OTMwNg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc3NDIxMDAwMDAwMDAwMHw2MDg4MDQ3Nw%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc3NzQwNTAwMDAwMDAwMHw2MDg4MjMyNA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc4MDkzMDAwMDAwMDAwMHw2MDg4NDM2Ng%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc4NDc0NDAwMDAwMDAwMHw2MDg4NjI3NQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc4NzUyMzAwMDAwMDAwMHw2MDg4ODE1OQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc4NzgwNDAwMDAwMDAwMHw2MDg4ODg2MQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc4ODI2NjAwMDAwMDAwMHw2MDg4OTYyNg%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc4OTAxODAwMDAwMDAwMHw2MDg5MDY1NA%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc5MDIxODAwMDAwMDAwMHw2MDg5MTgwNQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTc5MjQ4MjAwMDAwMDAwMHw2MDg5MzE3Ng%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTgyMTM3NTAwMDAwMDAwMHw2MDg5NTI2NQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTgzMDY4MDAwMDAwMDAwMHw2MDg5NjQ3NQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTgzNzY1MTAwMDAwMDAwMHw2MDg5NzQ4MQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTgzODYxMjAwMDAwMDAwMHw2MDg5ODM5OQ%3D%3D",
+        "https://data.alpaca.markets/v1beta1/news?start=2026-08-01T00:00:00Z&end=2026-09-22T14:48:56Z&limit=50&sort=asc&include_content=false&page_token=MTc4NTgzOTYzOTAwMDAwMDAwMHw2MDg5OTA4NQ%3D%3D"
+      ],
+      "http_status": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "item_count": 1500,
+      "pages": 30,
+      "truncated_at_page_limit": true
+    }
+  },
+  "feeds": {
+    "QQQ": {
+      "daily": "iex",
+      "hourly": "iex"
+    },
+    "SPY": {
+      "daily": "iex",
+      "hourly": "iex"
+    },
+    "BTC/USD": {
+      "daily": "crypto-us",
+      "hourly": "crypto-us"
+    }
+  },
+  "errors": [],
+  "finished_at_utc": "2026-09-22T14:49:05Z",
+  "summary": {
+    "orders": 4,
+    "fills": 5,
+    "activities": 8,
+    "symbols": 3,
+    "stocks": [
+      "QQQ",
+      "SPY"
+    ],
+    "crypto": [
+      "BTC/USD"
+    ],
+    "news_per_symbol": {
+      "BTC/USD": 745,
+      "QQQ": 259,
+      "SPY": 882
+    }
+  }
+}

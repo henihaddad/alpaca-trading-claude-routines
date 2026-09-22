@@ -1,0 +1,73 @@
+[
+  {
+    "id": "20260808074037327::ede111f6-cb64-4f9e-8922-a78de8b10575",
+    "activity_type": "FILL",
+    "transaction_time": "2026-08-08T11:40:37.327899Z",
+    "type": "fill",
+    "price": "64977.12",
+    "qty": "0.001508973",
+    "side": "buy",
+    "symbol": "BTC/USD",
+    "leaves_qty": "0",
+    "order_id": "1f1dc25a-6eb5-4fd1-bb99-479e146e2757",
+    "cum_qty": "0.001508973",
+    "order_status": "filled",
+    "swap_rate": "1"
+  },
+  {
+    "id": "20260810094435884::59e86839-ebaf-4c0e-949e-4a5a5be2e68f",
+    "activity_type": "FILL",
+    "transaction_time": "2026-08-10T13:44:35.884333Z",
+    "type": "fill",
+    "price": "772.93",
+    "qty": "4",
+    "side": "buy",
+    "symbol": "SPY",
+    "leaves_qty": "0",
+    "order_id": "b2bcbd3d-87d8-4cad-873c-65594107a746",
+    "cum_qty": "4",
+    "order_status": "filled"
+  },
+  {
+    "id": "20260810094436154::a9c01cb6-63d8-4fde-b32e-069bf7c25345",
+    "activity_type": "FILL",
+    "transaction_time": "2026-08-10T13:44:36.154474Z",
+    "type": "partial_fill",
+    "price": "721.8",
+    "qty": "1",
+    "side": "buy",
+    "symbol": "QQQ",
+    "leaves_qty": "2",
+    "order_id": "c48252d6-5c8f-426f-a618-b109700f4a45",
+    "cum_qty": "1",
+    "order_status": "partially_filled"
+  },
+  {
+    "id": "20260810094436777::ce5e6729-04c6-44d2-bdee-3262aca3c305",
+    "activity_type": "FILL",
+    "transaction_time": "2026-08-10T13:44:36.77787Z",
+    "type": "fill",
+    "price": "721.82",
+    "qty": "2",
+    "side": "buy",
+    "symbol": "QQQ",
+    "leaves_qty": "0",
+    "order_id": "c48252d6-5c8f-426f-a618-b109700f4a45",
+    "cum_qty": "3",
+    "order_status": "filled"
+  },
+  {
+    "id": "20260814103856655::49f04f14-72e0-49a1-aec0-354d8eb15511",
+    "activity_type": "FILL",
+    "transaction_time": "2026-08-14T14:38:56.655821Z",
+    "type": "fill",
+    "price": "731.47",
+    "qty": "2",
+    "side": "buy",
+    "symbol": "QQQ",
+    "leaves_qty": "0",
+    "order_id": "83a542a6-9cbb-4049-b374-14e2b0485b97",
+    "cum_qty": "2",
+    "order_status": "filled"
+  }
+]

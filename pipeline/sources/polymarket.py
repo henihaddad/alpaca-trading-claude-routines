@@ -36,7 +36,9 @@ def fetch(start, end, log=print, max_markets=25):
                               score=int(m.get("volume24hr") or 0), sentiment=None))
             items[-1]["p_yes"] = p_yes
             if tokens:
-                h = http.get(CLOB, {"market": tokens[0], "startTs": int(start.timestamp()), "endTs": int(end.timestamp()), "fidelity": 60})
+                h = http.get(CLOB, {"market": tokens[0], "interval": "max", "fidelity": 60})
+                s0 = int(start.timestamp())
+                h = {"history": [x for x in h.get("history", []) if x["t"] >= s0]}
                 hist[m["question"]] = [(from_epoch(x["t"]).strftime("%Y-%m-%dT%H:%M:%SZ"), x["p"]) for x in h.get("history", [])]
         except Exception as e:
             log(f"polymarket/{m.get('question','')[:40]}: FAILED {e}")

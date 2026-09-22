@@ -10,7 +10,7 @@ from .sources import telegram, reddit, stocktwits, hackernews, polymarket, alpac
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--start"); ap.add_argument("--end"); ap.add_argument("--hours", type=int)
-    ap.add_argument("--out", default="data/raw")
+    ap.add_argument("--out", default="data/raw"); ap.add_argument("--suffix", default="", help="appended to output filenames, e.g. _part1")
     ap.add_argument("--sources", default="telegram,reddit,stocktwits,hackernews,polymarket,alpaca_news")
     a = ap.parse_args()
     now = datetime.now(timezone.utc)
@@ -28,7 +28,7 @@ def main():
             json.dump(hist, open(os.path.join(a.out, "polymarket_history.json"), "w"))
         else:
             items = mods[name].fetch(start, end, log=log)
-        with open(os.path.join(a.out, f"{name}.jsonl"), "w") as f:
+        with open(os.path.join(a.out, f"{name}{a.suffix}.jsonl"), "w") as f:
             for it in sorted(items, key=lambda x: x["ts"]):
                 f.write(json.dumps(it, ensure_ascii=False) + "\n")
         log(f"== {name}: {len(items)} items written")

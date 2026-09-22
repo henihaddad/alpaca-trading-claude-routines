@@ -47,7 +47,9 @@ def fetch_channel(channel, start, end, max_pages=1200, log=None):
 
 def fetch(start, end, channels=None, log=print):
     out = []
-    for ch in (channels or TELEGRAM_CHANNELS):
+    import os
+    env = os.environ.get("TELEGRAM_CHANNELS")
+    for ch in (channels or (env.split(",") if env else TELEGRAM_CHANNELS)):
         try:
             got = fetch_channel(ch, start, end, log=log)
             log(f"telegram/{ch}: {len(got)}")

@@ -18,9 +18,10 @@ def _views(s):
     except ValueError:
         return 0
 
-def fetch_channel(channel, start, end, max_pages=1200):
+def fetch_channel(channel, start, end, max_pages=1200, log=None):
     out, before = [], None
-    for _ in range(max_pages):
+    for page_no in range(max_pages):
+        if log and page_no and page_no % 50 == 0: log(f"telegram/{channel}: page {page_no}, {len(out)} items so far")
         url = f"https://t.me/s/{channel}" + (f"?before={before}" if before else "")
         page = http.get(url, as_json=False, delay=0.4)
         msgs = list(_MSG.finditer(page))
@@ -48,7 +49,7 @@ def fetch(start, end, channels=None, log=print):
     out = []
     for ch in (channels or TELEGRAM_CHANNELS):
         try:
-            got = fetch_channel(ch, start, end)
+            got = fetch_channel(ch, start, end, log=log)
             log(f"telegram/{ch}: {len(got)}")
             out += got
         except Exception as e:

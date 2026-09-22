@@ -6,9 +6,10 @@ from .common import item, parse_iso
 
 URL = "https://api.stocktwits.com/api/2/streams/symbol/{sym}.json"
 
-def fetch_symbol(alpaca_sym, st_sym, start, end, max_pages=int(__import__("os").environ.get("STOCKTWITS_MAX_PAGES", "120"))):
+def fetch_symbol(alpaca_sym, st_sym, start, end, max_pages=int(__import__("os").environ.get("STOCKTWITS_MAX_PAGES", "120")), log=None):
     out, cursor = [], None
-    for _ in range(max_pages):
+    for page_no in range(max_pages):
+        if log and page_no and page_no % 50 == 0: log(f"stocktwits/{st_sym}: page {page_no}, {len(out)} items, oldest {out[-1]['ts'] if out else '-'}")
         data = http.get(URL.format(sym=st_sym), {"max": cursor} if cursor else None, delay=0.5)
         msgs = data.get("messages") or []
         if not msgs: break
@@ -31,7 +32,7 @@ def fetch(start, end, symbols=None, log=print):
     out = []
     for a, s in (symbols or STOCKTWITS_SYMBOLS).items():
         try:
-            got = fetch_symbol(a, s, start, end); log(f"stocktwits/{s}: {len(got)}"); out += got
+            got = fetch_symbol(a, s, start, end, log=log); log(f"stocktwits/{s}: {len(got)}"); out += got
         except Exception as e:
             log(f"stocktwits/{s}: FAILED {e}")
     return out

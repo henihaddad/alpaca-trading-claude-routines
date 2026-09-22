@@ -1,4 +1,8 @@
 __pycache__/
 *.pyc
-data/
+data/*
+!data/live/
+data/live/*
+!data/live/brief.md
+!data/live/hourly.json
 logs/

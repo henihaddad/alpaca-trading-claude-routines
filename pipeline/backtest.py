@@ -67,6 +67,7 @@ def main():
         hours = {ts(k.split("|")[1]): v for k, v in feats.items() if k.split("|")[0] == sym}
         if not hours: continue
         lines.append(f"\n## {sym}\n")
+        lines.append(f"Buy-and-hold over the window: {(b[-1][1] / b[0][1] - 1) * 100:+.1f}% ({b[0][0]:%Y-%m-%d} to {b[-1][0]:%Y-%m-%d}).\n")
         base = {h: summarize([fwd(b, t, h) for t in hours]) for h in (4, 24, 72)}
         lines.append("| signal | events | +4h mean / win | +24h mean / win | +72h mean / win | strat 72h/stop: trades, total, avg |")
         lines.append("|---|---|---|---|---|---|")
@@ -77,12 +78,16 @@ def main():
             cell = lambda x: f"{x['mean']:+.2f}% / {x['win']}%" if x else "n/a"
             lines.append(f"| {name} | {len(evs)} | {cell(s[4])} | {cell(s[24])} | {cell(s[72])} | {len(tr)}, {sum(tr):+.1f}%, {st.mean(tr):+.2f}% |" if tr else
                          f"| {name} | {len(evs)} | {cell(s[4])} | {cell(s[24])} | {cell(s[72])} | no trades |")
-        row("baseline (all hours)", list(hours))
+        row("baseline (all hours with data)", list(hours))
         for src in sources:
             row(f"attention spike: {src}", [t for t, f in hours.items() if f.get(f"z_{src}", 0) >= a.z and f.get(f"n_{src}", 0) >= a.min_n])
             row(f"bullish tilt: {src}", [t for t, f in hours.items() if f.get(f"n_{src}", 0) >= a.min_n and (f.get(f"bull_{src}", 0) - f.get(f"bear_{src}", 0)) >= 0.4 * f.get(f"n_{src}", 0)])
             row(f"bearish tilt: {src}", [t for t, f in hours.items() if f.get(f"n_{src}", 0) >= a.min_n and (f.get(f"bear_{src}", 0) - f.get(f"bull_{src}", 0)) >= 0.4 * f.get(f"n_{src}", 0)])
-        row("combined z_all >= 4", [t for t, f in hours.items() if f.get("z_all", 0) >= 4])
+        combo = [t for t, f in hours.items() if f.get("z_all", 0) >= 4]
+        row("combined z_all >= 4", combo)
+        # show the days the combined signal fired, so a human can sanity-check them against known events
+        days = sorted({t.date() for t in combo})
+        if days: lines.append(f"\nDays the combined signal fired ({len(days)}): " + ", ".join(d.strftime('%m-%d') for d in days) + "\n")
         for c in ("fed", "macro_data", "policy", "geopolitics", "flows"):
             row(f"catalyst: {c} (>=3)", [t for t, f in hours.items() if f.get(f"cat_{c}", 0) >= 3])
         # daily-aggregated attention: sum of z over trailing 24h, top decile

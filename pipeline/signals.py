@@ -53,9 +53,11 @@ def build(raw_dir, baseline_days=7):
     sources = set()
     for it in load_items(raw_dir):
         src = it["source"]; sources.add(src)
-        syms = tag_symbols(it)
+        syms = tag_symbols(it); cats = tag_cats(it["text"])
+        if not syms and ({"fed", "macro_data"} & set(cats)):
+            syms = ["SPY", "QQQ"]          # macro headlines move the indexes even when they never name them
         if not syms: continue
-        hk = hour_key(it["ts"]); sent = sentiment(it); cats = tag_cats(it["text"])
+        hk = hour_key(it["ts"]); sent = sentiment(it)
         for s in syms:
             f = feats[(s, hk)]
             f[f"n_{src}"] += 1; f["n_all"] += 1

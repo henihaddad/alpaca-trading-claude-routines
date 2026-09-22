@@ -36,3 +36,10 @@ python3 -m pipeline.brief --features data/live/hourly.json --raw data/live --out
 ```
 
 Symbols, subreddits, Telegram channels and catalyst keywords live in `pipeline/config.py`.
+
+## Results so far
+
+See `analysis/backtest_report.md`. Short version for the 2026-08-01..09-22 window: crowd attention spikes
+(Reddit, Telegram) carry a modest 3-day edge in BTC, nothing usable on SPY/QQQ, sentiment wording carries no
+signal, and the combined signal is too loose to beat being long in a bull market. Treat as filters, re-evaluate
+at 3 months.

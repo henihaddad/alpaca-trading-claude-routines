@@ -34,11 +34,8 @@ SUBREDDITS = ["wallstreetbets", "stocks", "StockMarket", "investing", "Bitcoin",
 # Telegram public channels with preview enabled (t.me/s/<name> returns messages).
 TELEGRAM_CHANNELS = {
     "financialjuice": "macro headline squawk",
-    "bloomberg": "Bloomberg news",
     "markets_today": "market headlines",
-    "tradingview": "TradingView news",
     "disclosetv": "breaking/politics",
-    "spectatorindex": "breaking/geopolitics",
     "watcherguru": "crypto/markets breaking",
     "unfolded": "crypto news",
     "bitcoin": "bitcoin news",

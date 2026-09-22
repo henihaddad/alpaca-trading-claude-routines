@@ -10,7 +10,11 @@ def fetch_symbol(alpaca_sym, st_sym, start, end, max_pages=int(__import__("os").
     out, cursor = [], None
     for page_no in range(max_pages):
         if log and page_no and page_no % 50 == 0: log(f"stocktwits/{st_sym}: page {page_no}, {len(out)} items, oldest {out[-1]['ts'] if out else '-'}")
-        data = http.get(URL.format(sym=st_sym), {"max": cursor} if cursor else None, delay=0.5)
+        try:
+            data = http.get(URL.format(sym=st_sym), {"max": cursor} if cursor else None, delay=0.5)
+        except Exception as e:
+            print(f"stocktwits/{st_sym}: page failed after retries ({e}); keeping {len(out)} items", flush=True)
+            break
         msgs = data.get("messages") or []
         if not msgs: break
         for m in msgs:

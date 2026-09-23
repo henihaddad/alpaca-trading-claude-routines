@@ -48,5 +48,5 @@ at 3 months.
 
 `python3 -m pipeline.simulate --features data/features/hourly.json --bars analysis/data/bars_hourly` replays the v2
 routine (decision times, entry filters, stops, sizing, time limits, trailing stops) over the collected history.
-2026-08-08..09-22: 6 trades, +1.45% on $100k with the 10%/4% trailing stop; +0.37% with the old breakeven rule.
+2026-08-08..09-22: 6 trades, +2.72% on $100k with the 10%/4% trailing stop and a 15% position cap (+1.45% at an 8% cap; +0.37% with the old breakeven exit). Pyramiding into winners and resting breakout buy-orders were both tested and did not help.
 Buy-and-hold over the same window: BTC +32.5%, QQQ +3.3%, SPY +0.1%.

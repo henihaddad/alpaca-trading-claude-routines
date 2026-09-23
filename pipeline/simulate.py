@@ -55,6 +55,7 @@ def main():
     ap.add_argument("--trail_stock", type=float, default=0.04)
     ap.add_argument("--cap", type=float, default=0.15, help="max position value as a fraction of equity")
     ap.add_argument("--pyramid", type=float, default=0.0, help="add this fraction of equity to a winner each time it makes a new high >= 5%% above the last add (0 = off)")
+    ap.add_argument("--stop_stock", type=float, default=0.02); ap.add_argument("--stop_crypto", type=float, default=0.03)
     ap.add_argument("--breakout_orders", action="store_true", help="when attention fires but price is 3-10%% below the 20-day high, arm a buy-stop at the high (+0.2%%) valid until the next decision")
     a = ap.parse_args()
     feats = defaultdict(dict)
@@ -111,7 +112,7 @@ def main():
             if sym in open_pos: continue
             for bt, o, h, l, c in bars[sym]:
                 if po["armed"] < bt <= t and h >= po["trigger"]:
-                    entry = max(po["trigger"], o); stop_pct = 0.03 if "/" in sym else 0.02
+                    entry = max(po["trigger"], o); stop_pct = a.stop_crypto if "/" in sym else a.stop_stock
                     value = min(a.risk * equity / stop_pct, a.cap * equity, cash)
                     if value < 100: break
                     qty = value / entry; cash -= value
@@ -134,7 +135,7 @@ def main():
                 continue
             nxt = next(((bt, o) for bt, o, h, l, c in bars[sym] if bt > t), None)
             if not nxt: continue
-            entry = nxt[1]; stop_pct = 0.03 if is_crypto else 0.02
+            entry = nxt[1]; stop_pct = a.stop_crypto if is_crypto else a.stop_stock
             value = min(a.risk * equity / stop_pct, a.cap * equity, cash)
             if value < 100: continue
             qty = value / entry; cash -= value

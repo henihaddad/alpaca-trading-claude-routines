@@ -48,5 +48,17 @@ at 3 months.
 
 `python3 -m pipeline.simulate --features data/features/hourly.json --bars analysis/data/bars_hourly` replays the v2
 routine (decision times, entry filters, stops, sizing, time limits, trailing stops) over the collected history.
-2026-08-08..09-22: 6 trades, +2.72% on $100k with the 10%/4% trailing stop and a 15% position cap (+1.45% at an 8% cap; +0.37% with the old breakeven exit). Pyramiding into winners and resting breakout buy-orders were both tested and did not help.
+2026-08-08..09-22 on $100k, 15% position cap:
+
+| universe | rules | trades | result |
+|---|---|---|---|
+| BTC, SPY, QQQ | breakeven exit (old) | 8 | +0.37% |
+| BTC, SPY, QQQ | trailing 10%/4% | 6 | +2.72% |
+| all 12 symbols | trailing 10%/4%, 2% stock stop | 16 | +3.97% |
+| crypto + ETFs only | same | 8 | +4.91% |
+| all 12 symbols | single stocks 3% stop / 6% trail (live rules) | 15 | +6.11% |
+
+Buy-and-hold over the same window: BTC +32.5%, ETH +43%, QQQ +3.5%, SPY 0%. Crypto supplies most of the profit; single stocks
+need wider stops than ETFs or they get stopped out by noise. Pyramiding into winners and resting breakout buy-orders were
+both tested and did not help. Sixteen trades is a small sample; retest at 3 months.
 Buy-and-hold over the same window: BTC +32.5%, QQQ +3.3%, SPY +0.1%.

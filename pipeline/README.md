@@ -118,3 +118,19 @@ weekend equity valued stocks at entry price. The six-week table above predates t
 The 150-symbol universe was chosen in 2026 and contains names already known to have soared, so its numbers are
 inflated by survivorship bias. The S&P 100 columns are the more honest ones, though they carry the same bias in milder form.
 Momentum and breakout beat SPY in both periods; mean reversion does not work on single stocks here.
+
+### Rolling-start robustness test
+
+A single start date can make any strategy look good or bad. `python3 -m pipeline.rolling --bars <dir> --months 6 --every 14`
+starts every strategy on many dates (every 14 days) and reports the spread. S&P 100 + ETFs, 2024-10 to 2026-09:
+
+| strategy | median 6-month return | worst 6 months | beat SPY (6-month windows) | beat SPY (3-month windows) | worst max DD |
+|---|---|---|---|---|---|
+| Buy & hold SPY | +8.7% | -7.4% | - | - | 18.7% |
+| Momentum top 8 / 20d, weekly | +12.1% | -12.5% | 71% | 67% | 19.2% |
+| Momentum top 15 / 10d, weekly | +5.4% | -7.8% | 39% | 47% | 16.6% |
+| Breakout 20/10 | +6.5% | -5.4% | 45% | 42% | 12.7% |
+| Trend, price only | +2.9% | -5.2% | 45% | 40% | 14.8% |
+| Mean reversion RSI(2), ETFs | +1.5% | -2.2% | 21% | 24% | 4.2% |
+
+Only top-8 / 20-day momentum beats SPY in most windows; breakout's two-year result was partly start-date luck.

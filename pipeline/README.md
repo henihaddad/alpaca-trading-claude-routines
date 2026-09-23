@@ -100,3 +100,21 @@ bars, $100k, 0.05%/side costs. Results (return / max drawdown):
 
 The attention filter is what makes the trend strategy work: without it, the same rules lose money. Momentum and breakout were
 positive in both windows; mean reversion flips sign between windows. Seven weeks is far too short to choose between them.
+
+### Strategy lab over two years (2024-11-01 to 2026-09-23, daily bars, $100k, 0.05%/side)
+
+Two lab bugs fixed before these numbers: orders decided on Fridays were dropped on crypto-only weekend days, and
+weekend equity valued stocks at entry price. The six-week table above predates the fix.
+
+| strategy | 2y, 150 symbols | 2y, S&P 100 + ETFs | last year, S&P 100 + ETFs |
+|---|---|---|---|
+| Buy & hold SPY | +37% / DD 19% | +37% / 19% | +17% / 9% |
+| Buy & hold equal-weight | +51% / 24% | +33% / 16% | +15% / 7% |
+| Trend, price only | +37% / 28% | +27% / 14% | +16% / 13% |
+| Mean reversion RSI(2), stocks+ETFs | -11% / 18% | -4% / 17% | 0% / 9% |
+| Momentum top 8 by 20d, weekly | +153% / 36% | +64% / 21% | +41% / 12% |
+| Breakout Donchian 20/10 | +61% / 22% | +39% / 11% | +23% / 8% |
+
+The 150-symbol universe was chosen in 2026 and contains names already known to have soared, so its numbers are
+inflated by survivorship bias. The S&P 100 columns are the more honest ones, though they carry the same bias in milder form.
+Momentum and breakout beat SPY in both periods; mean reversion does not work on single stocks here.

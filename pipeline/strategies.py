@@ -31,7 +31,10 @@ def rsi(closes, n=2):
 
 class Book:
     def __init__(self, cash): self.cash = cash; self.pos = {}; self.trades = []; self.curve = []
-    def value(self, px): return self.cash + sum(p["qty"] * px.get(s, p["entry"]) for s, p in self.pos.items())
+    def value(self, px):
+        for s, p in self.pos.items():
+            if s in px: p["last"] = px[s]
+        return self.cash + sum(p["qty"] * p.get("last", p["entry"]) for s, p in self.pos.items())
     def buy(self, s, price, value, day, stop=None, meta=None):
         value = min(value, self.cash)
         if value < 100 or s in self.pos: return
@@ -45,32 +48,38 @@ class Book:
 def run(name, bars, days, start, decide, manage, equity0=100000.0):
     """decide(ctx) -> list of (sym, value, stop, meta); manage(ctx, sym, pos) -> exit reason or None."""
     bk = Book(equity0); pending_buys, pending_sells = [], []
+    import bisect
+    sd = {s: sorted(bars[s]) for s in bars}; sc = {s: [bars[s][d][3] for d in sd[s]] for s in bars}
     for i, d in enumerate(days):
         if d < start: continue
         px_open = {s: bars[s][d][0] for s in bars if d in bars[s]}
         px_close = {s: bars[s][d][3] for s in bars if d in bars[s]}
         # 1) execute yesterday's decisions at today's open
+        carry_s, carry_b = [], []
         for s, why in pending_sells:
             if s in bk.pos and s in px_open: bk.sell(s, px_open[s], d, why)
+            elif s in bk.pos: carry_s.append((s, why))          # market closed for it today: retry next session
         for s, value, stop_pct, meta in pending_buys:
-            if s in px_open and s not in bk.pos:
+            if s in bk.pos: continue
+            if s in px_open:
                 o = px_open[s]; bk.buy(s, o, value, d, stop=o * (1 - stop_pct) if stop_pct else None, meta=meta)
-        pending_buys, pending_sells = [], []
+            else: carry_b.append((s, value, stop_pct, meta))
+        pending_buys, pending_sells = carry_b, carry_s
         # 2) intraday stops
         for s in list(bk.pos):
             p = bk.pos[s]
             if s in bars and d in bars[s] and p["stop"] and bars[s][d][2] <= p["stop"]:
                 bk.sell(s, min(p["stop"], bars[s][d][0]), d, "stop")
         # 3) end of day: update highs, strategy management, new decisions
-        hist = {s: [bars[s][x][3] for x in days[:i + 1] if x in bars[s]] for s in bars}
+        hist = {s: sc[s][:bisect.bisect_right(sd[s], d)] for s in bars}
         eq = bk.value(px_close); bk.curve.append((d, eq))
         ctx = {"day": d, "hist": hist, "equity": eq, "book": bk, "px": px_close, "bars": bars, "days": days[:i + 1]}
         for s, p in list(bk.pos.items()):
             if s in px_close: p["hi"] = max(p["hi"], px_close[s])
             why = manage(ctx, s, p)
-            if why: pending_sells.append((s, why))
-        free = [c for c in decide(ctx) if c[0] not in bk.pos]
-        pending_buys = free
+            if why and all(x[0] != s for x in pending_sells): pending_sells.append((s, why))
+        queued = {c[0] for c in pending_buys}
+        pending_buys += [c for c in decide(ctx) if c[0] not in bk.pos and c[0] not in queued]
     last = days[-1]
     for s in list(bk.pos):
         bk.sell(s, bars[s][last][3] / (1 - COST) if last in bars[s] else bk.pos[s]["entry"], last, "open@end")

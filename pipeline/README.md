@@ -134,3 +134,14 @@ starts every strategy on many dates (every 14 days) and reports the spread. S&P 
 | Mean reversion RSI(2), ETFs | +1.5% | -2.2% | 21% | 24% | 4.2% |
 
 Only top-8 / 20-day momentum beats SPY in most windows; breakout's two-year result was partly start-date luck.
+
+Weekly starts, one full year held (51 start weeks, 2024-10-07 to 2025-09-22, S&P 100 + ETFs):
+
+| strategy | median 1-year return | worst year | best year | beat SPY | worst max DD |
+|---|---|---|---|---|---|
+| Buy & hold SPY | +19.3% | +10.2% | +36.3% | - | 18.7% |
+| Momentum top 8 / 20d, weekly | +27.7% | +3.4% | +63.7% | 76% | 22.1% |
+| Momentum top 15 / 10d, weekly | +15.8% | +1.8% | +41.0% | 27% | 19.8% |
+| Breakout 20/10 | +14.8% | +5.0% | +33.6% | 22% | 12.3% |
+| Trend, price only | +8.3% | -5.1% | +32.3% | 18% | 16.6% |
+| Mean reversion RSI(2), ETFs | +4.1% | +1.6% | +6.3% | 0% | 4.2% |

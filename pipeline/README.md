@@ -79,3 +79,24 @@ tags text for all of them (`python3 -m pipeline.check_patterns` prints precision
 The number of symbols is not what drives returns; crypto trends and the trailing exit are. The wider universe with the
 growth x log(mentions) ranking is live because it is not worse and adds independent chances. `python3 -m pipeline.experiments`
 reruns the grid.
+
+### Strategy lab (2026-09-23)
+
+`python3 -m pipeline.strategies [--start YYYY-MM-DD] [--detail "<name>"]` runs classic strategy families on the same daily
+bars, $100k, 0.05%/side costs. Results (return / max drawdown):
+
+| strategy | six weeks from 08-08 | last month from 08-24 |
+|---|---|---|
+| Buy & hold SPY | -0.4% / 3.1% | +0.7% / 2.5% |
+| Buy & hold equal-weight 150 | +5.5% / 3.3% | +2.0% / 3.1% |
+| Buy & hold BTC+ETH | +39.7% / 5.7% | +9.0% / 5.7% |
+| Live attention trend (hourly sim) | +5.9% / 5.6% | +1.8% / 6.8% |
+| Trend, price only (no attention filter) | -3.2% / 9.2% | -0.9% / 8.3% |
+| Mean reversion RSI(2), stocks+ETFs | -1.8% / 3.4% | +2.9% / 3.0% |
+| Momentum top 8 by 20d return, weekly | +6.6% / 7.3% | +8.8% / 9.7% |
+| Momentum top 15 by 10d return, weekly | +7.8% / 7.8% | +6.3% / 8.1% |
+| Breakout Donchian 20/10 | +7.0% / 7.2% | +8.0% / 5.7% |
+| Combo trend + mean reversion | -2.1% / 7.1% | +0.9% / 4.5% |
+
+The attention filter is what makes the trend strategy work: without it, the same rules lose money. Momentum and breakout were
+positive in both windows; mean reversion flips sign between windows. Seven weeks is far too short to choose between them.

@@ -29,7 +29,7 @@ ENTRY requires ALL of:
 Do NOT enter when geopolitics is the dominant catalyst for that symbol (geo share > 50% in the brief) and no flows/fed/earnings tag is present. Do not re-enter a symbol exited by a stop within the last 5 days.
 EXIT when ANY of: the stop order filled (nothing to do; note it); invalidation happened; time limit (tl) reached and the position is below entry; bearish tilt <= -0.4 with an attention spike on a held symbol. Exit = cancel the stop order, then sell at market (crypto) or limit at the bid (stocks, market open only).
 TRAILING (let winners run): once a position is past its time limit and above entry, every run replace its stop order with a new one at max(current stop, highest close since entry x 0.90 for crypto, x 0.96 for stocks). Never lower a stop. The simulation in repo/pipeline/simulate.py shows this is what turns the strategy from flat into positive.
-SIZING: risk 0.5% of equity per trade (position value = 0.5% of equity / stop distance in %), max 8% of equity per position, max 10 positions, crypto max 15% of equity in total.
+SIZING: risk 0.5% of equity per trade (position value = 0.5% of equity / stop distance in %), max 15% of equity per position, max 8 positions, crypto max 25% of equity in total. Do not add to an existing position (pyramiding tested negative).
 INSTRUMENTS: liquid US large caps, SPY/QQQ/VOO, BTC/USD, ETH/USD. No options, penny stocks, leveraged or inverse ETFs.
 "No trade" is fine but must be justified per watched symbol by naming which of (a)(b)(c) failed.
 

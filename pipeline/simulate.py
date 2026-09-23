@@ -53,6 +53,8 @@ def main():
     ap.add_argument("--risk", type=float, default=0.005); ap.add_argument("--start", default="2026-08-08")
     ap.add_argument("--trail_crypto", type=float, default=0.10, help="after time limit, trail stop this fraction below the highest close (0 = breakeven rule)")
     ap.add_argument("--trail_stock", type=float, default=0.04)
+    ap.add_argument("--cap", type=float, default=0.15, help="max position value as a fraction of equity")
+    ap.add_argument("--pyramid", type=float, default=0.0, help="add this fraction of equity to a winner each time it makes a new high >= 5%% above the last add (0 = off)")
     ap.add_argument("--breakout_orders", action="store_true", help="when attention fires but price is 3-10%% below the 20-day high, arm a buy-stop at the high (+0.2%%) valid until the next decision")
     a = ap.parse_args()
     feats = defaultdict(dict)
@@ -92,6 +94,17 @@ def main():
         # 2) mark equity
         mv = sum(p["qty"] * next((c for bt, o, h, l, c in reversed(bars[s]) if bt <= t), p["entry"]) for s, p in open_pos.items())
         equity = cash + mv
+        # 2a) pyramid into winners: past time limit, price >= 5% above last add, still within 3% of 20d high
+        if a.pyramid:
+            for sym, p in open_pos.items():
+                c = next((c for bt, o, h, l, c in reversed(bars[sym]) if bt <= t), None)
+                if not c or t < p["t_in"] + timedelta(days=7): continue
+                if c >= p.get("last_add", p["entry"]) * 1.05 and (p["qty"] * c) < a.cap * 2 * equity:
+                    add = min(a.pyramid * equity, cash)
+                    if add < 100: continue
+                    p["entry"] = (p["entry"] * p["qty"] + c * add / c) / (p["qty"] + add / c)  # blended entry
+                    p["qty"] += add / c; cash -= add; p["last_add"] = c
+                    log.append(f"{t:%m-%d %H:%M} ADD {sym} @ {c:.2f} +{add:,.0f}")
         # 2b) pending breakout orders armed at the previous decision: fill if the high was touched since
         for sym in list(pending):
             po = pending.pop(sym)
@@ -99,7 +112,7 @@ def main():
             for bt, o, h, l, c in bars[sym]:
                 if po["armed"] < bt <= t and h >= po["trigger"]:
                     entry = max(po["trigger"], o); stop_pct = 0.03 if "/" in sym else 0.02
-                    value = min(a.risk * equity / stop_pct, 0.08 * equity, cash)
+                    value = min(a.risk * equity / stop_pct, a.cap * equity, cash)
                     if value < 100: break
                     qty = value / entry; cash -= value
                     open_pos[sym] = {"qty": qty, "entry": entry, "stop": entry * (1 - stop_pct), "t_in": bt, "last_checked": bt}
@@ -122,7 +135,7 @@ def main():
             nxt = next(((bt, o) for bt, o, h, l, c in bars[sym] if bt > t), None)
             if not nxt: continue
             entry = nxt[1]; stop_pct = 0.03 if is_crypto else 0.02
-            value = min(a.risk * equity / stop_pct, 0.08 * equity, cash)
+            value = min(a.risk * equity / stop_pct, a.cap * equity, cash)
             if value < 100: continue
             qty = value / entry; cash -= value
             open_pos[sym] = {"qty": qty, "entry": entry, "stop": entry * (1 - stop_pct), "t_in": nxt[0], "last_checked": nxt[0]}

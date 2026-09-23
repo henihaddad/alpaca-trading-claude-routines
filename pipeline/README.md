@@ -43,3 +43,10 @@ See `analysis/backtest_report.md`. Short version for the 2026-08-01..09-22 windo
 (Reddit, Telegram) carry a modest 3-day edge in BTC, nothing usable on SPY/QQQ, sentiment wording carries no
 signal, and the combined signal is too loose to beat being long in a bull market. Treat as filters, re-evaluate
 at 3 months.
+
+## Portfolio simulation of the live rules
+
+`python3 -m pipeline.simulate --features data/features/hourly.json --bars analysis/data/bars_hourly` replays the v2
+routine (decision times, entry filters, stops, sizing, time limits, trailing stops) over the collected history.
+2026-08-08..09-22: 6 trades, +1.45% on $100k with the 10%/4% trailing stop; +0.37% with the old breakeven rule.
+Buy-and-hold over the same window: BTC +32.5%, QQQ +3.3%, SPY +0.1%.

@@ -60,6 +60,8 @@ def build_parser():
     ap.add_argument("--stop_etf", type=float, default=0.02); ap.add_argument("--trail_etf", type=float, default=0.04)
     ap.add_argument("--max_positions", type=int, default=8)
     ap.add_argument("--no_rank", action="store_true", help="enter candidates in universe order instead of by score (legacy)")
+    ap.add_argument("--min_n24", type=float, default=0, help="minimum 24h mentions (excl. stocktwits) for a candidate")
+    ap.add_argument("--rank", default="ratio_x_logn", choices=["z24", "volume", "ratio_x_logn"], help="candidate ranking score")
     ap.add_argument("--symbols", default="", help="comma-separated subset of the bars universe")
     ap.add_argument("--crypto_cap_total", type=float, default=0.25, help="max total crypto exposure as a fraction of equity at entry")
     ap.add_argument("--cap", type=float, default=0.15, help="max position value as a fraction of equity")
@@ -147,7 +149,7 @@ def run(a, feats_raw=None, bars_all=None):
             is_crypto = "/" in sym
             if not is_crypto and t.hour == 1: continue
             ok, n24, nprior, z24, geo = attention(feats[sym], t, a.ratio, a.z)
-            if not ok: continue
+            if not ok or n24 < a.min_n24: continue
             dc = [(dd, c) for dd, c in daily[sym] if dd < t.date()][-20:]
             if len(dc) < 20: continue
             closes = [c for _, c in dc]; last = closes[-1]; hi20 = max(closes); r5 = last / closes[-6] - 1
@@ -157,7 +159,10 @@ def run(a, feats_raw=None, bars_all=None):
                 continue
             nxt = next(((bt, o) for bt, o, h, l, c in bars[sym] if bt > t), None)
             if not nxt: continue
-            score = z24 if z24 else (n24 / nprior if nprior else n24)
+            import math
+            if a.rank == "volume": score = n24
+            elif a.rank == "ratio_x_logn": score = (n24 / nprior if nprior else 1.0) * math.log1p(n24)
+            else: score = z24 if z24 else (n24 / nprior if nprior else n24)
             cands.append((score, sym, nxt, n24, nprior, z24, geo))
         if not a.no_rank: cands.sort(key=lambda x: -x[0])  # stable: ties keep bars order
         for score, sym, nxt, n24, nprior, z24, geo in cands:

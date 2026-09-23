@@ -62,3 +62,20 @@ Buy-and-hold over the same window: BTC +32.5%, ETH +43%, QQQ +3.5%, SPY 0%. Cryp
 need wider stops than ETFs or they get stopped out by noise. Pyramiding into winners and resting breakout buy-orders were
 both tested and did not help. Sixteen trades is a small sample; retest at 3 months.
 Buy-and-hold over the same window: BTC +32.5%, QQQ +3.3%, SPY +0.1%.
+
+### Universe expansion (2026-09-23)
+
+`pipeline/universe.py` lists 151 symbols (S&P 100, retail favourites, 5 ETFs, 13 Alpaca cryptos); `pipeline/universe_patterns.py`
+tags text for all of them (`python3 -m pipeline.check_patterns` prints precision samples). Six weeks from 2026-08-08, $100k, 8 positions:
+
+| config | trades | return | max DD |
+|---|---|---|---|
+| 12 symbols | 17 | +5.30% | 4.8% |
+| 150 symbols, rank by z24 | 22 | +4.60% | 5.4% |
+| 150 symbols, rank by growth x log(mentions) (live) | 24 | +5.85% | 5.6% |
+| 150 symbols, min 50 mentions | 6 | +2.52% | 1.7% |
+| 150 symbols, no crypto | 29 | +2.66% | 7.4% |
+
+The number of symbols is not what drives returns; crypto trends and the trailing exit are. The wider universe with the
+growth x log(mentions) ranking is live because it is not worse and adds independent chances. `python3 -m pipeline.experiments`
+reruns the grid.

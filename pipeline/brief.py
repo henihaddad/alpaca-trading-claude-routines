@@ -13,18 +13,24 @@ def ts(s): return datetime.fromisoformat(s.replace("Z", "+00:00"))
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--features", default="data/live/hourly.json"); ap.add_argument("--raw", default="data/live")
-    ap.add_argument("--out", default="data/live/brief.md"); ap.add_argument("--symbols", default="BTC/USD,ETH/USD,SPY,QQQ,NVDA,TSLA,AAPL,MSFT,AMZN,META,GOOGL,AMD")
+    ap.add_argument("--out", default="data/live/brief.md"); ap.add_argument("--symbols", default="")
+    ap.add_argument("--top", type=int, default=20, help="show the top N symbols by attention score (growth x log mentions)")
+    ap.add_argument("--held", default="", help="comma-separated symbols to always include (current positions)")
     a = ap.parse_args()
     feats = json.load(open(a.features)); now = datetime.now(timezone.utc)
+    import math
+    if not a.symbols:
+        from .universe import ALL
+        a.symbols = ",".join(ALL)
     lines = [f"# Signal brief — {now:%Y-%m-%d %H:%M} UTC\n",
              "Attention = mentions in the last 24h vs the previous 72h (per source). z24 = sum of hourly z-scores over 24h.",
              "Tilt = (bullish - bearish) / mentions, from Stocktwits labels and keyword sentiment. Catalysts = tagged headline types.\n",
              "Mentions and the ratio exclude Stocktwits (its history is too short for a baseline); tilt includes it. geo share = geopolitics share of catalyst tags.\n",
-             "| symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share |", "|---|---|---|---|---|---|---|"]
+             ]
     per = defaultdict(list)
     for k, f in feats.items():
         s, h = k.split("|"); per[s].append((ts(h), f))
-    detail = []
+    rows_out, details = [], {}
     for s in a.symbols.split(","):
         rows = sorted(per.get(s, []))
         last = [(t, f) for t, f in rows if t > now - timedelta(hours=24)]
@@ -43,12 +49,18 @@ def main():
         catstr = ", ".join(f"{c}:{int(v)}" for c, v in sorted(cats.items(), key=lambda kv: -kv[1])[:4]) or "-"
         tot_cats = sum(cats.values()); geo_share = cats.get("geopolitics", 0) / tot_cats if tot_cats else 0
         ratio = f"{n24 / nprior:.1f}x" if nprior >= 3 else "n/a (no baseline)"
-        lines.append(f"| {s} | {int(n24)} (+{int(n24_all - n24)} stocktwits) | {ratio} | {z24:+.1f} | {tilt:+.2f} | {catstr} | {geo_share:.0%} |")
-        tops = sorted([x for _, f in last for x in f.get("top", [])], reverse=True)[:6]
-        if tops:
-            detail.append(f"\n### {s} — most-engaged items, last 24h")
-            for sc, src, text, url in tops: detail.append(f"- [{src}, {sc}] {text}")
-    lines += detail
+        score = (n24 / nprior if nprior >= 3 else 1.0) * math.log1p(n24)
+        if n24 == 0 and s not in a.held.split(","): continue
+        rows_out.append((score, s, f"| {s} | {int(n24)} (+{int(n24_all - n24)} stocktwits) | {ratio} | {z24:+.1f} | {tilt:+.2f} | {catstr} | {geo_share:.0%} | {score:.1f} |"))
+        tops = sorted([x for _, f in last for x in f.get("top", [])], reverse=True)[:5]
+        if tops: details[s] = [f"\n### {s} — most-engaged items, last 24h"] + [f"- [{src}, {sc}] {text}" for sc, src, text, url in tops]
+    held = [x for x in a.held.split(",") if x]
+    rows_out.sort(key=lambda r: -r[0])
+    chosen = [r for r in rows_out[:a.top]] + [r for r in rows_out[a.top:] if r[1] in held]
+    lines.append(f"Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top {a.top} of {len(rows_out)} symbols with activity, plus held positions.\n")
+    lines += ["| symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share | score |", "|---|---|---|---|---|---|---|---|"]
+    lines += [r[2] for r in chosen]
+    for _, s, _ in chosen: lines += details.get(s, [])
     pm = os.path.join(a.raw, "polymarket.jsonl")
     if os.path.exists(pm):
         lines.append("\n### Prediction markets (Polymarket, probability of YES)")

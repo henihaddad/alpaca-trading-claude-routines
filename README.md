@@ -4,6 +4,10 @@ Automated trading routines for an Alpaca **paper trading** account, executed by 
 
 ## Active routine
 
+**Alpaca paper trading v2 (signals + journal)** — trigger `trig_01FsDswBLruGqmRybF9QAQiF`, schedule `0 1,13,20 * * *` UTC, prompt in [`routines/daily-paper-trading-v2.md`](routines/daily-paper-trading-v2.md). It runs the keyless signal pipeline in [`pipeline/`](pipeline/README.md), enforces stops as real Alpaca stop orders, and tags each entry with its thesis in `client_order_id`. The backtest behind the strategy is in [`analysis/backtest_report.md`](analysis/backtest_report.md).
+
+### Previous routine (disabled 2026-09-22)
+
 **Alpaca daily paper trading** — trigger `trig_01AsNoAraxUSqfs2dYNNKsg4`
 
 - **Schedule:** `0 14 * * 1-5` (weekdays at 14:00 UTC — 30 minutes after US market open during EDT)

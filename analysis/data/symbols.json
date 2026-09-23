@@ -1,0 +1,18 @@
+{
+  "all": [
+    "BTC/USD",
+    "QQQ",
+    "SPY"
+  ],
+  "stocks": [
+    "QQQ",
+    "SPY"
+  ],
+  "crypto": [
+    "BTC/USD"
+  ],
+  "aliases": {
+    "BTCUSD": "BTC/USD"
+  },
+  "note": "aliases maps the slash-less crypto symbol used by /v2/positions to the canonical BTC/USD form used for bars and news"
+}

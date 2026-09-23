@@ -1,0 +1,38 @@
+name: signal-brief
+# Runs the keyless signal pipeline and commits the brief the trading routine reads.
+# Scheduled workflows only run from the default branch.
+on:
+  schedule:
+    - cron: "30 0,12,19 * * *"   # ~30 min before each routine firing (01:00, 13:00, 20:00 UTC)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: signal-brief
+  cancel-in-progress: false
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect last 96h from all keyless sources
+        env:
+          STOCKTWITS_MAX_PAGES: "60"
+        run: |
+          python3 -m pipeline.collect --hours 96 --out data/live 2>&1 | tail -40
+      - name: Build features and brief
+        run: |
+          python3 -m pipeline.signals --raw data/live --out data/live/hourly.json
+          python3 -m pipeline.brief --features data/live/hourly.json --raw data/live --out data/live/brief.md
+          head -40 data/live/brief.md
+      - name: Commit brief
+        run: |
+          git config user.name "signal-brief bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f data/live/brief.md data/live/hourly.json
+          git commit -m "brief: $(date -u +'%Y-%m-%d %H:%M UTC')" || echo "nothing to commit"
+          git push

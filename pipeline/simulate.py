@@ -46,22 +46,41 @@ def attention(feats_sym, t, ratio_thr, z_thr):
     blocked = geo > 0.5 and not any(cats.get(c, 0) for c in ("flows", "fed", "earnings"))
     return hot and has_cat and not blocked, n24, nprior, z24, geo
 
-def main():
+ETFS = {"SPY", "QQQ", "VOO", "IWM", "DIA"}
+
+def kind(sym): return "crypto" if "/" in sym else ("etf" if sym in ETFS else "stock")
+
+def build_parser():
     ap = argparse.ArgumentParser()
     ap.add_argument("--features", default="data/features/hourly.json"); ap.add_argument("--bars", default="analysis/data/bars_hourly")
     ap.add_argument("--equity", type=float, default=100000); ap.add_argument("--ratio", type=float, default=2.0); ap.add_argument("--z", type=float, default=4.0)
     ap.add_argument("--risk", type=float, default=0.005); ap.add_argument("--start", default="2026-08-08")
     ap.add_argument("--trail_crypto", type=float, default=0.10, help="after time limit, trail stop this fraction below the highest close (0 = breakeven rule)")
-    ap.add_argument("--trail_stock", type=float, default=0.04)
+    ap.add_argument("--trail_stock", type=float, default=0.06)
+    ap.add_argument("--stop_etf", type=float, default=0.02); ap.add_argument("--trail_etf", type=float, default=0.04)
+    ap.add_argument("--max_positions", type=int, default=8)
+    ap.add_argument("--no_rank", action="store_true", help="enter candidates in universe order instead of by score (legacy)")
+    ap.add_argument("--symbols", default="", help="comma-separated subset of the bars universe")
+    ap.add_argument("--crypto_cap_total", type=float, default=0.25, help="max total crypto exposure as a fraction of equity at entry")
     ap.add_argument("--cap", type=float, default=0.15, help="max position value as a fraction of equity")
     ap.add_argument("--pyramid", type=float, default=0.0, help="add this fraction of equity to a winner each time it makes a new high >= 5%% above the last add (0 = off)")
-    ap.add_argument("--stop_stock", type=float, default=0.02); ap.add_argument("--stop_crypto", type=float, default=0.03)
+    ap.add_argument("--stop_stock", type=float, default=0.03); ap.add_argument("--stop_crypto", type=float, default=0.03)
     ap.add_argument("--breakout_orders", action="store_true", help="when attention fires but price is 3-10%% below the 20-day high, arm a buy-stop at the high (+0.2%%) valid until the next decision")
-    a = ap.parse_args()
+    return ap
+
+def run(a, feats_raw=None, bars_all=None):
+    """Core simulation. Returns dict with trades, log, final_equity, max_dd, per_symbol, universe, end."""
     feats = defaultdict(dict)
-    for k, f in json.load(open(a.features)).items():
+    for k, f in (feats_raw if feats_raw is not None else json.load(open(a.features))).items():
         s, h = k.split("|"); feats[s][ts(h)] = f
-    bars = load_bars(a.bars); daily = {s: daily_closes(b) for s, b in bars.items()}
+    bars = bars_all if bars_all is not None else load_bars(a.bars)
+    if a.symbols:
+        want = {x.strip() for x in a.symbols.split(",") if x.strip()}
+        bars = {k: v for k, v in bars.items() if k in want}
+    stop_of = lambda s: {"crypto": a.stop_crypto, "etf": a.stop_etf, "stock": a.stop_stock}[kind(s)]
+    trail_of = lambda s: {"crypto": a.trail_crypto, "etf": a.trail_etf, "stock": a.trail_stock}[kind(s)]
+    last_close = lambda s, t, dflt=None: next((c for bt, o, h, l, c in reversed(bars[s]) if bt <= t), dflt)
+    daily = {s: daily_closes(b) for s, b in bars.items()}
     equity, cash = a.equity, a.equity
     open_pos, trades, log, pending = {}, [], [], {}
     t0 = datetime.fromisoformat(a.start).replace(tzinfo=timezone.utc)
@@ -71,6 +90,7 @@ def main():
     while d <= end:
         for hr in (1, 13, 20): decisions.append(d.replace(hour=hr, minute=0))
         d += timedelta(days=1)
+    peak, max_dd = a.equity, 0.0
     for t in decisions:
         # 1) manage open positions bar by bar up to t (stops, time limits)
         for sym in list(open_pos):
@@ -79,7 +99,7 @@ def main():
                 if bt <= p["last_checked"] or bt > t: continue
                 p["last_checked"] = bt
                 p["hi"] = max(p.get("hi", p["entry"]), c)
-                trail = a.trail_crypto if "/" in sym else a.trail_stock
+                trail = trail_of(sym)
                 if trail and bt >= p["t_in"] + timedelta(days=7):
                     p["stop"] = max(p["stop"], p["hi"] * (1 - trail))
                 if l <= p["stop"]:
@@ -90,11 +110,12 @@ def main():
                 if c and c < p["entry"]:
                     pnl = p["qty"] * (c - p["entry"]); cash += p["qty"] * c
                     trades.append((sym, p["t_in"], t, p["entry"], c, (c / p["entry"] - 1) * 100, pnl, "timeout")); del open_pos[sym]
-                elif c and not (a.trail_crypto if "/" in sym else a.trail_stock):  # breakeven rule
+                elif c and not trail_of(sym):  # breakeven rule
                     p["stop"] = max(p["stop"], p["entry"])
         # 2) mark equity
         mv = sum(p["qty"] * next((c for bt, o, h, l, c in reversed(bars[s]) if bt <= t), p["entry"]) for s, p in open_pos.items())
         equity = cash + mv
+        peak = max(peak, equity); max_dd = max(max_dd, (peak - equity) / peak)
         # 2a) pyramid into winners: past time limit, price >= 5% above last add, still within 3% of 20d high
         if a.pyramid:
             for sym, p in open_pos.items():
@@ -109,17 +130,18 @@ def main():
         # 2b) pending breakout orders armed at the previous decision: fill if the high was touched since
         for sym in list(pending):
             po = pending.pop(sym)
-            if sym in open_pos: continue
+            if sym in open_pos or len(open_pos) >= a.max_positions: continue
             for bt, o, h, l, c in bars[sym]:
                 if po["armed"] < bt <= t and h >= po["trigger"]:
-                    entry = max(po["trigger"], o); stop_pct = a.stop_crypto if "/" in sym else a.stop_stock
+                    entry = max(po["trigger"], o); stop_pct = stop_of(sym)
                     value = min(a.risk * equity / stop_pct, a.cap * equity, cash)
                     if value < 100: break
                     qty = value / entry; cash -= value
                     open_pos[sym] = {"qty": qty, "entry": entry, "stop": entry * (1 - stop_pct), "t_in": bt, "last_checked": bt}
                     log.append(f"{bt:%m-%d %H:%M} BREAKOUT-FILL {sym} @ {entry:.2f} size {value:,.0f} (armed {po['armed']:%m-%d %H:%M} at {po['trigger']:.2f})")
                     break
-        # 3) entries
+        # 3) entries: collect candidates, rank by z24 (fallback n24/nprior), fill free slots
+        cands = []
         for sym in bars:
             if sym in open_pos or sym not in feats: continue
             is_crypto = "/" in sym
@@ -135,8 +157,16 @@ def main():
                 continue
             nxt = next(((bt, o) for bt, o, h, l, c in bars[sym] if bt > t), None)
             if not nxt: continue
-            entry = nxt[1]; stop_pct = a.stop_crypto if is_crypto else a.stop_stock
+            score = z24 if z24 else (n24 / nprior if nprior else n24)
+            cands.append((score, sym, nxt, n24, nprior, z24, geo))
+        if not a.no_rank: cands.sort(key=lambda x: -x[0])  # stable: ties keep bars order
+        for score, sym, nxt, n24, nprior, z24, geo in cands:
+            if len(open_pos) >= a.max_positions: break
+            entry = nxt[1]; stop_pct = stop_of(sym)
             value = min(a.risk * equity / stop_pct, a.cap * equity, cash)
+            if "/" in sym:
+                cexp = sum(p["qty"] * last_close(s, t, p["entry"]) for s, p in open_pos.items() if "/" in s)
+                value = min(value, a.crypto_cap_total * equity - cexp)
             if value < 100: continue
             qty = value / entry; cash -= value
             open_pos[sym] = {"qty": qty, "entry": entry, "stop": entry * (1 - stop_pct), "t_in": nxt[0], "last_checked": nxt[0]}
@@ -146,12 +176,23 @@ def main():
         c = bars[sym][-1][4]; pnl = p["qty"] * (c - p["entry"]); cash += p["qty"] * c
         trades.append((sym, p["t_in"], bars[sym][-1][0], p["entry"], c, (c / p["entry"] - 1) * 100, pnl, "open@end"))
     equity = cash
+    per = {}
+    for x in trades:
+        r = per.setdefault(x[0], [0, 0, 0.0]); r[0] += 1; r[1] += x[6] > 0; r[2] += x[6]
+    return {"trades": trades, "log": log, "final_equity": equity, "max_dd": max_dd * 100, "per_symbol": per,
+            "universe": len(bars), "end": end, "bars": bars, "daily": daily, "t0": t0}
+
+def main():
+    a = build_parser().parse_args()
+    R = run(a); trades, log, equity, end, bars, daily, t0 = R["trades"], R["log"], R["final_equity"], R["end"], R["bars"], R["daily"], R["t0"]
     print(f"# v2 rule simulation {a.start} -> {end:%Y-%m-%d}  (ratio>={a.ratio}x or z24>={a.z}; risk {a.risk*100:.1f}%/trade)\n")
     for l in log: print("- " + l)
     print("\n| symbol | in | out | entry | exit | ret | pnl $ | why |\n|---|---|---|---|---|---|---|---|")
     for s, ti, to, e, x, r, pnl, why in trades: print(f"| {s} | {ti:%m-%d %H:%M} | {to:%m-%d %H:%M} | {e:.2f} | {x:.2f} | {r:+.2f}% | {pnl:+,.0f} | {why} |")
     wins = [x for x in trades if x[6] > 0]
-    print(f"\nTrades: {len(trades)}, wins {len(wins)}, total P&L ${sum(x[6] for x in trades):+,.0f}, final equity ${equity:,.0f} ({(equity/a.equity-1)*100:+.2f}%)")
+    print(f"\nTrades: {len(trades)}, wins {len(wins)}, total P&L ${sum(x[6] for x in trades):+,.0f}, final equity ${equity:,.0f} ({(equity/a.equity-1)*100:+.2f}%), max drawdown {R['max_dd']:.2f}%")
+    print("\n| symbol | trades | wins | pnl $ |\n|---|---|---|---|")
+    for s, (n, w, pnl) in sorted(R["per_symbol"].items(), key=lambda kv: -kv[1][2]): print(f"| {s} | {n} | {w} | {pnl:+,.0f} |")
     for sym in bars:
         d0 = next((c for dd, c in daily[sym] if dd >= t0.date()), None); print(f"buy&hold {sym}: {(bars[sym][-1][4]/d0-1)*100:+.1f}%")
 

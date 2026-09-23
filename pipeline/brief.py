@@ -19,7 +19,8 @@ def main():
     lines = [f"# Signal brief — {now:%Y-%m-%d %H:%M} UTC\n",
              "Attention = mentions in the last 24h vs the previous 72h (per source). z24 = sum of hourly z-scores over 24h.",
              "Tilt = (bullish - bearish) / mentions, from Stocktwits labels and keyword sentiment. Catalysts = tagged headline types.\n",
-             "| symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) |", "|---|---|---|---|---|---|"]
+             "Mentions and the ratio exclude Stocktwits (its history is too short for a baseline); tilt includes it. geo share = geopolitics share of catalyst tags.\n",
+             "| symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share |", "|---|---|---|---|---|---|---|"]
     per = defaultdict(list)
     for k, f in feats.items():
         s, h = k.split("|"); per[s].append((ts(h), f))
@@ -28,17 +29,21 @@ def main():
         rows = sorted(per.get(s, []))
         last = [(t, f) for t, f in rows if t > now - timedelta(hours=24)]
         prior = [(t, f) for t, f in rows if now - timedelta(hours=96) < t <= now - timedelta(hours=24)]
-        n24 = sum(f.get("n_all", 0) for _, f in last); nprior = sum(f.get("n_all", 0) for _, f in prior) / 3
-        z24 = sum(f.get("z_all", 0) for _, f in last)
+        # Stocktwits only reaches back a day or two, so it would inflate any "vs prior" ratio; use it for tilt only.
+        def n_hist(f): return sum(v for k, v in f.items() if k.startswith("n_") and k not in ("n_all", "n_stocktwits"))
+        n24 = sum(n_hist(f) for _, f in last); nprior = sum(n_hist(f) for _, f in prior) / 3
+        n24_all = sum(f.get("n_all", 0) for _, f in last)
+        z24 = sum(v for _, f in last for k, v in f.items() if k.startswith("z_") and k not in ("z_all", "z_stocktwits"))
         bull = sum(f.get("bull_all", 0) for _, f in last); bear = sum(f.get("bear_all", 0) for _, f in last)
-        tilt = (bull - bear) / n24 if n24 else 0
+        tilt = (bull - bear) / n24_all if n24_all else 0
         cats = defaultdict(int)
         for _, f in last:
             for k, v in f.items():
                 if k.startswith("cat_"): cats[k[4:]] += v
         catstr = ", ".join(f"{c}:{int(v)}" for c, v in sorted(cats.items(), key=lambda kv: -kv[1])[:4]) or "-"
-        ratio = f"{n24 / nprior:.1f}x" if nprior else "new"
-        lines.append(f"| {s} | {int(n24)} | {ratio} | {z24:+.1f} | {tilt:+.2f} | {catstr} |")
+        tot_cats = sum(cats.values()); geo_share = cats.get("geopolitics", 0) / tot_cats if tot_cats else 0
+        ratio = f"{n24 / nprior:.1f}x" if nprior >= 3 else "n/a (no baseline)"
+        lines.append(f"| {s} | {int(n24)} (+{int(n24_all - n24)} stocktwits) | {ratio} | {z24:+.1f} | {tilt:+.2f} | {catstr} | {geo_share:.0%} |")
         tops = sorted([x for _, f in last for x in f.get("top", [])], reverse=True)[:6]
         if tops:
             detail.append(f"\n### {s} — most-engaged items, last 24h")

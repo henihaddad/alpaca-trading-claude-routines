@@ -26,7 +26,7 @@ ENTRY requires ALL of:
   a) attention: in the brief, 24h mentions >= 2x the prior 72h daily average OR z24 >= 4, AND at least one catalyst tag other than price_level (flows, fed, macro_data, policy, earnings);
   b) price confirmation: last close within 3% of the 20-day high and 5-day return positive;
   c) a thesis: one sentence why, the stop (3% below entry for crypto, 2% for ETFs and large caps, or the 20-day low if closer), time limit = 5 trading days out, and the invalidation.
-Do NOT enter when the brief shows a geopolitics catalyst cluster (>=3) on that symbol in the last 24h. Do not re-enter a symbol exited by a stop within the last 5 days.
+Do NOT enter when geopolitics is the dominant catalyst for that symbol (geo share > 50% in the brief) and no flows/fed/earnings tag is present. Do not re-enter a symbol exited by a stop within the last 5 days.
 EXIT when ANY of: the stop order filled (nothing to do; note it); invalidation happened; time limit (tl) reached and the position is below entry; bearish tilt <= -0.4 with an attention spike on a held symbol. Exit = cancel the stop order, then sell at market (crypto) or limit at the bid (stocks, market open only).
 SIZING: risk 0.5% of equity per trade (position value = 0.5% of equity / stop distance in %), max 8% of equity per position, max 10 positions, crypto max 15% of equity in total.
 INSTRUMENTS: liquid US large caps, SPY/QQQ/VOO, BTC/USD, ETH/USD. No options, penny stocks, leveraged or inverse ETFs.

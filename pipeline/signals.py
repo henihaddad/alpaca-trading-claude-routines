@@ -12,7 +12,10 @@ Features per (symbol, hour):
 import argparse, glob, json, os, re, statistics as st
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
-from .config import SYMBOL_PATTERNS, CATALYST_PATTERNS
+from .config import SYMBOL_PATTERNS as _CFG_PATTERNS, CATALYST_PATTERNS
+from .universe_patterns import SYMBOL_PATTERNS as _UNIV_PATTERNS
+
+SYMBOL_PATTERNS = {**_CFG_PATTERNS, **_UNIV_PATTERNS}
 
 SYM_RE = {s: re.compile(p, re.I) for s, p in SYMBOL_PATTERNS.items()}
 CAT_RE = {c: re.compile(p, re.I) for c, p in CATALYST_PATTERNS.items()}

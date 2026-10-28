@@ -1,194 +1,198 @@
-# Signal brief — 2026-10-28 06:12 UTC
+# Signal brief — 2026-10-28 18:32 UTC
 
 Attention = mentions in the last 24h vs the previous 72h (per source). z24 = sum of hourly z-scores over 24h.
 Tilt = (bullish - bearish) / mentions, from Stocktwits labels and keyword sentiment. Catalysts = tagged headline types.
 
 Mentions and the ratio exclude Stocktwits (its history is too short for a baseline); tilt includes it. geo share = geopolitics share of catalyst tags.
 
-Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 26 symbols with activity, plus held positions.
+Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 51 symbols with activity, plus held positions.
 
 | symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share | score |
 |---|---|---|---|---|---|---|---|
-| SPY | 69 (+2181 stocktwits) | 7.7x | +59.4 | +0.13 | fed:143, earnings:101, macro_data:77, geopolitics:69 | 16% | 32.6 |
-| QQQ | 71 (+1845 stocktwits) | 7.1x | +57.7 | +0.16 | earnings:110, fed:110, macro_data:65, geopolitics:55 | 14% | 30.4 |
-| COIN | 28 (+15 stocktwits) | 7.0x | +39.2 | -0.02 | - | 0% | 23.6 |
-| BTC/USD | 51 (+768 stocktwits) | 3.6x | +44.3 | +0.23 | fed:27, geopolitics:8, earnings:8, price_level:6 | 14% | 14.4 |
-| GOOGL | 8 (+94 stocktwits) | n/a (no baseline) | +42.6 | +0.33 | earnings:21, fed:15, price_level:3, geopolitics:3 | 7% | 2.2 |
-| ORCL | 7 (+32 stocktwits) | n/a (no baseline) | +0.0 | +0.28 | - | 0% | 2.1 |
-| ETH/USD | 5 (+191 stocktwits) | 1.1x | +7.3 | +0.15 | geopolitics:4, fed:4, price_level:3, earnings:2 | 25% | 1.9 |
-| META | 4 (+95 stocktwits) | n/a (no baseline) | +15.5 | +0.11 | earnings:3, geopolitics:2, price_level:1, fed:1 | 25% | 1.6 |
-| MSFT | 3 (+58 stocktwits) | n/a (no baseline) | +17.6 | +0.34 | earnings:16, fed:14, geopolitics:3, price_level:1 | 9% | 1.4 |
-| XRP/USD | 3 (+109 stocktwits) | n/a (no baseline) | +17.2 | +0.05 | earnings:1, macro_data:1, policy:1 | 0% | 1.4 |
-| PYPL | 2 (+10 stocktwits) | n/a (no baseline) | +0.0 | +0.17 | earnings:2, macro_data:1, geopolitics:1 | 25% | 1.1 |
-| MSTR | 2 (+130 stocktwits) | n/a (no baseline) | +19.8 | +0.02 | fed:1, earnings:1 | 0% | 1.1 |
-| HOOD | 2 (+57 stocktwits) | n/a (no baseline) | +0.0 | +0.29 | earnings:10, fed:1 | 0% | 1.1 |
-| DELL | 2 (+8 stocktwits) | n/a (no baseline) | +0.0 | +0.20 | geopolitics:2 | 100% | 1.1 |
-| SOL/USD | 2 (+20 stocktwits) | n/a (no baseline) | +11.7 | +0.45 | geopolitics:3, flows:1, macro_data:1, fed:1 | 43% | 1.1 |
-| AAVE/USD | 2 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | flows:2 | 0% | 1.1 |
-| AAPL | 1 (+69 stocktwits) | n/a (no baseline) | +2.1 | +0.36 | fed:4, earnings:3, geopolitics:3, flows:1 | 27% | 0.7 |
-| AMD | 1 (+109 stocktwits) | n/a (no baseline) | +10.9 | +0.51 | earnings:15, flows:3, geopolitics:2, price_level:1 | 10% | 0.7 |
-| INTC | 1 (+34 stocktwits) | n/a (no baseline) | -0.6 | +0.71 | earnings:4, geopolitics:1 | 20% | 0.7 |
-| JPM | 1 (+3 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | price_level:1 | 0% | 0.7 |
-
-### SPY — most-engaged items, last 24h
-- [polymarket, 3756571] Will there be no change in Fed interest rates after the October 2026 meeting?
-- [polymarket, 2698969] Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
-- [polymarket, 2116752] Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?
-- [polymarket, 722253] Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?
-- [polymarket, 103746] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+| QQQ | 117 (+1816 stocktwits) | 6.2x | +81.4 | +0.13 | fed:262, earnings:138, macro_data:118, geopolitics:63 | 10% | 29.4 |
+| SPY | 118 (+2556 stocktwits) | 5.2x | +77.7 | +0.07 | fed:370, macro_data:143, earnings:135, geopolitics:72 | 9% | 24.9 |
+| GOOGL | 26 (+135 stocktwits) | 2.6x | +51.1 | +0.19 | earnings:37, fed:30, price_level:5, geopolitics:2 | 3% | 8.6 |
+| BTC/USD | 78 (+757 stocktwits) | 1.3x | +36.1 | +0.20 | fed:37, geopolitics:15, earnings:12, macro_data:6 | 19% | 5.5 |
+| COIN | 17 (+20 stocktwits) | 1.5x | +17.9 | +0.03 | earnings:1 | 0% | 4.2 |
+| MSFT | 9 (+75 stocktwits) | 1.3x | +15.8 | +0.17 | earnings:32, fed:29, geopolitics:3, price_level:1 | 4% | 3.0 |
+| NVDA | 11 (+554 stocktwits) | 1.1x | +14.8 | +0.29 | earnings:35, fed:27, geopolitics:10, policy:3 | 12% | 2.8 |
+| AAPL | 6 (+64 stocktwits) | 1.1x | +17.9 | +0.26 | fed:5, earnings:4 | 0% | 2.2 |
+| AMZN | 5 (+51 stocktwits) | 1.1x | +5.5 | +0.25 | earnings:12, fed:9, geopolitics:2, macro_data:1 | 8% | 1.9 |
+| BA | 5 (+14 stocktwits) | n/a (no baseline) | +0.0 | -0.05 | fed:3, earnings:2, price_level:2 | 0% | 1.8 |
+| TSLA | 6 (+1376 stocktwits) | 0.9x | +9.4 | +0.20 | fed:67, earnings:24, geopolitics:8, policy:6 | 7% | 1.8 |
+| DELL | 4 (+5 stocktwits) | n/a (no baseline) | +0.0 | +0.22 | geopolitics:2 | 100% | 1.6 |
+| AMD | 4 (+68 stocktwits) | 0.9x | +9.8 | +0.49 | earnings:3, geopolitics:2, flows:1, fed:1 | 25% | 1.5 |
+| ORCL | 4 (+17 stocktwits) | 0.9x | -0.9 | +0.43 | - | 0% | 1.5 |
+| BLK | 3 (+4 stocktwits) | n/a (no baseline) | +0.0 | +0.14 | flows:1 | 0% | 1.4 |
+| JPM | 3 (+18 stocktwits) | n/a (no baseline) | +0.0 | +0.67 | fed:5, earnings:1 | 0% | 1.4 |
+| SOL/USD | 3 (+13 stocktwits) | n/a (no baseline) | +22.1 | +0.50 | earnings:2, fed:1, geopolitics:1 | 25% | 1.4 |
+| XRP/USD | 3 (+72 stocktwits) | n/a (no baseline) | +15.5 | +0.07 | earnings:2, macro_data:1, policy:1 | 0% | 1.4 |
+| HOOD | 3 (+38 stocktwits) | 0.9x | -1.4 | +0.20 | earnings:9, fed:3, price_level:1 | 0% | 1.2 |
+| ETH/USD | 5 (+128 stocktwits) | 0.7x | +5.1 | +0.23 | flows:3, price_level:1, earnings:1, fed:1 | 12% | 1.2 |
 
 ### QQQ — most-engaged items, last 24h
-- [polymarket, 3756571] Will there be no change in Fed interest rates after the October 2026 meeting?
-- [polymarket, 2698969] Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
-- [polymarket, 2116752] Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?
-- [polymarket, 722253] Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?
-- [polymarket, 103746] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 8393054] Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?
+- [polymarket, 5912789] Will there be no change in Fed interest rates after the October 2026 meeting?
+- [polymarket, 4839875] Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?
+- [polymarket, 2748942] Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
+- [polymarket, 572885] Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?
 
-### COIN — most-engaged items, last 24h
-- [telegram, 40600] JUST IN: Coinbase CEO Brian Armstrong says "all asset classes are moving onchain."  @WatcherGuru
-- [telegram, 6770] 🚨 🚨 🚨  648 $BTC (51,696,352 USD) transferred from Coinbase Institutional to unknown wallet Details
-- [telegram, 6720] 🚨 🚨 🚨 🚨 🚨 🚨 🚨  1,999 $BTC (159,673,006 USD) transferred from unknown wallet to Coinbase Institutional Details
-- [telegram, 6670] 🚨 🚨 🚨 🚨 🚨 🚨 🚨 🚨  2,249 $BTC (179,588,991 USD) transferred from unknown wallet to Coinbase Institutional Details
-- [telegram, 6610] 🚨 🚨 🚨  648 $BTC (51,909,549 USD) transferred from Coinbase Institutional to unknown wallet Details
-
-### BTC/USD — most-engaged items, last 24h
-- [polymarket, 128155] Will Bitcoin reach $87,500 in October?
-- [polymarket, 125640] Will Bitcoin reach $90,000 in October?
-- [polymarket, 124336] Will Bitcoin dip to $77,500 in October?
-- [polymarket, 123893] Will Bitcoin reach $85,000 in October?
-- [polymarket, 93387] Will Bitcoin reach $82,500 in October?
+### SPY — most-engaged items, last 24h
+- [polymarket, 8393054] Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?
+- [polymarket, 5912789] Will there be no change in Fed interest rates after the October 2026 meeting?
+- [polymarket, 4839875] Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?
+- [polymarket, 2748942] Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
+- [polymarket, 572885] Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?
 
 ### GOOGL — most-engaged items, last 24h
-- [telegram, 1830] Genius Launches Mobile App Integrating Token Trading, Creation, and Social Features on BNB Chain  Onchain trading platform Genius has launched its mobile app on
-- [telegram, 458] Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace - TechCrunch $META $MSFT|FJ
-- [telegram, 456] Oracle brings google TPUs to Oracle Cloud infrastructure. $ORCL $GOOGL|FJ
-- [telegram, 456] Google upgrades AI world model that rattled video game stocks $GOOGL|FJ
-- [telegram, 445] Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace - TechCrunch $META $MSFT|FJ
+- [telegram, 53600] JUST IN: Google unveils new security system to help banks safely store and transfer cryptocurrencies and tokenized assets.  @WatcherGuru
+- [telegram, 53500] JUST IN: 🇺🇸 33 major US companies now oppose having their stocks tokenized on OKX and ICE's planned exchange:  • IBM • Dell • Intel • IonQ • AMD • Intuit • Orac
+- [telegram, 12300] JUST IN - Google unleashes Gemini 4 Carbon, its most advanced AI model yet.  @disclosetv
+- [telegram, 4330] Google to preview crypto custody security system as AI threats grow — link | AI comment
+- [telegram, 1610] Google Unveils MPC Service to Secure Crypto and Tokenized Assets  Google is developing an MPC service to help financial institutions secure and transfer crypto 
 
-### ORCL — most-engaged items, last 24h
-- [telegram, 457] Intel and Oracle plan expanded pact. $INTC $ORCL|FJ
-- [telegram, 456] Oracle brings google TPUs to Oracle Cloud infrastructure. $ORCL $GOOGL|FJ
-- [telegram, 455] Oracle expands OpenAI partnership - CNBC. $ORCL|FJ
-- [telegram, 455] Oracle adds networking capabilities to Acceleron for AI. OpenAI expands partnership with Oracle to bring apps to ChatGPT. $ORCL|FJ
-- [telegram, 455] Nvidia & Oracle expand Nvidia Vera Rubin $NVDA $ORCL|FJ
+### BTC/USD — most-engaged items, last 24h
+- [polymarket, 143059] Will Bitcoin reach $87,500 in October?
+- [polymarket, 138089] Will Bitcoin dip to $77,500 in October?
+- [polymarket, 118380] Will Bitcoin reach $90,000 in October?
+- [telegram, 108000] JUST IN: Bitcoin reclaims $81,000  @WatcherGuru
+- [polymarket, 91365] Will Bitcoin reach $85,000 in October?
 
-### ETH/USD — most-engaged items, last 24h
-- [telegram, 43700] JUST IN: 🇺🇸 Polymarket launches 5-minute BTC, ETH, SOL and XRP up/down markets on its US app.  @WatcherGuru
-- [telegram, 6040] 🚨 🚨 🚨  32,169 $ETH (74,947,332 USD) transferred from Coinbase Institutional to unknown new wallet Details
-- [telegram, 5980] 🚨 🚨 🚨  30,375 $ETH (70,776,985 USD) transferred from unknown wallet to Coinbase Institutional Details
-- [telegram, 5960] 📉 📉 📉 Predict.fun Users Reportedly Lose $260K in Suspected Wallet Drain on Ethereum Read Analysis
-- [telegram, 1780] Wallet Potentially Linked to $40M UXLINK Hack Shows $6.54M in Unrealized ETH Gains  A wallet suspected of belonging to the hacker behind last year’s roughly $40
-
-### META — most-engaged items, last 24h
-- [telegram, 476] Meta’s $25 billion stock sale ended five times oversubscribed $META|FJ
-- [telegram, 472] Zuckerberg's Meta stock deal challenged in Delaware suit - BLaw.|FJ
-- [telegram, 458] Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace - TechCrunch $META $MSFT|FJ
-- [telegram, 445] Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace - TechCrunch $META $MSFT|FJ
-- [stocktwits, 6] Never get high on your own supply.    $META is raising up to $97.5B in stock, about 6% of its market cap, to fund AI spending.     $NVDA, $AMD, and $AVGO are bu
+### COIN — most-engaged items, last 24h
+- [telegram, 76600] JUST IN: Coinbase CEO Brian Armstrong says "all asset classes are moving onchain."  @WatcherGuru
+- [telegram, 51600] JUST IN: Ripple partners with Coinbase to expand its $RLUSD crypto stablecoin across trading, payments, and institutional finance.  @WatcherGuru
+- [telegram, 6900] 🚨 🚨 🚨  644 $BTC (51,941,250 USD) transferred from Coinbase Institutional to unknown wallet Details
+- [telegram, 6650] 🚨 🚨 🚨  644 $BTC (51,930,634 USD) transferred from Coinbase Institutional to unknown wallet Details
+- [telegram, 6100] 🚨 🚨 🚨  644 $BTC (52,030,022 USD) transferred from Coinbase Institutional to unknown wallet Details
 
 ### MSFT — most-engaged items, last 24h
-- [telegram, 458] Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace - TechCrunch $META $MSFT|FJ
-- [telegram, 445] Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace - TechCrunch $META $MSFT|FJ
-- [telegram, 427] Microsoft AI launches MAI image 2.7 in preview. $MSFT|FJ
-- [stocktwits, 7] $AVGO accumulate as much as possible of this stock while it’s dirt cheap! Forward PE is 18 only right now, lowest it has ever been. Major AI earnings this  week
-- [stocktwits, 6] $PLTR is 155% PROFITABLE!!! With $0 DEBT!!!    $SPY we run Anthropic and Open Ai!!!    $MSFT $GOOG $AMZN NOPE!!!  https://media.stocktwits-cdn.com/api/3/media/1
+- [telegram, 53500] JUST IN: 🇺🇸 33 major US companies now oppose having their stocks tokenized on OKX and ICE's planned exchange:  • IBM • Dell • Intel • IonQ • AMD • Intuit • Orac
+- [telegram, 400] Nvidia: RTX Spark laptops now available from Asus, Dell, HP, Lenovo, Microsoft, MSI - Website. $NVDA $MSFT  $HPQ $DELL|FJ
+- [telegram, 379] Nvidia: RTX Spark laptops now available from Asus, Dell, HP, Lenovo, Microsoft, MSI - Website. $NVDA £MSFT $HPQ $DELL|FJ
+- [reddit, 209] Three of the four biggest AI spenders now report negative free cash flow Latest reported results, cash from operations minus capex:  \- Amazon (Q2): -$7.6B over
+- [reddit, 100] GOOGL vs MSFT: Who Wins? GOOGL and MSFT are both reporting earnings today. Could be an interesting night for tech stocks.  I’m mainly watching Google’s cloud gr
 
-### XRP/USD — most-engaged items, last 24h
-- [telegram, 68800] JUST IN: Ripple and Robinhood $HOOD officially announce strategic partnership to expand stablecoin adoption.  @WatcherGuru
-- [telegram, 43700] JUST IN: 🇺🇸 Polymarket launches 5-minute BTC, ETH, SOL and XRP up/down markets on its US app.  @WatcherGuru
-- [telegram, 775] US Treasury Secretary: Crypto Leadership Strengthens Dollar Dominance, Stablecoins Expand Treasury Demand  US Treasury Secretary Scott Bessent stated at Ripple’
-- [stocktwits, 8] ( $RLUSD.X $XRP.X $HOOD $XRPN $BTC.X ) “Ripple and Robinhood Partner to Power the Next Generation of Finance” Source: https://ripple.com/ripple-press/ripple-and
-- [stocktwits, 6] ( $RLUSD.X $XRP.X $XRPN $BTC.X $SOL.X ) “Ripple Secures Major US Banking Approval, XRP Fails to Rally” Source: https://u.today/ripple-secures-major-us-banking-a
-
-### PYPL — most-engaged items, last 24h
-- [telegram, 1730] Coinbase to Automatically Convert 14 Restricted Crypto Assets for EEA Users on October 30  Under Coinbase's previously announced MiCA compliance measures, retai
-- [telegram, 537] $PYPL PayPal Q3 Earnings Adj. EPS $1.45 vs. est. $1.31 Net Rev. $8.58B, est. $8.71B Adj. Oper income $1.61B, est. $1.42B|FJ
-- [stocktwits, 5] $BTC.X $PYPL Join $RUM uptrend
-- [stocktwits, 3] $PYPL $TSLA $SPCX   Elon is coming after PayPal using X cash and payments
-- [stocktwits, 3] $PYPL $SPCX $TSLA soon he will also be behind bars…most corrupt person besides trump
-
-### MSTR — most-engaged items, last 24h
-- [telegram, 63900] JUST IN: Michael Saylor says AI creates wealth while Bitcoin allows humanity to preserve it.  @WatcherGuru
-- [telegram, 3750] JUST IN: 🟠 Strive $ASST CEO Matt Cole just said, "Strategy $MSTR is playing the institutional game. They're talking to banks, major asset managers, and pension 
-- [stocktwits, 8] $QNT.X  This has never looked so bullish to me. It&#39;s clear its in the accumulation consolidation zone before the next leg up. If you&#39;re not in Qaunt rig
-- [stocktwits, 7] $BTC.X $MSTR $ASST  When all the r*tard bears start getting really loud on this app, that’s when you know the local bottom is close.  Like clockwork.
-- [stocktwits, 5] $MSTR $BTC.X AMAZING GAINS
-
-### HOOD — most-engaged items, last 24h
-- [telegram, 68800] JUST IN: Ripple and Robinhood $HOOD officially announce strategic partnership to expand stablecoin adoption.  @WatcherGuru
-- [telegram, 1580] Robinhood Q3 Revenue Meets Estimates as Prediction Market Revenue Surges and Crypto Revenue Falls 55%  Robinhood reported Q3 2026 revenue of $1.424 billion, up 
-- [stocktwits, 8] ( $RLUSD.X $XRP.X $HOOD $XRPN $BTC.X ) “Ripple and Robinhood Partner to Power the Next Generation of Finance” Source: https://ripple.com/ripple-press/ripple-and
-- [stocktwits, 8] $SOFI I DON&#39;T OWN THIS. BEEN OUT FOR MONTHS BUT GLAD TO SEE THIS PUMPING ON GREAT EARNINGS. WISHING THE BULLS MUCH SUCCESS IN THIS. WRECK THESE RAT POS SHOR
-- [stocktwits, 8] $QQQ $HOOD I can&#39;t sell my calls..  getting rejected.  prices are not moving, still an issue with everyone else using Robinhood????
-
-### DELL — most-engaged items, last 24h
-- [telegram, 392] HP and Asus shift some PC manufacturing back to China due to AI-driven cost hikes; Dell is also evaluating shifting some PC making back to China, according to s
-- [telegram, 391] HP and Asus shift some PC manufacturing back to China due to AI-driven cost hikes; Dell is also evaluating shifting some PC making back to China, according to s
-- [stocktwits, 8] $DELL $NVDA $SPCX $TSSI $TSLA the Epstein class is trying to buy the election
-- [stocktwits, 5] $SMCI $NVDA $DELL $TSLA $HPE And then again we have this too.    The mismatch is evident here and SMCI can easily 3x here with  bit of buying pressure.
-- [stocktwits, 5] $DELL $NVDA $SPCX $TSSI   Michael Dell is talking about how FAST they pulled off the Colossus buildout. TSSI helped integrate those racks and get that infrastru
-
-### SOL/USD — most-engaged items, last 24h
-- [telegram, 6770] 📉 📉 📉 Solana Falls Below $100 as Whale Wallets Move $49M in SOL to Exchanges Read Analysis
-- [telegram, 5950] 🚨 🚨 🚨  661,612 $SOL (66,438,159 USD) transferred from unknown wallet to Coinbase Institutional Details
-- [stocktwits, 8] $GLXY this stock could potentially post earnings of 1 bil plus for 2027,,, seems like a good buy at these levels,,, $APLD  $SOL.X  $BTC.X
-- [stocktwits, 6] ( $RLUSD.X $XRP.X $XRPN $BTC.X $SOL.X ) “Ripple Secures Major US Banking Approval, XRP Fails to Rally” Source: https://u.today/ripple-secures-major-us-banking-a
-- [stocktwits, 4] If you need another indication of how &#39;meh&#39; crypto is lately, the OCC giving Ripple the ok for a bank wasn&#39;t enough to move price, but you&#39;d thi
-
-### AAVE/USD — most-engaged items, last 24h
-- [telegram, 3480] 🚨 🚨 🚨 🚨 🚨 🚨  134,068,978 $USDC (134,095,188 USD) transferred from #Aave to Unknown Whale 1 Details
-- [telegram, 3380] 🚨 🚨 🚨 🚨 🚨 🚨  134,068,978 $USDC (134,094,317 USD) transferred from Unknown Whale 1 to #Aave Details
+### NVDA — most-engaged items, last 24h
+- [telegram, 400] Nvidia: RTX Spark laptops now available from Asus, Dell, HP, Lenovo, Microsoft, MSI - Website. $NVDA $MSFT  $HPQ $DELL|FJ
+- [telegram, 379] Nvidia: RTX Spark laptops now available from Asus, Dell, HP, Lenovo, Microsoft, MSI - Website. $NVDA £MSFT $HPQ $DELL|FJ
+- [telegram, 367] Nvidia introduces Nemotron 3.5 transcribe speech model. $NVDA|FJ
+- [stocktwits, 44] $BB $BB.TSX : As I said not long ago..&quot;watch out from the left field&quot;. JG went on CNBC Mad Money while JW on Yahoo Finance telling retails about Alloy
+- [stocktwits, 24] $NVDA $BBAI $INFQ     Warsh needs to hold interest rates tomorrow so we can continue with the green trend...
 
 ### AAPL — most-engaged items, last 24h
-- [telegram, 1830] Genius Launches Mobile App Integrating Token Trading, Creation, and Social Features on BNB Chain  Onchain trading platform Genius has launched its mobile app on
-- [stocktwits, 8] $NVDA this video is crazy 😂 $INTC $AAPL $GOOGL $PLTR
-- [stocktwits, 7] $AVGO accumulate as much as possible of this stock while it’s dirt cheap! Forward PE is 18 only right now, lowest it has ever been. Major AI earnings this  week
-- [stocktwits, 6] TODAY’S TRADE RECAP  $SPY -46% $QQQ +271% $NVAX +31% $AAPL +22% $HOOD -10%  A challenging start, followed by a strong recovery led by $QQQ. Every trade is a lea
-- [stocktwits, 6] $QQQ $SPY $TSLA $NVDA  From Charlie Bilello.   THIS is the reason why I  Index only.   THIS. THIS. THIS.  Yeah, try actually picking the best stocks to beat the
+- [telegram, 458] South Korea fines Google, Apple 63.7B won on forced in-app payments.|FJ
+- [telegram, 432] Apple's Touch MacBook Pro has M5 Pro and M5 Max chip options $AAPL|FJ
+- [telegram, 425] Apple announces overhauled MacBook Pro with touch-screen $AAPL|FJ
+- [telegram, 417] Touch Mac starts at $2,899 for the 14-inch and $3,399 for the 16-inch $AAPL|FJ
+- [telegram, 376] Apple Touch MacBook event begins in Los Angeles $AAPL|FJ
+
+### AMZN — most-engaged items, last 24h
+- [reddit, 633] 🐒 Monkey Explains Amazon’s Anthropic Money-Making Machine 🍌 Me Amazon. Big monkey. 🦍  Me buy Anthropic shares when cheap. 🍌  Me also sell Anthropic compute. Lot
+- [reddit, 209] Three of the four biggest AI spenders now report negative free cash flow Latest reported results, cash from operations minus capex:  \- Amazon (Q2): -$7.6B over
+- [reddit, 65] Meta, Amazon and Alphabet each spent more on capex than operating cash flow in their latest reported qtr This is the operating cash flow against spending on pro
+- [stocktwits, 7] $NVDA Big day tomorrow when MSFT and AMZN report huge capX expansion. MSFT is saving billions in the layoff of 60,000 employees to buy NVIDIA SYSTEMS.
+- [stocktwits, 6] Everyone&#39;s passing memory costs on, so that&#39;s not the interesting part... access is. SK hynix says long term agreements with 14 customers already cover 
+
+### BA — most-engaged items, last 24h
+- [reddit, 30] The two companies behind the 737 MAX's engine are now worth over 3x Boeing Boeing fell 10.7% on Tuesday to $168.18, its worst day since June 2020. It missed on 
+- [stocktwits, 3] Dark-pool volume in $BA just spiked far above normal, and the options crowd is leaning toward puts. The stock is down about 12% from a week ago, its lowest leve
+- [stocktwits, 3] $BA Ignore these mfkers who posts stuff like “this is a generational ￼opportunity” “I’m selling my house to buy this stock” they are either bag holders or just 
+- [stocktwits, 3] $BA I&#39;m looking to buy   ■ May/2027 $160 calls if BA falls under 164  ■ Sep/2027 $145 calls if BA falls under 145    $DFEN $ITA $SPY $QQQ
+- [stocktwits, 3] $BA I have an idea 💡 sell your BA and buy Elon’s garbage $SPCX  and than wait for them to stick another garbage $TSLA up your vazooooo 🤪🤪🤪
+
+### TSLA — most-engaged items, last 24h
+- [telegram, 50000] JUST IN: 🇷🇺🇺🇸 Russian President Putin says Elon Musk is a "true genius."  @WatcherGuru
+- [reddit, 46] Why should $SPCX pay a premium to buy $TSLA? Tesla stock price has been flat for the last 5 years and has only recently stated pumping due to the possible merge
+- [reddit, 40] Asimov imagined the robot economy 70 years ago. Here's the AI trade everyone might be missing. I've been rereading Isaac Asimov's Robot series and Iain M. Banks
+- [stocktwits, 24] $TSLA     Huge win on the puts    Congrats followers    And people doubted me yesterday
+- [stocktwits, 23] $TSLA finally got the channel breakout
+
+### DELL — most-engaged items, last 24h
+- [telegram, 441] HP and Asus shift some PC manufacturing back to China due to AI-driven cost hikes; Dell is also evaluating shifting some PC making back to China, according to s
+- [telegram, 440] HP and Asus shift some PC manufacturing back to China due to AI-driven cost hikes; Dell is also evaluating shifting some PC making back to China, according to s
+- [telegram, 400] Nvidia: RTX Spark laptops now available from Asus, Dell, HP, Lenovo, Microsoft, MSI - Website. $NVDA $MSFT  $HPQ $DELL|FJ
+- [telegram, 379] Nvidia: RTX Spark laptops now available from Asus, Dell, HP, Lenovo, Microsoft, MSI - Website. $NVDA £MSFT $HPQ $DELL|FJ
+- [stocktwits, 6] Everyone&#39;s passing memory costs on, so that&#39;s not the interesting part... access is. SK hynix says long term agreements with 14 customers already cover 
 
 ### AMD — most-engaged items, last 24h
-- [telegram, 472] AMD to invest $1b in Meta offering.|FJ
+- [telegram, 53500] JUST IN: 🇺🇸 33 major US companies now oppose having their stocks tokenized on OKX and ICE's planned exchange:  • IBM • Dell • Intel • IonQ • AMD • Intuit • Orac
+- [reddit, 36] All in AMD ![img](gxmlw9kr67yh1 "Successful YOLO.")  Sell or keep going
 - [stocktwits, 13] $MU and $SKHY beat analyst profit estimates by more than $SPCX $AMD $TSLA make actual profit! I get the memory names had unbelievably historic runs but they wer
-- [stocktwits, 11] .$AVGO Broadcom secures $63 billion from worlds largest banks to finance AI compute sales to Anthropic    $SPY $NVDA $AMD $MRVL      https://uk.finance.yahoo.co
-- [stocktwits, 10] $SOXL $NVDA $AMD $INTC $KORU   BIG Tech and Semis earnings coming tomorrow and Thursday as well as next week    Buy the DIP, Leg UP just started yesterday for e
-- [stocktwits, 10] $MU $SKHY $NVDA $AMD $SMCI
+- [stocktwits, 11] $MU $SKHY $NVDA $AMD $SMCI
+- [stocktwits, 9] $QQQ $SPY $SKHY $NVDA $AMD   It took absolutely blowout numbers from $SKHY but the KOSPI market s actually green.  Salute to the Korean psychos!
 
-### INTC — most-engaged items, last 24h
-- [telegram, 457] Intel and Oracle plan expanded pact. $INTC $ORCL|FJ
-- [stocktwits, 12] $MBLY shorts are about to get crushed … party is over   $INTC $NVDA $UBER $TSLA
-- [stocktwits, 12] $INFQ I believe Intel’s move strengthens the case that INFQ owns capabilities that big tech companies want. I could see $NVDA taking a strategic stake in Infleq
-- [stocktwits, 10] $SOXL $NVDA $AMD $INTC $KORU   BIG Tech and Semis earnings coming tomorrow and Thursday as well as next week    Buy the DIP, Leg UP just started yesterday for e
-- [stocktwits, 8] $ORCL plans to offer $CBRS fast inference and $GOOGL TPUs on OCI in 2027, alongside expanded $INTC Xeon and $NVDA Vera Rubin capacity. https://notreload.xyz/ora
+### ORCL — most-engaged items, last 24h
+- [telegram, 53500] JUST IN: 🇺🇸 33 major US companies now oppose having their stocks tokenized on OKX and ICE's planned exchange:  • IBM • Dell • Intel • IonQ • AMD • Intuit • Orac
+- [telegram, 403] Oracle: Plan to expand multicloud AI database services to the US government $ORCL|FJ
+- [reddit, 227] Google and Oracle are partnering to bring Google TPUs to Oracle Cloud Infrastructure | Google Cloud Blog
+- [stocktwits, 9] $ORCL if any other company has same news then stock could  move 15-20% but damnn Orcl 😂😂 $AMD $NVDA $TSLA $SPCX
+- [stocktwits, 8] $SMCI $ORCL $NVDA $MICR $CRWV   Crooks did it again and shook out all the leveraged trades and weak hands. Unbelievable.                      Fears ‘overblown’ 
+
+### BLK — most-engaged items, last 24h
+- [telegram, 1690] Bitcoin Spot ETFs See $176M Total Net Inflows on October 27  According to SoSoValue data, US Bitcoin spot ETFs recorded a total net inflow of $176 million on Oc
+- [reddit, 13] Will you trade AI compute as a commodity onchain? Back in May, BlackRock CEO Larry Fink predicted that compute could become a new asset class. He said, "A new a
+- [stocktwits, 8] BlackRock $BLK  owns 5% of $SLNH ... at around $1 price.  They are the largest holder of this AI / $BTC.X data center.  $QQQ     In addition, SLNH cleared 75% o
+- [stocktwits, 8] $BTC.X $MU $QNT.X $TSLA $ZEC.X How can quant possibly stay at a 2.5b market cap much longer when they go live with the clearing house in early 2027 &amp; the UK
+- [stocktwits, 2] $AMC $GME $SPY $MMTLP  Crime is criming… BlackRock bought 64,410,599 shares  Adam Aron and Ryan Cohen crooks!  No supply and demand 6 years  https://youtu.be/2p
 
 ### JPM — most-engaged items, last 24h
-- [telegram, 133] Anthropic selects JPMorgan to head US retail offering in IPO|FJ
-- [stocktwits, 1] Options flow: Big Money Bets on JP Morgan: $2.8M in Unusual Calls Hit $JPM Options $SPY $QQQ    $JPM is up 0.6% today. JPM is -2.1% over the past month, -6.9% o
-- [stocktwits, 1] $SPY $JPM $BAC  Banks illiquid
-- [stocktwits, 1] $BA down 10% &amp; $DJIA up? Hmm, thats odd.  Another think to watch when EU closes    $QQQ $JPM $SPY
+- [telegram, 53500] JUST IN: 🇺🇸 33 major US companies now oppose having their stocks tokenized on OKX and ICE's planned exchange:  • IBM • Dell • Intel • IonQ • AMD • Intuit • Orac
+- [telegram, 252] JPMorgan: Extra UK bank tax lacks principle - Statement $JPM|FJ
+- [telegram, 217] Anthropic selects JPMorgan to head US retail offering in IPO|FJ
+- [stocktwits, 4] $JPM no bears let’s slap that ask as we approach fomc   $SPY $QQQ
+- [stocktwits, 3] $JPM be funny if this crashed now after FOMC debating selling my 340 calls for eow at a little over 100% profit before 2-2:30  $SPY $QQQ $GS
+
+### SOL/USD — most-engaged items, last 24h
+- [telegram, 21700] JUST IN: Solana $SOL co-founder Anatoly Yakovenko says US companies opposing tokenized stock trading "should go private then."  @WatcherGuru
+- [telegram, 1610] Google Unveils MPC Service to Secure Crypto and Tokenized Assets  Google is developing an MPC service to help financial institutions secure and transfer crypto 
+- [stocktwits, 10] $GLXY this stock could potentially post earnings of 1 bil plus for 2027,,, seems like a good buy at these levels,,, $APLD  $SOL.X  $BTC.X
+- [stocktwits, 4] ( $RLUSD.X $XRP.X $XRPN $BTC.X $SOL.X )  “XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments” Source: — CoinDesk https://www.c
+- [stocktwits, 4] $GLXY no reason at all for this to be held back today on the back of yesterdays strong earnings,,, not even the fed,,,  this stock could easily earn well over $
+
+### XRP/USD — most-engaged items, last 24h
+- [telegram, 65700] JUST IN: 🇺🇸 Polymarket launches 5-minute BTC, ETH, SOL and XRP up/down markets on its US app.  @WatcherGuru
+- [telegram, 51600] JUST IN: Ripple partners with Coinbase to expand its $RLUSD crypto stablecoin across trading, payments, and institutional finance.  @WatcherGuru
+- [telegram, 1740] US Treasury Secretary: Crypto Leadership Strengthens Dollar Dominance, Stablecoins Expand Treasury Demand  US Treasury Secretary Scott Bessent stated at Ripple’
+- [stocktwits, 5] $BTC.X $MSTR $ETH.X $XRP.X  This will look nothing short of extraordinary promise you kids!
+- [stocktwits, 4] ( $RLUSD.X $XRP.X $XRPN $BTC.X $SOL.X )  “XRP Ledger developers propose creating wallets with zero XRP for stablecoin payments” Source: — CoinDesk https://www.c
+
+### HOOD — most-engaged items, last 24h
+- [telegram, 2140] Robinhood Q3 Revenue Meets Estimates as Prediction Market Revenue Surges and Crypto Revenue Falls 55%  Robinhood reported Q3 2026 revenue of $1.424 billion, up 
+- [stocktwits, 12] Don’t overlook the little guy $PDSB It went from 30 cents to $1.50 in eight weeks. I predict it will be $2.00 by Friday’s closing bell. It should shoot past $5.
+- [stocktwits, 6] TODAY’S TRADE RECAP  $SPY -46% $QQQ +271% $NVAX +31% $AAPL +22% $HOOD -10%  A challenging start, followed by a strong recovery led by $QQQ. Every trade is a lea
+- [stocktwits, 5] $HOOD says that nobody wants shitcoins anymore $BTC.X
+- [stocktwits, 5] $AIFC $HOOD $BTC.X $ORCL $CRWV
+
+### ETH/USD — most-engaged items, last 24h
+- [telegram, 65700] JUST IN: 🇺🇸 Polymarket launches 5-minute BTC, ETH, SOL and XRP up/down markets on its US app.  @WatcherGuru
+- [telegram, 4900] Ethereum max pain price $2,500, $776 million notional value, put/call ratio 0.77 | AI comment
+- [telegram, 1690] Bitcoin Spot ETFs See $176M Total Net Inflows on October 27  According to SoSoValue data, US Bitcoin spot ETFs recorded a total net inflow of $176 million on Oc
+- [telegram, 1610] Google Unveils MPC Service to Secure Crypto and Tokenized Assets  Google is developing an MPC service to help financial institutions secure and transfer crypto 
+- [stocktwits, 6] $XCN.X $BTC.X $DOGE.X $ETH.X $LTC.X https://x.com/Onyx/status/2115097550214893585
 
 ### Prediction markets (Polymarket, probability of YES)
-- 95% — Will there be no change in Fed interest rates after the October 2026 meeting?
-- 4% — Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
 - 0% — Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?
+- 100% — Will there be no change in Fed interest rates after the October 2026 meeting?
 - 0% — Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?
-- 94% — US x Iran ceasefire continues through October 31?
-- 35% — US announces end of Iranian blockade by December 31, 2026?
-- 98% — US x Iran ceasefire continues through October 28?
-- 90% — US-Iran ceasefire continues through the midterms?
-- 5% — Will Bitcoin reach $87,500 in October?
-- 2% — Will Bitcoin reach $90,000 in October?
-- 94% — Israel x Iran ceasefire continues through October 31?
-- 24% — Will Bitcoin dip to $77,500 in October?
-- 18% — Will Bitcoin reach $85,000 in October?
-- 100% — Israel x Iran ceasefire continues through October 27?
-- 76% — Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- 0% — Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
 - 0% — Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?
-- 56% — Will Bitcoin reach $82,500 in October?
+- 96% — Israel x Iran ceasefire continues through October 31?
+- 82% — Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- 16% — Will there be no change in Fed interest rates after the December 2026 meeting?
+- 2% — Will Bitcoin reach $87,500 in October?
 - 1% — Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
-- 0% — Will Bitcoin dip to $62,500 in October?
-- 3% — US announces end of Iranian blockade by October 31, 2026?
-- 20% — Will there be no change in Fed interest rates after the December 2026 meeting?
-- 18% — Will the U.S. invade Iran before 2027?
-- 0% — Will the price of Bitcoin be above $86,000 on October 28?
-- 0% — Will Bitcoin dip to $67,500 in October?
-- 49% — US x Iran ceasefire continues through November 15?
+- 18% — Will Bitcoin dip to $77,500 in October?
+- 96% — US x Iran ceasefire continues through October 31?
+- 2% — US announces end of Iranian blockade by October 31, 2026?
+- 35% — US announces end of Iranian blockade by December 31, 2026?
+- 99% — US x Iran ceasefire continues through October 28?
+- 1% — Will Bitcoin reach $90,000 in October?
+- 6% — Will the Iranian regime fall before 2027?
+- 100% — Israel x Iran ceasefire continues through October 27?
+- 2% — Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
+- 10% — Will Bitcoin reach $85,000 in October?
+- 0% — Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
+- 92% — US-Iran ceasefire continues through the midterms?
+- 48% — Will Bitcoin reach $82,500 in October?
+- 4% — Will Bitcoin dip to $75,000 in October?
+- 0% — Will Bitcoin dip to $65,000 in October?

@@ -1,196 +1,194 @@
-# Signal brief — 2026-11-09 22:44 UTC
+# Signal brief — 2026-11-10 07:43 UTC
 
 Attention = mentions in the last 24h vs the previous 72h (per source). z24 = sum of hourly z-scores over 24h.
 Tilt = (bullish - bearish) / mentions, from Stocktwits labels and keyword sentiment. Catalysts = tagged headline types.
 
 Mentions and the ratio exclude Stocktwits (its history is too short for a baseline); tilt includes it. geo share = geopolitics share of catalyst tags.
 
-Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 53 symbols with activity, plus held positions.
+Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 48 symbols with activity, plus held positions.
 
 | symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share | score |
 |---|---|---|---|---|---|---|---|
-| NVDA | 145 (+2259 stocktwits) | 4.4x | +78.6 | +0.17 | geopolitics:103, earnings:78, policy:23, macro_data:21 | 43% | 21.9 |
-| SPY | 99 (+2506 stocktwits) | 2.3x | +48.6 | +0.14 | geopolitics:118, macro_data:103, fed:67, earnings:37 | 32% | 10.4 |
-| COIN | 18 (+18 stocktwits) | 3.0x | +38.4 | -0.06 | geopolitics:1 | 100% | 8.8 |
-| ETH/USD | 14 (+268 stocktwits) | 2.6x | +32.4 | +0.04 | geopolitics:4, macro_data:3, flows:2, earnings:2 | 31% | 7.1 |
-| QQQ | 65 (+1923 stocktwits) | 1.7x | +19.7 | +0.17 | geopolitics:82, macro_data:73, fed:60, earnings:29 | 29% | 7.1 |
-| BTC/USD | 76 (+1191 stocktwits) | 1.5x | +53.2 | +0.06 | geopolitics:31, macro_data:15, earnings:8, fed:8 | 39% | 6.6 |
-| MSFT | 6 (+37 stocktwits) | 1.1x | +4.8 | +0.40 | earnings:3 | 0% | 2.1 |
-| AAPL | 6 (+49 stocktwits) | n/a (no baseline) | +25.1 | +0.07 | geopolitics:3, earnings:2, flows:1 | 50% | 1.9 |
-| GOOGL | 8 (+81 stocktwits) | 0.9x | +26.0 | +0.42 | geopolitics:5, earnings:3, macro_data:1 | 56% | 1.9 |
-| GS | 5 (+6 stocktwits) | n/a (no baseline) | +0.0 | +0.09 | macro_data:1, earnings:1 | 0% | 1.8 |
-| BLK | 3 (+8 stocktwits) | n/a (no baseline) | +0.0 | -0.09 | flows:1 | 0% | 1.4 |
-| CAT | 3 (+0 stocktwits) | n/a (no baseline) | +0.0 | -0.33 | - | 0% | 1.4 |
-| META | 3 (+66 stocktwits) | n/a (no baseline) | +28.5 | +0.43 | geopolitics:1, fed:1 | 50% | 1.4 |
-| PYPL | 3 (+3 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | geopolitics:1 | 100% | 1.4 |
-| MSTR | 3 (+137 stocktwits) | n/a (no baseline) | +18.4 | -0.24 | macro_data:1, geopolitics:1, flows:1 | 33% | 1.4 |
-| MU | 4 (+97 stocktwits) | 0.9x | +7.1 | +0.35 | earnings:10, macro_data:6, geopolitics:6, fed:2 | 23% | 1.4 |
-| AMD | 4 (+204 stocktwits) | 0.8x | +6.0 | +0.40 | earnings:11, geopolitics:11, macro_data:6, policy:1 | 38% | 1.3 |
-| AMZN | 3 (+41 stocktwits) | 0.9x | +4.9 | +0.36 | policy:1, geopolitics:1 | 50% | 1.2 |
-| SOL/USD | 3 (+34 stocktwits) | 0.8x | +8.8 | +0.11 | geopolitics:3, macro_data:1 | 75% | 1.1 |
-| VOO | 2 (+24 stocktwits) | n/a (no baseline) | +0.0 | +0.27 | geopolitics:2 | 100% | 1.1 |
+| NVDA | 147 (+2207 stocktwits) | 3.5x | +66.2 | +0.17 | geopolitics:116, earnings:72, macro_data:32, policy:27 | 44% | 17.4 |
+| SPY | 103 (+2459 stocktwits) | 2.3x | +47.8 | +0.11 | macro_data:136, geopolitics:134, fed:69, earnings:31 | 32% | 10.5 |
+| COIN | 18 (+20 stocktwits) | 3.2x | +38.3 | +0.00 | - | 0% | 9.4 |
+| QQQ | 68 (+1878 stocktwits) | 1.8x | +24.7 | +0.16 | macro_data:89, geopolitics:85, fed:62, earnings:29 | 29% | 7.7 |
+| BTC/USD | 71 (+958 stocktwits) | 1.4x | +49.7 | +0.11 | geopolitics:23, macro_data:15, price_level:10, earnings:9 | 32% | 6.1 |
+| AMD | 8 (+166 stocktwits) | 1.8x | +24.2 | +0.35 | geopolitics:9, macro_data:9, policy:1, earnings:1 | 43% | 4.1 |
+| GOOGL | 12 (+80 stocktwits) | 1.6x | +37.3 | +0.24 | geopolitics:7, earnings:3 | 70% | 4.0 |
+| MSFT | 8 (+35 stocktwits) | 1.6x | +9.0 | +0.21 | earnings:2, geopolitics:1, macro_data:1 | 25% | 3.5 |
+| ETH/USD | 8 (+222 stocktwits) | 1.2x | +15.7 | +0.06 | geopolitics:2, earnings:2, flows:2, policy:1 | 22% | 2.6 |
+| AMZN | 4 (+37 stocktwits) | 1.3x | +8.0 | +0.24 | policy:1, geopolitics:1 | 50% | 2.1 |
+| AAPL | 6 (+51 stocktwits) | n/a (no baseline) | +16.1 | +0.11 | geopolitics:4, earnings:3, flows:1 | 50% | 1.9 |
+| MU | 4 (+95 stocktwits) | 1.2x | +6.0 | +0.23 | macro_data:7, earnings:6, geopolitics:5, fed:2 | 22% | 1.9 |
+| SOL/USD | 4 (+24 stocktwits) | 1.1x | +13.7 | +0.07 | geopolitics:2, macro_data:1 | 67% | 1.8 |
+| GS | 4 (+7 stocktwits) | n/a (no baseline) | +0.0 | -0.36 | macro_data:1 | 0% | 1.6 |
+| BLK | 3 (+8 stocktwits) | n/a (no baseline) | +0.0 | +0.09 | flows:1 | 0% | 1.4 |
+| META | 3 (+78 stocktwits) | n/a (no baseline) | +27.0 | +0.41 | geopolitics:1 | 100% | 1.4 |
+| PYPL | 3 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 1.4 |
+| SCHW | 3 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | price_level:1 | 0% | 1.4 |
+| MSTR | 3 (+117 stocktwits) | n/a (no baseline) | +20.0 | -0.27 | geopolitics:1, flows:1 | 50% | 1.4 |
+| HOOD | 3 (+4 stocktwits) | 1.0x | +0.0 | +0.43 | - | 0% | 1.4 |
 
 ### NVDA — most-engaged items, last 24h
-- [telegram, 87900] JUST IN: 🇺🇸🇨🇳 Nvidia $NVDA CEO Jensen Huang says China is not an enemy and US chip policy is a "mistake."  @WatcherGuru
-- [telegram, 64800] JUST IN: 🇺🇸🇨🇳 Former SEC Chair Gary Gensler says Nvidia's $NVDA board faces "tough choices" following investigation into CEO Jensen Huang's affair with a Chines
-- [telegram, 62200] JUST IN: Nvidia $NVDA crashes 6.5% at open after CEO Jensen Huang admits to having an affair with an alleged Chinese spy.  @WatcherGuru
-- [telegram, 52600] JUST IN: 🇺🇸🇨🇳 US investigation into Megaspeed over suspected AI chip smuggling to China halted after Nvidia $NVDA intervened.  CEO Jensen Huang had an affair wi
-- [telegram, 50000] JUST IN: 🇺🇸🇨🇳 US Congress summons Nvidia $NVDA CEO Jensen Huang over affair with Chinese spy.  @WatcherGuru
+- [telegram, 70800] JUST IN: 🇺🇸🇨🇳 Former SEC Chair Gary Gensler says Nvidia's $NVDA board faces "tough choices" following investigation into CEO Jensen Huang's affair with a Chines
+- [telegram, 68500] JUST IN: Nvidia $NVDA crashes 6.5% at open after CEO Jensen Huang admits to having an affair with an alleged Chinese spy.  @WatcherGuru
+- [telegram, 66600] JUST IN: 🇺🇸🇨🇳 US Congress summons Nvidia $NVDA CEO Jensen Huang over affair with Chinese spy.  @WatcherGuru
+- [telegram, 62100] JUST IN: 🇺🇸🇨🇳 US investigation into Megaspeed over suspected AI chip smuggling to China halted after Nvidia $NVDA intervened.  CEO Jensen Huang had an affair wi
+- [telegram, 52400] JUST IN: 🇺🇸🇨🇳 Nvidia $NVDA and CEO Jensen Huang sued for allegedly defrauding shareholders by hiding ties to a Chinese spy.  @WatcherGuru
 
 ### SPY — most-engaged items, last 24h
-- [polymarket, 348553] Will there be no change in Fed interest rates after the December 2026 meeting?
-- [polymarket, 324418] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 142442] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- [polymarket, 103711] Another Fed rate hike in 2026?
-- [telegram, 64800] JUST IN: 🇺🇸🇨🇳 Former SEC Chair Gary Gensler says Nvidia's $NVDA board faces "tough choices" following investigation into CEO Jensen Huang's affair with a Chines
+- [polymarket, 351170] Will there be no change in Fed interest rates after the December 2026 meeting?
+- [polymarket, 314668] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
+- [polymarket, 161951] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 147954] Another Fed rate hike in 2026?
+- [telegram, 70800] JUST IN: 🇺🇸🇨🇳 Former SEC Chair Gary Gensler says Nvidia's $NVDA board faces "tough choices" following investigation into CEO Jensen Huang's affair with a Chines
 
 ### COIN — most-engaged items, last 24h
-- [telegram, 76300] JUST IN: 🇺🇸 Coinbase officially receives full US federal approval to operate as a national trust bank.  @WatcherGuru
-- [telegram, 55300] JUST IN: 🇺🇸 $410 billion PNC Bank partners with Coinbase to offer crypto stablecoin payments.  @WatcherGuru
-- [telegram, 6550] 🚨 🚨 🚨  692 $BTC (51,576,616 USD) transferred from Coinbase Institutional to unknown wallet Details
-- [telegram, 6500] 🚨 🚨 🚨  692 $BTC (51,849,283 USD) transferred from Coinbase Institutional to unknown wallet Details
-- [telegram, 6480] 🚨 🚨 🚨  692 $BTC (51,574,170 USD) transferred from Coinbase Institutional to unknown wallet Details
-
-### ETH/USD — most-engaged items, last 24h
-- [polymarket, 106978] Will Ethereum reach $2,300 on November 9?
-- [polymarket, 101643] Will Ethereum reach $2,350 on November 9?
-- [telegram, 41100] JUST IN: 🇺🇸 PNC Bank begins testing USDC stablecoin payments on Ethereum for corporate and institutional clients.  PNC Bank also begins testing conversion of $U
-- [telegram, 9000] 📉 📉 📉 Tracked Hyperliquid trader’s 56,667 ETH long is fully liquidated after cutting exposure from 93,184 ETH Read Analysis
-- [telegram, 2220] Spot Bitcoin ETFs saw $1.282 billion in net outflows last week; spot Ethereum ETFs saw $365 million  From Nov. 2 to Nov. 6 (ET), spot Bitcoin ETFs recorded $1.2
+- [telegram, 81000] JUST IN: 🇺🇸 Coinbase officially receives full US federal approval to operate as a national trust bank.  @WatcherGuru
+- [telegram, 61200] JUST IN: 🇺🇸 $410 billion PNC Bank partners with Coinbase to offer crypto stablecoin payments.  @WatcherGuru
+- [telegram, 7600] 🚨 🚨 🚨  692 $BTC (51,576,616 USD) transferred from Coinbase Institutional to unknown wallet Details
+- [telegram, 7460] 🚨 🚨 🚨  692 $BTC (51,574,170 USD) transferred from Coinbase Institutional to unknown wallet Details
+- [telegram, 7350] 🚨 🚨 🚨  692 $BTC (51,849,283 USD) transferred from Coinbase Institutional to unknown wallet Details
 
 ### QQQ — most-engaged items, last 24h
-- [polymarket, 348553] Will there be no change in Fed interest rates after the December 2026 meeting?
-- [polymarket, 324418] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 142442] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- [polymarket, 103711] Another Fed rate hike in 2026?
-- [telegram, 7650] 📉 📉 📉 Crypto market weakens as traders watch U.S. CPI, PPI, jobless claims, and major earnings for Fed clues Read Analysis
+- [polymarket, 351170] Will there be no change in Fed interest rates after the December 2026 meeting?
+- [polymarket, 314668] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
+- [polymarket, 161951] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 147954] Another Fed rate hike in 2026?
+- [telegram, 8400] 📉 📉 📉 Crypto market weakens as traders watch U.S. CPI, PPI, jobless claims, and major earnings for Fed clues Read Analysis
 
 ### BTC/USD — most-engaged items, last 24h
-- [polymarket, 101845] Will Bitcoin dip to $55,000 by December 31, 2026?
-- [polymarket, 99132] Will Bitcoin dip to $72,500 in November?
-- [polymarket, 79527] Will Bitcoin dip to $70,000 by December 31, 2026?
-- [telegram, 65099] JUST IN: Michael Saylor's 'Strategy' buys 1,037 Bitcoin worth $77 million.  @WatcherGuru
-- [telegram, 9010] 🚨 🚨 🚨 🚨  1,000 $BTC (75,056,408 USD) transferred from #CryptoCom to unknown wallet Details
+- [polymarket, 75180] Will Bitcoin dip to $70,000 by December 31, 2026?
+- [telegram, 70400] JUST IN: Michael Saylor's 'Strategy' buys 1,037 Bitcoin worth $77 million.  @WatcherGuru
+- [telegram, 27900] FUN FACT: 5 years ago today, Bitcoin reached a new all-time high of $69,000 during the 2021 crypto bull run.  @WatcherGuru
+- [telegram, 8430] 🚨 🚨 🚨 🚨 🚨 🚨 🚨  2,194 $BTC (161,888,786 USD) transferred from unknown wallet to unknown new wallet Details
+- [telegram, 7600] 🚨 🚨 🚨  692 $BTC (51,576,616 USD) transferred from Coinbase Institutional to unknown wallet Details
+
+### AMD — most-engaged items, last 24h
+- [telegram, 271] anthropic: google, nvidia, amd, broadcom, micron, microsoft, tsmc to invest $26 billion via private placement at ipo price|FJ
+- [telegram, 231] Arrow agrees to buy 62mt West Pilbara DSO Fe, RHI-AMD|FJ
+- [stocktwits, 29] $SLS To everyone watching $NVDA $AMD $TSLA  look beyond your ticker for one minute and follow the data. 👀    SLS has reached REGAL’s 80th and final event trigge
+- [stocktwits, 25] Cost of not controlling your peepee.     $MU $SPY $TSLA $NVDA $AMD
+- [reddit, 22] "I told him not to tap it." - Dr. Lisa Su, CEO, AMD Predictions:  \- The media will make a circus of this. Like Bill Clinton and Lewsinky, but bigger.   \- Jens
+
+### GOOGL — most-engaged items, last 24h
+- [reddit, 576] Google unveils new AI chip variants as cloud demand surges This might be the real reason NVDA is dumping
+- [telegram, 560] Google to challenge NVIDIA with two new versions of TPU systems.|FJ
+- [telegram, 540] Google’s TPU 8tx and 8i max to handle more specialized tasks.|FJ
+- [telegram, 503] Google announced its expanded eighth-generation TPU portfolio, 8TX & 8I Max. $GOOGL|FJ
+- [telegram, 271] anthropic: google, nvidia, amd, broadcom, micron, microsoft, tsmc to invest $26 billion via private placement at ipo price|FJ
 
 ### MSFT — most-engaged items, last 24h
 - [reddit, 1513] Name a better investor than Jensen Huang's wife. $NVDA bull case just dropped !      The affair rally:  $AMZN has added $2 trillion to its market cap since Bezo
-- [reddit, 22] After trillions of dollars are plucked out of AI stocks where does that money go next? I think I know We all know by now that trillions of dollars have been wip
-- [stocktwits, 16] Give credit where credit is due.    $MSFT $AMZN $NVDA $AAPL
-- [stocktwits, 6] $PLTR $SPY $NVDA buy the Ai SaaS that beats $MSFT $NOW
-- [stocktwits, 6] $NVDA $MSFT $AMZN $TSLA $SPCX  1) A talented man pursues his dream 2) When successful, money follows him 3) Then women follows the money   SK Hynix CEO has been
+- [telegram, 271] anthropic: google, nvidia, amd, broadcom, micron, microsoft, tsmc to invest $26 billion via private placement at ipo price|FJ
+- [reddit, 61] This should work right? right? full ported my portfolio into appl and msft puts. nvda there just to handle my losses 🫠   dd: yolo
+- [reddit, 25] Are you ready for the Anthropic IPO? Everyone’s talking about how Anthropic has a crazy valuation, yet everyone I know is still gonna invest because they think 
+- [reddit, 20] After trillions of dollars are plucked out of AI stocks where does that money go next? I think I know We all know by now that trillions of dollars have been wip
 
-### AAPL — most-engaged items, last 24h
-- [telegram, 56100] JUST IN: Apple $AAPL reportedly plans to turn Siri into an AI agent that can take actions and complete tasks on behalf of users.  @WatcherGuru
-- [telegram, 516] Apple's AI features on Ipad, Macbook get China's approval.|FJ
-- [reddit, 127] Nvidia's down but Micron out-earned Apple last qtr and is worth a 6th as much Nvidia is down more than 5% this morning but the chip number I keep coming back to
-- [reddit, 28] Apple stocks sell or hold ? I have around 200 stocks of Apple with avg cost per share as $90 and I have pretty  good profit.   Contemplating to sell or keep hol
-- [stocktwits, 16] Give credit where credit is due.    $MSFT $AMZN $NVDA $AAPL
-
-### GOOGL — most-engaged items, last 24h
-- [telegram, 537] Google to challenge NVIDIA with two new versions of TPU systems.|FJ
-- [telegram, 522] Google’s TPU 8tx and 8i max to handle more specialized tasks.|FJ
-- [reddit, 519] Google unveils new AI chip variants as cloud demand surges This might be the real reason NVDA is dumping
-- [telegram, 475] Google announced its expanded eighth-generation TPU portfolio, 8TX & 8I Max. $GOOGL|FJ
-- [reddit, 13] CCP Agent back to cleaning dishes 🔥 [All in GOOG instead of this CCP traitor gooner](https://www.bloomberg.com/news/articles/2026-11-09/google-escalates-nvidia-
-
-### GS — most-engaged items, last 24h
-- [telegram, 49500] JUST IN: 🇺🇸 $3.7 trillion Goldman Sachs CEO David Solomon expects massive investment in US data centers and AI computing capacity to continue.  @WatcherGuru
-- [reddit, 498] Goldman Sachs Is Pulling Claude Code From Its Bankers and Traders
-- [telegram, 324] Goldman Sachs CEO Solomon: Optimistic there'll still be a significant amount of investment in data centers, compute capacity in the US - CNBC|FJ
-- [reddit, 131] Dow rallies 900 points, Nasdaq jumps 2% as stocks climb out of postelection slump Stocks surged on Monday, boosted by a decline in oil prices as well as gains i
-- [stocktwits, 7] $NVDA  Goldman Sachs says the next earnings will be spectacular,  outperform target price  $379
-
-### BLK — most-engaged items, last 24h
-- [telegram, 60400] JUST IN: $15 trillion BlackRock expects billions of dollars in crypto to move into ETFs over security concerns.  @WatcherGuru
-- [telegram, 5150] Bitcoin ETFs lost $1,281.7M last week, the largest weekly outflow since late June.   Almost all of it came from BlackRock's IBIT ($1,209.5M), a sign the selling
-- [telegram, 2220] Spot Bitcoin ETFs saw $1.282 billion in net outflows last week; spot Ethereum ETFs saw $365 million  From Nov. 2 to Nov. 6 (ET), spot Bitcoin ETFs recorded $1.2
-- [stocktwits, 29] $SLS To everyone watching $NVDA $AMD $TSLA  look beyond your ticker for one minute and follow the data. 👀    SLS has reached REGAL’s 80th and final event trigge
-- [stocktwits, 4] $BTC.X $ETH.X $BLK what a scumbag     https://m.youtube.com/watch?v=XWwotSf0sbE
-
-### CAT — most-engaged items, last 24h
-- [reddit, 131] Dow rallies 900 points, Nasdaq jumps 2% as stocks climb out of postelection slump Stocks surged on Monday, boosted by a decline in oil prices as well as gains i
-- [reddit, 40] Gotta Give Michael Burry His Flowers Obviously Michael Burry has a mixed record, but back in early October he shared that he rolled most of his options position
-- [reddit, 1] The AI bubble "burst" lasted one weekend. Here is what actually happened. Last Friday, half of Reddit was convinced the AI trade was dead and the market was ent
-
-### META — most-engaged items, last 24h
-- [telegram, 467] Meta plans a sales team and consulting partnerships to win over big companies - The Information. $META|FJ
-- [telegram, 366] Meta Introduces Muse Ember, Its Smallest, Most Efficient Reasoning Model, Available Today on Meta Model API at $0.10/$0.50 per Million Input/Output Tokens. $MET
-- [stocktwits, 9] $RKLB once you realize they are making profits and repaying debt ....$qqq $META $RDW $SPCE
-- [stocktwits, 6] $TSLA $SPCX $META  How’s them Bears doing?! 😂
-- [stocktwits, 6] $NVDA $MSFT $AMZN $TSLA $SPCX  1) A talented man pursues his dream 2) When successful, money follows him 3) Then women follows the money   SK Hynix CEO has been
-
-### PYPL — most-engaged items, last 24h
-- [reddit, 28] Apple stocks sell or hold ? I have around 200 stocks of Apple with avg cost per share as $90 and I have pretty  good profit.   Contemplating to sell or keep hol
-- [reddit, 15] wouldnt be easier to have solutions to bitcoin such as Strike or maybe Paypal or any offchain apps that allow to send satoshis instead of layer 2's or lighting 
-- [stocktwits, 9] $SRFM shoots to $10 with $PLTR FEDRAMP BONE!!!!  $SPY $PYPL Mafia loading $NOW
-- [reddit, 7] Bitcoin to Paypal exchange for small amounts without KYC Hello, does anyone know a reliable service where I can send bitcoin and receive money on an paypal acco
-- [stocktwits, 4] $NOW $PLTR $PYPL $SPY $SRFM
-
-### MSTR — most-engaged items, last 24h
-- [telegram, 65099] JUST IN: Michael Saylor's 'Strategy' buys 1,037 Bitcoin worth $77 million.  @WatcherGuru
-- [telegram, 2580] ICYMI: 🟠 Michael Saylor's Strategy buys 1,036 BTC worth $77 million 🚀  Source: https://x.com/bitcoinmagazine/status/2119778420259201326
-- [telegram, 1670] Strategy Raises $283.8M From MSTR Sales, Spends More on STRC Buybacks Than Bitcoin  Strategy sold 2.05 million MSTR shares for $283.8 million between November 2
-- [stocktwits, 9] $BTC.X $SPY $QQQ $MSTR $DJT   The BIGGEST SCAM in human history that Trump managed to pull isn&#39;t all his irrefutable scams he pulled on his own customers an
-- [stocktwits, 9] $BTC.X $SPY $QQQ $MSTR $DJT   Bitcoin going to crash hard even harder now that Dems are in control.  They&#39;re going to put an end to Trump&#39;s crypto scams
-
-### MU — most-engaged items, last 24h
-- [reddit, 127] Nvidia's down but Micron out-earned Apple last qtr and is worth a 6th as much Nvidia is down more than 5% this morning but the chip number I keep coming back to
-- [reddit, 40] Gotta Give Michael Burry His Flowers Obviously Michael Burry has a mixed record, but back in early October he shared that he rolled most of his options position
-- [reddit, 29] People are obsessed with forwarded PE and other metrics. Well, look at MU and NKE. I’m telling you, Nike stock is cheap. Nike stock is incredibly cheap. I don’t
-- [stocktwits, 19] $SPY $NVDA $MU $CRWV $SPCX
-- [stocktwits, 16] $NVDA $NBIS $MRVL $MU $SNDK
-
-### AMD — most-engaged items, last 24h
-- [stocktwits, 29] $SLS To everyone watching $NVDA $AMD $TSLA  look beyond your ticker for one minute and follow the data. 👀    SLS has reached REGAL’s 80th and final event trigge
-- [reddit, 22] "I told him not to tap it." - Dr. Lisa Su, CEO, AMD Predictions:  \- The media will make a circus of this. Like Bill Clinton and Lewsinky, but bigger.   \- Jens
-- [reddit, 13] Now we know why Jenson Huang was so adamant the US sell all its most high tech chips to China and what it means for the AI trade Poon tang is a mighty strong mo
-- [stocktwits, 12] $NVDA $AMD plot  twist. Lisa introduced Jensen to Alice.
-- [stocktwits, 12] $AMD $MU $SNDK $NVDA Power hour. GL people.
+### ETH/USD — most-engaged items, last 24h
+- [telegram, 55200] JUST IN: 🇺🇸 PNC Bank begins testing USDC stablecoin payments on Ethereum for corporate and institutional clients.  PNC Bank also begins testing conversion of $U
+- [telegram, 5550] 💤  A dormant pre-mine address containing 2,155 $ETH (4,575,753 USD) has just been activated after 11.3 years! Details
+- [telegram, 1950] BitMine Nears 5% of ETH Supply After Adding 9,587 ETH  BitMine said it acquired 9,587 ETH over the past week, bringing total holdings to 6,070,092 ETH, or about
+- [telegram, 1860] Former Ethereum Foundation Official Sues EF and Vitalik Buterin, Alleging Retaliatory Firing Over Mandate Dispute  According to a complaint filed in the U.S. Di
+- [telegram, 1770] Largest U.S. Retail Brokerage Charles Schwab Adds Spot Trading for SOL, AVAX and LINK  Charles Schwab, the largest U.S. retail brokerage, announced on November 
 
 ### AMZN — most-engaged items, last 24h
 - [reddit, 1513] Name a better investor than Jensen Huang's wife. $NVDA bull case just dropped !      The affair rally:  $AMZN has added $2 trillion to its market cap since Bezo
-- [reddit, 22] After trillions of dollars are plucked out of AI stocks where does that money go next? I think I know We all know by now that trillions of dollars have been wip
-- [stocktwits, 16] Give credit where credit is due.    $MSFT $AMZN $NVDA $AAPL
-- [stocktwits, 6] $NVDA $MSFT $AMZN $TSLA $SPCX  1) A talented man pursues his dream 2) When successful, money follows him 3) Then women follows the money   SK Hynix CEO has been
-- [stocktwits, 6] $BB $QQQ $AMD $SPY $AMZN Told yall his morning... GET IN!!
+- [reddit, 20] After trillions of dollars are plucked out of AI stocks where does that money go next? I think I know We all know by now that trillions of dollars have been wip
+- [reddit, 18] Jensen's Wang will bring down the empire. 69 PUTS, $115K Remember Cisco in 2000? Sold the shovels for the internet revolution. Infinite demand. Couldn't go tits
+- [stocktwits, 12] $QQQ $SPY $NVDA $AMZN  Jeff Bezos calling Jensen: “Bro, welcome to the club. First round of PR is on me.” 😂
+- [stocktwits, 10] $QQQ $SPY $AAPL $NVDA $AMZN  Looking at it this way  Apple still looks like the safer bet  No wonder it keeps going up 😂😂
+
+### AAPL — most-engaged items, last 24h
+- [telegram, 63300] JUST IN: Apple $AAPL reportedly plans to turn Siri into an AI agent that can take actions and complete tasks on behalf of users.  @WatcherGuru
+- [telegram, 573] Apple's AI features on Ipad, Macbook get China's approval.|FJ
+- [reddit, 159] Nvidia's down but Micron out-earned Apple last qtr and is worth a 6th as much Nvidia is down more than 5% this morning but the chip number I keep coming back to
+- [reddit, 28] Apple stocks sell or hold ? I have around 200 stocks of Apple with avg cost per share as $90 and I have pretty  good profit.   Contemplating to sell or keep hol
+- [reddit, 25] Are you ready for the Anthropic IPO? Everyone’s talking about how Anthropic has a crazy valuation, yet everyone I know is still gonna invest because they think 
+
+### MU — most-engaged items, last 24h
+- [telegram, 271] anthropic: google, nvidia, amd, broadcom, micron, microsoft, tsmc to invest $26 billion via private placement at ipo price|FJ
+- [reddit, 159] Nvidia's down but Micron out-earned Apple last qtr and is worth a 6th as much Nvidia is down more than 5% this morning but the chip number I keep coming back to
+- [reddit, 29] People are obsessed with forwarded PE and other metrics. Well, look at MU and NKE. I’m telling you, Nike stock is cheap. Nike stock is incredibly cheap. I don’t
+- [stocktwits, 25] Cost of not controlling your peepee.     $MU $SPY $TSLA $NVDA $AMD
+- [stocktwits, 21] $MU $AMD $NVDA $INTC $SPY
 
 ### SOL/USD — most-engaged items, last 24h
-- [telegram, 56800] JUST IN: $13 trillion Charles Schwab adds Solana, Avalanche, and Chainlink trading to its crypto accounts.  @WatcherGuru
-- [telegram, 1240] Largest U.S. Retail Brokerage Charles Schwab Adds Spot Trading for SOL, AVAX and LINK  Charles Schwab, the largest U.S. retail brokerage, announced on November 
-- [stocktwits, 5] $SOL.X grabbed more SOL and $BTC.X ON THE DIP.
-- [stocktwits, 5] $BTC.X $SOL.X $ETH.X Just a quick question for the cryptos today...
-- [stocktwits, 4] $SOL.X  $BTC.X $ETH.X   Sketchy action on a Sunday.   I bought a little bit of $SOL.   Expect these quick dips for another 1-2months.   Buy the dip and stake. S
+- [telegram, 62700] JUST IN: $13 trillion Charles Schwab adds Solana, Avalanche, and Chainlink trading to its crypto accounts.  @WatcherGuru
+- [telegram, 2250] 📉 📉 📉 China’s Central Bank Reportedly Probes Solana-Related Activities in Shanghai Over Illegal Crypto Services Read Analysis
+- [telegram, 1770] Largest U.S. Retail Brokerage Charles Schwab Adds Spot Trading for SOL, AVAX and LINK  Charles Schwab, the largest U.S. retail brokerage, announced on November 
+- [telegram, 875] Upbit to List HYPE Token of World's Largest Decentralized Perpetuals Exchange  Upbit, South Korea's largest cryptocurrency exchange by trading volume, announced
+- [stocktwits, 6] $BTC.X $SOL.X $ETH.X Just a quick question for the cryptos today...
 
-### VOO — most-engaged items, last 24h
-- [stocktwits, 10] $USO $SPY $DJT $QQQ $VOO Peace deal 48 might be the one, we&#39;ll see.     Washington has allowed uranium enrichment inside Iran to 3.67%, and Tehran has agree
-- [stocktwits, 6] $NVDA $BTC.X   This is another reason you guys should invest in Bitcoin…  There is no CEO …  There is no sex scandal …  No board meeting…No reverse split …None 
-- [stocktwits, 5] $NVDA   Where is Biden LOL ?  Everything was much better with him …  This Orange man screwed up the whole world!!!  Everything he touches turns into bad thing… 
-- [stocktwits, 5] $NVDA   He made a fool of himself in front of the whole world in a single day !!!  He became most stupid man on earth from being “one of the smartest “  $SPY $Q
-- [stocktwits, 4] $SPY $QQQ $VOO
+### GS — most-engaged items, last 24h
+- [telegram, 59500] JUST IN: 🇺🇸 $3.7 trillion Goldman Sachs CEO David Solomon expects massive investment in US data centers and AI computing capacity to continue.  @WatcherGuru
+- [telegram, 355] Goldman Sachs CEO Solomon: Optimistic there'll still be a significant amount of investment in data centers, compute capacity in the US - CNBC|FJ
+- [reddit, 246] Dow rallies 900 points, Nasdaq jumps 2% as stocks climb out of postelection slump Stocks surged on Monday, boosted by a decline in oil prices as well as gains i
+- [reddit, 24] The AI bubble "burst" lasted one weekend. Here is what actually happened. Last Friday, half of Reddit was convinced the AI trade was dead and the market was ent
+- [stocktwits, 2] Report: Anthropic $ANT.X to IPO next week    We probably have a short term (until next week) bottom in place. The greedy pricks want their IPO fees! $GS $MS    
+
+### BLK — most-engaged items, last 24h
+- [telegram, 66200] JUST IN: $15 trillion BlackRock expects billions of dollars in crypto to move into ETFs over security concerns.  @WatcherGuru
+- [telegram, 5710] Bitcoin ETFs lost $1,281.7M last week, the largest weekly outflow since late June.   Almost all of it came from BlackRock's IBIT ($1,209.5M), a sign the selling
+- [telegram, 294] BlackRock Sees Record Demand From Bitcoin Whales Converting BTC Into IBIT Over Security Concerns  According to Barron's, BlackRock's Head of Digital Assets, Rob
+- [stocktwits, 29] $SLS To everyone watching $NVDA $AMD $TSLA  look beyond your ticker for one minute and follow the data. 👀    SLS has reached REGAL’s 80th and final event trigge
+- [stocktwits, 7] $NVDA $300+ BlackRock, Fidelity and State Street added 64M shares in Q2. Cathie Wood just grabbed another 90,443 worth $16.88M. Smart money buying while bears k
+
+### META — most-engaged items, last 24h
+- [telegram, 492] Meta plans a sales team and consulting partnerships to win over big companies - The Information. $META|FJ
+- [telegram, 409] Meta Introduces Muse Ember, Its Smallest, Most Efficient Reasoning Model, Available Today on Meta Model API at $0.10/$0.50 per Million Input/Output Tokens. $MET
+- [stocktwits, 15] $RKLB once you realize they are making profits and repaying debt ....$qqq $META $RDW $SPCE
+- [stocktwits, 9] $NVDA lawsuits a  nothing, Burger. Meta gets sued all the time. Facebook, excuse me, Nvidia has unlimited money, nothing burger
+- [stocktwits, 7] $OPEAZZX.P $META $GOOGL $SPY $QQQ 😂😂
+
+### PYPL — most-engaged items, last 24h
+- [reddit, 28] Apple stocks sell or hold ? I have around 200 stocks of Apple with avg cost per share as $90 and I have pretty  good profit.   Contemplating to sell or keep hol
+- [reddit, 9] Bitcoin to Paypal exchange for small amounts without KYC Hello, does anyone know a reliable service where I can send bitcoin and receive money on an paypal acco
+- [reddit, 1] safest way to move money from paypal to crypto? [removed]
+
+### SCHW — most-engaged items, last 24h
+- [telegram, 62700] JUST IN: $13 trillion Charles Schwab adds Solana, Avalanche, and Chainlink trading to its crypto accounts.  @WatcherGuru
+- [telegram, 1770] Largest U.S. Retail Brokerage Charles Schwab Adds Spot Trading for SOL, AVAX and LINK  Charles Schwab, the largest U.S. retail brokerage, announced on November 
+- [reddit, 14] Looking for online broker where I can cancel regular hours orders during after hours trading Right now I am using Schwab (I got there when they bought Ameritrad
+
+### MSTR — most-engaged items, last 24h
+- [telegram, 70400] JUST IN: Michael Saylor's 'Strategy' buys 1,037 Bitcoin worth $77 million.  @WatcherGuru
+- [telegram, 3790] ICYMI: 🟠 Michael Saylor's Strategy buys 1,036 BTC worth $77 million 🚀  Source: https://x.com/bitcoinmagazine/status/2119778420259201326
+- [telegram, 1950] Strategy Raises $283.8M From MSTR Sales, Spends More on STRC Buybacks Than Bitcoin  Strategy sold 2.05 million MSTR shares for $283.8 million between November 2
+- [stocktwits, 15] $BTC.X $MSTR $NVDA
+- [stocktwits, 10] $MSTR $BTC.X MSCI new index list comes out on the 11th, goes live on the 30th. If they and other bitcoin stocks get dropped per the new rules, it will likely ca
+
+### HOOD — most-engaged items, last 24h
+- [telegram, 1280] 56 of 62 Firms Oppose OKXICE Tokenized Stock Plan; All Six Remaining Are Crypto-Linked  Robinhood confirmed it does not object to its shares trading on OKXICE, 
+- [stocktwits, 4] $BTC.X $HOOD UPPPPPP
+- [reddit, 3] Can anyone explain this? From Robinhood:  "The cash value of the stock rewards may not be withdrawn for 60 days after the reward is claimed. Stock rewards not c
+- [stocktwits, 1] $SPY $BTC.X     I think $HOOD is getting screwed in all of this. DD required!     I have a few shares of 2x $ROBN and looking to add more.
+- [reddit, 1] Robinhood [removed]
 
 ### Prediction markets (Polymarket, probability of YES)
 - 5% — US announces end of Iranian blockade by November 15, 2026?
-- 16% — US announces end of Iranian blockade by November 30, 2026?
-- 10% — Will the U.S. invade Iran before 2027?
-- 18% — Will there be no change in Fed interest rates after the December 2026 meeting?
-- 94% — Israel x Iran ceasefire continues through November 15?
+- 18% — US announces end of Iranian blockade by November 30, 2026?
+- 20% — Will there be no change in Fed interest rates after the December 2026 meeting?
+- 38% — US announces end of Iranian blockade by December 31, 2026?
 - 0% — Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- 40% — US announces end of Iranian blockade by December 31, 2026?
+- 10% — Will the U.S. invade Iran before 2027?
+- 97% — Israel x Iran ceasefire continues through November 15?
 - 12% — US-Iran Final Nuclear Deal by December 31, 2026?
-- 14% — US-Iran Hormuz Agreement by November 30?
-- 17% — Next US-Iran senior diplomatic meeting by November 30, 2026?
-- 100% — Israel x Iran ceasefire continues through November 6?
-- 5% — US-Iran Final Nuclear Deal by November 30, 2026?
+- 16% — US-Iran Hormuz Agreement by November 30?
+- 20% — Next US-Iran senior diplomatic meeting by November 30, 2026?
 - 80% — Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- 64% — Israel x Iran ceasefire continues through December 31?
-- 1% — Will Ethereum reach $2,300 on November 9?
-- 82% — Another Fed rate hike in 2026?
-- 10% — Will Bitcoin dip to $55,000 by December 31, 2026?
-- 1% — Will Ethereum reach $2,350 on November 9?
-- 64% — Will Bitcoin dip to $72,500 in November?
-- 38% — Next US-Iran senior diplomatic meeting by December 31, 2026?
-- 20% — US x Iran Effective Ceasefire by November 8?
+- 4% — US-Iran Final Nuclear Deal by November 30, 2026?
+- 80% — Another Fed rate hike in 2026?
+- 68% — Israel x Iran ceasefire continues through December 31?
+- 86% — Israel x Iran ceasefire continues through November 30?
+- 3% — Kharg Island no longer under Iranian control by December 31?
+- 100% — Israel x Iran ceasefire continues through November 7?
 - 34% — US-Iran Hormuz Agreement by December 31?
-- 57% — Will Bitcoin dip to $70,000 by December 31, 2026?
-- 72% — Israel x Iran ceasefire continues through December 15?
-- 4% — Kharg Island no longer under Iranian control by December 31?
+- 40% — Next US-Iran senior diplomatic meeting by December 31, 2026?
+- 90% — Israel x Iran ceasefire continues through November 22?
+- 59% — Will Bitcoin dip to $70,000 by December 31, 2026?
+- 17% — US x Iran Effective Ceasefire by November 8?
+- 78% — Israel x Iran ceasefire continues through December 15?
+- 60% — US x Iran Effective Ceasefire by November 22?
+- 8% — Iran leadership change by December 31?

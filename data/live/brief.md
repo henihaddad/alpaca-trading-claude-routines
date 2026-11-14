@@ -1,198 +1,195 @@
-# Signal brief — 2026-11-14 07:00 UTC
+# Signal brief — 2026-11-14 18:31 UTC
 
 Attention = mentions in the last 24h vs the previous 72h (per source). z24 = sum of hourly z-scores over 24h.
 Tilt = (bullish - bearish) / mentions, from Stocktwits labels and keyword sentiment. Catalysts = tagged headline types.
 
 Mentions and the ratio exclude Stocktwits (its history is too short for a baseline); tilt includes it. geo share = geopolitics share of catalyst tags.
 
-Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 42 symbols with activity, plus held positions.
+Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 39 symbols with activity, plus held positions.
 
 | symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share | score |
 |---|---|---|---|---|---|---|---|
-| MSFT | 44 (+158 stocktwits) | 2.6x | +46.3 | -0.08 | geopolitics:10, earnings:5, price_level:3, macro_data:2 | 43% | 10.0 |
-| QQQ | 119 (+1886 stocktwits) | 1.2x | +21.1 | -0.01 | fed:116, macro_data:72, geopolitics:55, earnings:46 | 17% | 6.0 |
-| BTC/USD | 111 (+1734 stocktwits) | 1.1x | +30.1 | +0.04 | macro_data:23, geopolitics:23, fed:16, price_level:15 | 21% | 5.1 |
-| SPY | 134 (+2400 stocktwits) | 1.0x | +8.9 | -0.04 | fed:117, geopolitics:99, macro_data:74, earnings:41 | 26% | 4.8 |
-| NVDA | 171 (+2128 stocktwits) | 0.6x | +26.5 | +0.09 | earnings:133, geopolitics:90, macro_data:20, policy:15 | 32% | 3.2 |
-| AMZN | 5 (+25 stocktwits) | 1.7x | +0.0 | +0.03 | geopolitics:2, earnings:2 | 50% | 3.0 |
-| HOOD | 5 (+16 stocktwits) | 1.7x | -0.4 | +0.33 | macro_data:1 | 0% | 3.0 |
-| ETH/USD | 8 (+205 stocktwits) | 1.0x | +7.9 | -0.05 | price_level:2, flows:2, earnings:2, fed:1 | 10% | 2.1 |
-| INTC | 6 (+31 stocktwits) | n/a (no baseline) | +0.0 | +0.11 | geopolitics:5, earnings:4, policy:1 | 50% | 1.9 |
-| META | 5 (+36 stocktwits) | n/a (no baseline) | -1.3 | +0.32 | earnings:1, policy:1 | 0% | 1.8 |
-| SMCI | 5 (+58 stocktwits) | n/a (no baseline) | +0.0 | +0.03 | geopolitics:7, earnings:5, policy:1, fed:1 | 47% | 1.8 |
-| MSTR | 4 (+146 stocktwits) | 1.1x | +10.2 | -0.19 | geopolitics:2, macro_data:1 | 67% | 1.8 |
-| AAPL | 9 (+65 stocktwits) | 0.7x | +7.4 | +0.05 | policy:2, earnings:2 | 0% | 1.6 |
-| VOO | 4 (+21 stocktwits) | n/a (no baseline) | +0.0 | +0.20 | geopolitics:1 | 100% | 1.6 |
-| ARM | 4 (+13 stocktwits) | n/a (no baseline) | +0.0 | +0.12 | earnings:1 | 0% | 1.6 |
-| COIN | 9 (+40 stocktwits) | 0.7x | +7.3 | +0.16 | macro_data:3, policy:1, price_level:1, fed:1 | 0% | 1.5 |
-| JPM | 3 (+3 stocktwits) | n/a (no baseline) | +0.0 | +0.67 | - | 0% | 1.4 |
-| SOL/USD | 3 (+25 stocktwits) | n/a (no baseline) | +14.1 | +0.21 | - | 0% | 1.4 |
-| XRP/USD | 3 (+41 stocktwits) | n/a (no baseline) | +17.5 | +0.25 | fed:1, earnings:1 | 0% | 1.4 |
-| GOOGL | 7 (+56 stocktwits) | 0.6x | +3.2 | +0.19 | earnings:3, geopolitics:3 | 50% | 1.2 |
-
-### MSFT — most-engaged items, last 24h
-- [telegram, 46600] JUST IN: 🇺🇸 Microsoft $MSFT says FAA ground stop does not appear to be linked to its services.  @WatcherGuru
-- [reddit, 725] All US Flights grounded, stocks crashing, Microsoft issues! All departing domestic flights are halted until further notice (initially scheduled through 10:00 p.
-- [reddit, 695] Japanese stock markets switch to fax machines amid Microsoft outage
-- [telegram, 491] Microsoft on outage: extending email timeout window to 48 hours to protect delayed messages during service recovery|FJ
-- [telegram, 482] Microsoft on outage: assessing extra mitigation measures to enhance recovery speed and consistency|FJ
-
-### QQQ — most-engaged items, last 24h
-- [polymarket, 844723] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 543186] Will there be no change in Fed interest rates after the December 2026 meeting?
-- [polymarket, 476641] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- [polymarket, 391051] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 313684] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+| BTC/USD | 110 (+1937 stocktwits) | 1.1x | +29.1 | +0.04 | macro_data:17, price_level:16, geopolitics:14, fed:13 | 15% | 5.3 |
+| ETH/USD | 10 (+286 stocktwits) | 1.2x | +8.2 | -0.15 | macro_data:3, price_level:3, earnings:2, geopolitics:1 | 9% | 2.9 |
+| MSFT | 20 (+138 stocktwits) | 0.9x | +13.7 | -0.06 | geopolitics:14, earnings:4, price_level:4, policy:3 | 48% | 2.7 |
+| TSLA | 8 (+373 stocktwits) | 1.1x | +23.3 | +0.12 | geopolitics:17, earnings:8, macro_data:2, policy:2 | 55% | 2.5 |
+| NVDA | 120 (+1976 stocktwits) | 0.4x | +17.3 | +0.10 | earnings:139, geopolitics:109, macro_data:24, policy:20 | 35% | 2.0 |
+| INTC | 4 (+28 stocktwits) | 1.2x | -0.7 | +0.03 | earnings:5, geopolitics:3, policy:1 | 33% | 1.9 |
+| META | 5 (+40 stocktwits) | n/a (no baseline) | +1.5 | +0.31 | policy:3, geopolitics:3, earnings:2 | 38% | 1.8 |
+| QQQ | 45 (+1649 stocktwits) | 0.5x | -2.8 | -0.01 | geopolitics:63, fed:57, earnings:55, macro_data:46 | 25% | 1.8 |
+| SPY | 56 (+2231 stocktwits) | 0.4x | -7.6 | -0.03 | geopolitics:109, earnings:61, fed:59, macro_data:51 | 33% | 1.6 |
+| HOOD | 4 (+14 stocktwits) | 1.0x | +0.0 | -0.22 | flows:1, earnings:1 | 0% | 1.6 |
+| SOL/USD | 4 (+34 stocktwits) | n/a (no baseline) | +19.1 | +0.18 | macro_data:1 | 0% | 1.6 |
+| BRK.B | 3 (+10 stocktwits) | n/a (no baseline) | +0.0 | +0.23 | price_level:3, geopolitics:1, fed:1 | 20% | 1.4 |
+| GME | 3 (+8 stocktwits) | n/a (no baseline) | +0.0 | +0.09 | flows:1, earnings:1 | 0% | 1.4 |
+| XRP/USD | 3 (+66 stocktwits) | n/a (no baseline) | +14.2 | -0.04 | macro_data:4, fed:1, earnings:1, price_level:1 | 0% | 1.4 |
+| VOO | 2 (+23 stocktwits) | n/a (no baseline) | +0.0 | +0.16 | geopolitics:1, macro_data:1 | 50% | 1.1 |
+| COST | 2 (+0 stocktwits) | n/a (no baseline) | +0.0 | -0.50 | earnings:1 | 0% | 1.1 |
+| MU | 2 (+64 stocktwits) | n/a (no baseline) | -2.3 | +0.14 | earnings:3, price_level:2, policy:2, macro_data:2 | 10% | 1.1 |
+| DOGE/USD | 2 (+22 stocktwits) | n/a (no baseline) | +14.9 | -0.38 | policy:1 | 0% | 1.1 |
+| LTC/USD | 2 (+3 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 1.1 |
+| AAPL | 6 (+53 stocktwits) | 0.4x | -0.2 | +0.14 | earnings:2, geopolitics:2 | 50% | 0.8 |
 
 ### BTC/USD — most-engaged items, last 24h
-- [polymarket, 268386] Will Bitcoin dip to $60,000 by December 31, 2026?
-- [polymarket, 205917] Will Bitcoin dip to $65,000 by December 31, 2026?
-- [polymarket, 157028] Will Bitcoin dip to $50,000 by December 31, 2026?
-- [polymarket, 152153] Will Bitcoin dip to $66,000 November 9-15?
-- [polymarket, 151020] Will Bitcoin dip to $64,000 November 9-15?
+- [polymarket, 272738] Will Bitcoin dip to $65,000 by December 31, 2026?
+- [polymarket, 255979] Will Bitcoin dip to $60,000 by December 31, 2026?
+- [polymarket, 180509] Will Bitcoin dip to $50,000 by December 31, 2026?
+- [polymarket, 175513] Will Bitcoin dip to $64,000 November 9-15?
+- [polymarket, 170835] Will Bitcoin dip to $55,000 in November?
 
-### SPY — most-engaged items, last 24h
-- [polymarket, 844723] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 543186] Will there be no change in Fed interest rates after the December 2026 meeting?
-- [polymarket, 476641] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- [polymarket, 391051] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 313684] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+### ETH/USD — most-engaged items, last 24h
+- [polymarket, 149859] Will Ethereum dip to $1,800 in November?
+- [telegram, 138000] JUST IN: Crypto is crashing  $BTC falls under $67,000 $ETH falls under $1,900 $XRP falls under $1.00 $SOL falls under $75  Over $330,000,000 liquidated from the
+- [polymarket, 113182] Will Ethereum dip to $1,750 by December 31, 2026?
+- [telegram, 7650] 📉 📉 📉 Ether Falls Below $1,900 as Ethereum Foundation-Linked Wallet Sells 5,000 ETH in Five Days Read Analysis
+- [telegram, 6110] ℹ️ ℹ️ ℹ️ We are having issues with #Ethereum due to a hardware malfunction at our cloud provider. Hopefully it will be sorted soon.
+
+### MSFT — most-engaged items, last 24h
+- [telegram, 68100] JUST IN: 🇺🇸 Microsoft $MSFT says FAA ground stop does not appear to be linked to its services.  @WatcherGuru
+- [reddit, 725] All US Flights grounded, stocks crashing, Microsoft issues! All departing domestic flights are halted until further notice (initially scheduled through 10:00 p.
+- [telegram, 398] Microsoft on outage: consumer product services partially restored|FJ
+- [telegram, 392] Microsoft on outage: completed work to resolve root issue, restored service to affected customers and regions|FJ
+- [telegram, 362] Microsoft on outage: services across previously impacted environments have been restored|FJ
+
+### TSLA — most-engaged items, last 24h
+- [telegram, 82700] JUST IN: 🇺🇸🇨🇳 Elon Musk to join President Trump on his trip to China next week.  @WatcherGuru
+- [telegram, 71600] JUST IN: Elon Musk says he is signing a petition to reinstate Jensen Huang as Nvidia $NVDA CEO.  @WatcherGuru
+- [telegram, 55800] JUST IN: Elon Musk officially signs petition to reinstate Jensen Huang as Nvidia $NVDA CEO.  @WatcherGuru
+- [telegram, 393] Elon Musk on Jensen Huang: without Jensen, some crucial deals would be lost|FJ
+- [telegram, 392] Elon Musk: Jensen managed Nvidia supply chain expertly, but many agreements were handshakes, not written contracts|FJ
 
 ### NVDA — most-engaged items, last 24h
-- [telegram, 78400] JUST IN: Nvidia $NVDA unveils 'GR00T 2' AI model that allows robots to learn from humans and share skills with other robot bodies.  @WatcherGuru
-- [telegram, 67100] JUST IN: Ian Buck is favored to replace Jensen Huang as Nvidia's next CEO.  @WatcherGuru
-- [telegram, 66800] JUST IN: Nvidia $NVDA approaches $ARM CEO Rene Haas to potentially replace Jensen Huang as CEO.  @WatcherGuru
-- [telegram, 58800] JUST IN: Elon Musk says he is signing a petition to reinstate Jensen Huang as Nvidia $NVDA CEO.  @WatcherGuru
-- [reddit, 17642] “NVIDIA Is NVIDIA Because Of Jensen,” Employees Flood Internal Forums, Demanding Transparency And Calling For Former CEO’s Return
+- [telegram, 102000] JUST IN: Nvidia $NVDA unveils 'GR00T 2' AI model that allows robots to learn from humans and share skills with other robot bodies.  @WatcherGuru
+- [telegram, 71600] JUST IN: Elon Musk says he is signing a petition to reinstate Jensen Huang as Nvidia $NVDA CEO.  @WatcherGuru
+- [telegram, 55800] JUST IN: Elon Musk officially signs petition to reinstate Jensen Huang as Nvidia $NVDA CEO.  @WatcherGuru
+- [telegram, 52200] JUST IN: Watcher Guru Inc. signs petition to reinstate Jensen Huang as Nvidia $NVDA CEO.  @WatcherGuru
+- [telegram, 35300] JUST IN: Petition to reinstate Jensen Huang as CEO of Nvidia $NVDA reaches 100,000 signatures.  @WatcherGuru
 
-### AMZN — most-engaged items, last 24h
-- [telegram, 81900] JUST IN: Amazon $AMZN to collect data on nearly every product sold on earth to compete with Google $GOOGL and AI shopping tools.  @WatcherGuru
-- [reddit, 329] Long-term thesis on buying the Nvidia dip. What risks am I missing? Apologies if this is a beginner question. I’ve researched as much as I can, but past a point
-- [telegram, 245] Soros Fund Management LLC cuts its stake in Amazon  by 10.8% to 1.1 million shares $AMZN|FJ
-- [reddit, 10] More Pass Phrase backup options I think metal is the best backup for your pass phrase. Put it in Safe deposit box at the bank. I think a digital backup is ok if
-- [stocktwits, 7] $QQQ $SPY Even FAA equipment failures are announced at market close?!? I doubt that’s a coincidence 🤣🤣🤣 false flag inbound. Be safe out there! $AMZN $NVDA
+### INTC — most-engaged items, last 24h
+- [reddit, 3041] The true reason Jensen was pushed out in a concerted effort, and why it will juice up Anthropic’s IPO U.S intelligence is already walking back the claim that sh
+- [reddit, 342] Intel intercepts implicating Jensen Huang in affair sparked classified Rubio memo Intelligence agencies reportedly intercepted communications earlier this year 
+- [telegram, 294] Soros Fund Management LLC raises its share stake in Micron Technology by 58.9% to 35,618 shares - SEC filing, and raises its share stake in Intel to 2.8 million
+- [reddit, 29] INTC YOLO What goes down must come up or however that saying goes
+- [stocktwits, 8] $AMD $INTC $NVDA   Musk has already signed it   https://standwithjensen.com/
+
+### META — most-engaged items, last 24h
+- [telegram, 35000] NEW - Zuckerberg's Meta plans to launch its own prediction market app, now in testing with employees.  Read here: https://www.disclose.tv/id/5n5dcawgxl/  @discl
+- [telegram, 380] Italy’s data protection authority fines Meta Platforms €805 million over alleged use of videos and photos of Android users without consent|FJ
+- [telegram, 334] Meta Testing New Prediction-Market App With Employees - WSJ $META|FJ
+- [telegram, 321] Meta is testing a new prediction-market app with employees - WSJ. $META|FJ
+- [stocktwits, 8] $NVDA  $MU $SNDK $AMD $SPY   this is why ai will make a killing, make zillions of dollars.  you can rewrite the code and programming in your car.  even the much
+
+### QQQ — most-engaged items, last 24h
+- [polymarket, 402139] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
+- [polymarket, 373757] Will there be no change in Fed interest rates after the December 2026 meeting?
+- [polymarket, 179189] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 136578] Will the Fed decrease interest rates by 50+ bps after the January 2027 meeting?
+- [polymarket, 126046] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
+
+### SPY — most-engaged items, last 24h
+- [polymarket, 402139] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
+- [polymarket, 373757] Will there be no change in Fed interest rates after the December 2026 meeting?
+- [polymarket, 179189] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 136578] Will the Fed decrease interest rates by 50+ bps after the January 2027 meeting?
+- [polymarket, 126046] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
 
 ### HOOD — most-engaged items, last 24h
 - [reddit, 355] Retail investors have been buying the NVDA dip in enormous numbers Multiple contributors on CNBC today have reported that their retail clients have been buying 
-- [stocktwits, 12] $QNT.X   I expect we will test previous resistance levels, after this long distance pull back ,which is $190 and eventually $212 …  Gaining strength and momentu
-- [stocktwits, 8] $BTC.X   Good morning USA !!!  Buy Bitcoin…  Price is on sale for you…  Great dip buying opportunity!!!  $SPY $QQQ $COIN $HOOD
-- [reddit, 6] Is feeding your customers to predators for $$$ a good sustainable business? I'm talking about Robinhood. I have brokerage accounts in Fidelity, Schwab, Interact
-- [stocktwits, 5] $SPY $HOOD $BTC.X $NVDA $QQQ   bought 800 HOOD at $77.28
-
-### ETH/USD — most-engaged items, last 24h
-- [telegram, 58400] JUST IN: Crypto is crashing  $BTC falls under $67,000 $ETH falls under $1,900 $XRP falls under $1.00 $SOL falls under $75  Over $330,000,000 liquidated from the
-- [telegram, 6970] 🚨 🚨 🚨  31,018 $ETH (59,745,700 USD) transferred from Coinbase Institutional to unknown new wallet Details
-- [telegram, 6760] 🚨 🚨 🚨  31,731 $ETH (61,118,339 USD) transferred from unknown wallet to Coinbase Institutional Details
-- [telegram, 2110] Bitcoin and Ethereum Spot ETFs Record Sixth Consecutive Day of Net Outflows  According to SoSoValue, on November 12 (ET), U.S. spot Bitcoin ETFs recorded net ou
-- [telegram, 1890] WuBlockchain Weekly: Goldman, Citi Back $270M Stablecoin Project, Ethereum Eyes Earlier Quantum Upgrade, Coinbase Wins Trust Bank Approval  Goldman Sachs, Citi 
-
-### INTC — most-engaged items, last 24h
-- [reddit, 1832] The true reason Jensen was pushed out in a concerted effort, and why it will juice up Anthropic’s IPO U.S intelligence is already walking back the claim that sh
-- [reddit, 342] Intel intercepts implicating Jensen Huang in affair sparked classified Rubio memo Intelligence agencies reportedly intercepted communications earlier this year 
-- [telegram, 270] Soros Fund Management LLC raises its share stake in Micron Technology by 58.9% to 35,618 shares - SEC filing, and raises its share stake in Intel to 2.8 million
-- [reddit, 28] INTC YOLO What goes down must come up or however that saying goes
-- [stocktwits, 7] $NVDA $INTC $AVGO $AMD $MU  ‘Bring Back THE Boss’: Nvidia Employees Petition for Jensen Huang’s Return | WIRED https://share.google/8EerrqEoX1mzm8RTG
-
-### META — most-engaged items, last 24h
-- [telegram, 28000] NEW - Zuckerberg's Meta plans to launch its own prediction market app, now in testing with employees.  Read here: https://www.disclose.tv/id/5n5dcawgxl/  @discl
-- [telegram, 298] Meta Testing New Prediction-Market App With Employees - WSJ $META|FJ
-- [telegram, 288] Meta is testing a new prediction-market app with employees - WSJ. $META|FJ
-- [reddit, 105] Buying into fear (or catching the falling knife of Nvidia and earlier MSFT, META, GOOG, etc). *Microsoft, June 2026.* SaaSpocalypse was going to kill  software.
-- [stocktwits, 7] $PRFX LET&#39;S GO! 🚀📈🔥💲🪙🤑💰🟢 $AMD &quot; EXTREMELY BULLISH! &quot; $NVDA $TSLA $META
-
-### SMCI — most-engaged items, last 24h
-- [telegram, 360] Supermicro Spokesperson: Voluntarily provided information and engaged with all requests from Singapore authorities to date $SMCI|FJ
-- [telegram, 321] Super Micro Computer Spokesperson: Megaspeed is not, and has never been, a Supermicro customer. $SMCI|FJ
-- [reddit, 18] SMCI vs. BABA- which one are would you pick? I’m  torn between SMCI and Alibaba Baba and wanted to get the sub's take before pulling the trigger.   Both are sit
-- [stocktwits, 15] $NVDA $NBIS $TSLA $SMCI $AMD
-- [stocktwits, 10] $SPY $QQQ They warned us, companies ignored for profits, and some even smuggled chips to china $SMCI $NVDA - we are now under attack by AI. The AI trade is lite
-
-### MSTR — most-engaged items, last 24h
-- [telegram, 5200] NEW: 🟠 Michael Saylor gives his thoughts on MSCI:  "MSCI is out on their own with this one. I don't know why, but again, not my decision."  Source: https://x.co
-- [telegram, 2029] JPMorgan Raises MSTR and IBIT Holdings While Holding More MSTR Put Exposure Than Stock  JPMorgan’s latest 13F shows 848,932 Strategy shares worth about $131.3 m
-- [reddit, 82] Strategy removed from MSCI I saw a ticker yesterday that Microstrategy was removed from the MSCI index. Could that be another reason for this crash? I mean issu
-- [stocktwits, 11] $BTC.X and now the reversal… cover shorts!!!   Squeeze squeeze squeeze!!! 🚀🚀🚀🚀🚀  $MSTR $BMNR $DOGE.X $ETH.X ￼
-- [stocktwits, 10] $BMNR $COIN $MSTR $BTC.X   Let’s goooooo….
-
-### AAPL — most-engaged items, last 24h
-- [telegram, 400] Apple Homeview available today.|FJ
-- [reddit, 46] New CEO of Nvidia announced by the White House (it's not Tim Cook).
-- [reddit, 35] After Tim Cook took over Nvidia
-- [reddit, 18] The State Wants an AI King. Bitcoin Needs No Ruler. This week, Nvidia evaporated $500 billion in market value—not because its tech failed, but because its CEO h
-- [stocktwits, 10] $SPY Ok, problem fixed    $BB $AAPL $NVDA $QQQ
-
-### VOO — most-engaged items, last 24h
-- [reddit, 28] If I'm wanting to partially live off dividends in two years should I be allocating savings now to a dividend etf or continue to buy growth My wife and I decided
-- [reddit, 12] I took a closer look at this portfolio and found quite a bit of overlap Portfolio reviews can get messy when clients have built up a mix of ETFs and individual 
-- [reddit, 11] While I prefer to trade, I've been looking into options for DCA as I have some friends who are more interested in that. Any thoughts? 25% $RSP - Equal weighted 
-- [stocktwits, 4] $NBIS $VOO $QQQ hey everyone look at this &quot; shorty&quot; that does&#39;t understand how financing works. The 45 billion he is talking about is in 70-80%  o
-- [stocktwits, 4] $BTC.X   V shape reversal will be epic …  Buy Bitcoin…  $SPY $QQQ $NVDA $VOO
-
-### ARM — most-engaged items, last 24h
-- [telegram, 66800] JUST IN: Nvidia $NVDA approaches $ARM CEO Rene Haas to potentially replace Jensen Huang as CEO.  @WatcherGuru
-- [telegram, 315] Arm boss Rene Haas approached in Nvidia CEO search - FT $NVDA $ARM|FJ
-- [telegram, 312] Arm boss Rene Haas approached in Nvidia CEO search - FT $FT $ARM|FJ
-- [telegram, 309] Arm boss Rene Haas approached in Nvidia CEO search - FT $NVDA $ARM|FJ
-- [stocktwits, 5] $NVDA has some levers and balls In play $ARM
-
-### COIN — most-engaged items, last 24h
-- [telegram, 8109] 🚨 🚨 🚨  738 $BTC (51,129,807 USD) transferred from Coinbase Institutional to unknown wallet Details
-- [telegram, 6970] 🚨 🚨 🚨  31,018 $ETH (59,745,700 USD) transferred from Coinbase Institutional to unknown new wallet Details
-- [telegram, 6760] 🚨 🚨 🚨  31,731 $ETH (61,118,339 USD) transferred from unknown wallet to Coinbase Institutional Details
-- [telegram, 6530] 🚨 🚨 🚨 🚨 🚨 🚨 🚨 🚨  2,878 $BTC (198,073,926 USD) transferred from Coinbase Institutional to unknown new wallet Details
-- [telegram, 6410] 🚨 🚨 🚨 🚨 🚨 🚨  2,120 $BTC (145,936,323 USD) transferred from unknown wallet to Coinbase Institutional Details
-
-### JPM — most-engaged items, last 24h
-- [telegram, 2029] JPMorgan Raises MSTR and IBIT Holdings While Holding More MSTR Put Exposure Than Stock  JPMorgan’s latest 13F shows 848,932 Strategy shares worth about $131.3 m
-- [telegram, 348] WATCH LIVE: JPMorgan's Dimon in conversation with Anthropic CEO Amodei (Use VPN if you can't see it)|FJ
-- [reddit, 156] JP Morgan is buying the DIP when you are freaking out JP Morgan just bought 25mln of shares in Strategy to increase its BTC exposure.  And you are paranoid by t
-- [stocktwits, 4] $F 12.5-12.70 next week solid chance for the bulls here not a sure thing but that odds shift a bit better for bulls next week   I see a lot of people claiming t
-- [stocktwits, 1] $COIN Cover you Bears! Reversal happening, Starting to trek Higher! JP Morgan Chase Bank is aquiring $MSTR $HOOD $COIN $BTC.X per Dimon! He sees the vision! $HO
+- [stocktwits, 7] $BTC.X $COIN $HOOD $QQQ $SPY  Stop posting, every time you post something  this shit goes even lower
+- [stocktwits, 5] $BTC.X this won&#39;t stop until touching 60K!! $80K by thanksgiving and 100K+ by Christmas!!     $COIN $MSTR $HOOD Buy low, sell high 🤑
+- [stocktwits, 4] $BTC.X $COIN $HOOD   wtf  My fucking money
+- [stocktwits, 4] $BTC.X   Folks !!!  You need to short this now…  “Bitcoin will go to zero…  Completely worthless…Shit coin…”  Just short it with 100X leverage and put all your 
 
 ### SOL/USD — most-engaged items, last 24h
-- [telegram, 58400] JUST IN: Crypto is crashing  $BTC falls under $67,000 $ETH falls under $1,900 $XRP falls under $1.00 $SOL falls under $75  Over $330,000,000 liquidated from the
-- [telegram, 6810] 📉 📉 📉 Solana Struggles to Hold $77-$80 Support as Open Interest Drops and Bearish Technicals Build Read Analysis
-- [stocktwits, 4] $BTC.X wasn’t going to get GTA 6 but now I need a distraction for the next 6-12 months of bear market $ETH.X $SOL.X
-- [stocktwits, 3] $ETH.X $SOL.X $XRP.X $LINK.X $ZEC.X   QNT 👀👀👀👀👀.
-- [stocktwits, 3] $BTC.X $ETH.X $SOL.X     TOTAL CRYPTO MARKET NOW AT APRIL 2021 LEVELS    Almost 6 years of nothing gained for the industry    Money chasing better assets...
+- [telegram, 138000] JUST IN: Crypto is crashing  $BTC falls under $67,000 $ETH falls under $1,900 $XRP falls under $1.00 $SOL falls under $75  Over $330,000,000 liquidated from the
+- [stocktwits, 5] $QNT.X   As soon as someone sells it then it will go up !!  Who will be Jonah ?  $BTC.X $ETH.X $SOL.X $XRP.X
+- [stocktwits, 5] $ETH.X     $BTC.X  $SOL.X        Crypto will be fine in the long run. Between growing industry lobbying and a record number of young voters holding digital asse
+- [stocktwits, 5] $BTC.X   Fock Binance…  Fock CZ…  Fock Trump…  $ETH.X $XRP.X $SOL.X $ZEC.X
+- [stocktwits, 4] Your first crypto bear market: What have I done.... Your second crypto bear market: omg I can&#39;t go through this again what will I tell my family omg I&#39;m
+
+### BRK.B — most-engaged items, last 24h
+- [reddit, 175] Berkshire breaks out to record high with fourth-quarter rally reaching 19% CNBC reports that Berkshire Hathaway has reached a record high, with its fourth-quart
+- [reddit, 11] While I prefer to trade, I've been looking into options for DCA as I have some friends who are more interested in that. Any thoughts? 25% $RSP - Equal weighted 
+- [stocktwits, 4] $NVDA ~ Nvidia AI. Weekly close at 162.85. DOWN -12.75 this week. Massive bearish breakdown started in the last week of Oct 2026. &quot;You only know who is swi
+- [stocktwits, 3] $SPY $BRK.B   https://wolfstreet.com/2026/11/12/sales-of-existing-single-family-homes-plunge-to-lowest-since-2010-supply-hits-12-year-high-condo-sales-plunge-to
+- [stocktwits, 2] $NVDA ~ 😂 Unfaithful “AI Tech Bro King” &amp; now former “resigned in disgrace” Nvidia CEO Proves Even 150 Billion Net Worth Cannot Buy Common Sense. ~ &quot;Yo
+
+### GME — most-engaged items, last 24h
+- [stocktwits, 10] $GME STRONG LIKE A ROCK    $NVDA -12.7%, $IREN -16%, tech getting smashed all week... and GameStop just sat there, quiet and steady, green 4 of 5 days.    That&
+- [stocktwits, 4] $SPY ground stop. Won’t stop. Gamestop $GME
+- [stocktwits, 3] $GME https://x.com/sneedweb/status/2121080611695727016?a=YlXFfHyIxTTQa902NOg&amp;s=46 Hold the line folks. We are about to skyrocket pretty soon 🔜  $NVDA $SPCX 
+- [reddit, 3] Why do you need to bring politics into this sub? I am so surprised honestly. I can’t believe the uprise off that last post regarding Duffy. Why the hell are you
+- [stocktwits, 2] $SPY grift grift grift grift grift  $GME  Maga
 
 ### XRP/USD — most-engaged items, last 24h
-- [telegram, 58400] JUST IN: Crypto is crashing  $BTC falls under $67,000 $ETH falls under $1,900 $XRP falls under $1.00 $SOL falls under $75  Over $330,000,000 liquidated from the
-- [reddit, 61] Ripple Prime CEO Steps Down Ahead Of XRP Expansion
-- [stocktwits, 11] $BTC.X   In the meantime…  $QNT.X starts to move up!!! 👀👀👀  You’re welcome!!!  $SPY $ETH.X $XRP.X
-- [stocktwits, 10] Bitcoin CEO Satoshi Nakamoto  admits to cheating on his wife!   $BTC.X dips below 66K!  $XRP.X $ETH.X
-- [stocktwits, 7] $XRP.X all this years telling you people that xrp will change the financial system. Only to turn around and sell most of his xrp cause is to volatile.  They dum
+- [telegram, 138000] JUST IN: Crypto is crashing  $BTC falls under $67,000 $ETH falls under $1,900 $XRP falls under $1.00 $SOL falls under $75  Over $330,000,000 liquidated from the
+- [telegram, 39700] JUST IN: $XRP crashes under $0.95 for the first time since November 2024.  @WatcherGuru
+- [stocktwits, 13] Bitcoin CEO Satoshi Nakamoto  admits to cheating on his wife!   $BTC.X dips below 66K!  $XRP.X $ETH.X
+- [stocktwits, 8] $XRP.X $BTC.X $ETH.X $COIN $MSTR  😂😂
+- [stocktwits, 7] $XRP.X $BTC.X People who held crypto and voted for the democrats , its like gays for palestine and chickens for KFC 🤣
 
-### GOOGL — most-engaged items, last 24h
-- [telegram, 81900] JUST IN: Amazon $AMZN to collect data on nearly every product sold on earth to compete with Google $GOOGL and AI shopping tools.  @WatcherGuru
-- [reddit, 329] Long-term thesis on buying the Nvidia dip. What risks am I missing? Apologies if this is a beginner question. I’ve researched as much as I can, but past a point
-- [reddit, 216] Is GOOG not the most obvious buy here? First of all, I know Google has been very popular with this sub for a while now. Obviously I'm not breaking new ground wi
-- [reddit, 105] Buying into fear (or catching the falling knife of Nvidia and earlier MSFT, META, GOOG, etc). *Microsoft, June 2026.* SaaSpocalypse was going to kill  software.
-- [stocktwits, 7] $NVDA $INTC $AVGO $AMD $MU  ‘Bring Back THE Boss’: Nvidia Employees Petition for Jensen Huang’s Return | WIRED https://share.google/8EerrqEoX1mzm8RTG
+### VOO — most-engaged items, last 24h
+- [reddit, 11] While I prefer to trade, I've been looking into options for DCA as I have some friends who are more interested in that. Any thoughts? 25% $RSP - Equal weighted 
+- [stocktwits, 7] $BTC.X $SPY $VOO   If you invested $10,000 in bitcoin 5 years ago you’d have a whopping $10,000 today. Which is about $8,230 inflation adjusted   If you had inv
+- [stocktwits, 6] Recap of the week for the S&amp;P 500 $SPX $SPY $VOO: market breadth is still looking good.  Stocks above the 200, 100, 50 and 20 Dail Moving Averages are comfo
+- [stocktwits, 4] $NBIS $VOO $QQQ hey everyone look at this &quot; shorty&quot; that does&#39;t understand how financing works. The 45 billion he is talking about is in 70-80%  o
+- [stocktwits, 4] $BTC.X $SPY $QQQ $VOO $GLD
+
+### COST — most-engaged items, last 24h
+- [reddit, 38] NVDA: 13.5. Fwd, RDDT: 15 Fwd. Costco: 53 current. Am I missing? Just sold all Costco - also just shopped at Costco for $1000. Still doesn’t justify price   Tho
+- [reddit, 23] Costco stock take profits or hold? Since Costco is above 1100 now is it a good idea to dump most of it?  PE is still super high but the business obviously makes
+
+### MU — most-engaged items, last 24h
+- [telegram, 294] Soros Fund Management LLC raises its share stake in Micron Technology by 58.9% to 35,618 shares - SEC filing, and raises its share stake in Intel to 2.8 million
+- [stocktwits, 20] $SPY $QQQ $NVDA $MU
+- [stocktwits, 12] $QQQ $NVDA $MU $AMD FAA grounds all flights and tech stocks immediately dump, airline stocks barely budge. Just anyyy excuse to dump tech its relentless.
+- [stocktwits, 12] $NVDA $MU $SNDK  Yeah jeeze! Leave the guy alone!
+- [stocktwits, 10] $MU $AVGO $NVDA   We spiked at the end of day because of MOC orderflow.  HEAVY institutional accumulation.  About as bullish as it gets Have a good weekend
+
+### DOGE/USD — most-engaged items, last 24h
+- [stocktwits, 17] $SPY are these guys fucking stupid, they literally still control house &amp; senate and they’re blaming congress for not funding the FAA? Acting like DOGE &amp;
+- [stocktwits, 5] $XRP.X How depressed are you on a scale from 1-10?? $BTC.X $DOGE.X $ETH.X
+- [stocktwits, 4] Your first crypto bear market: What have I done.... Your second crypto bear market: omg I can&#39;t go through this again what will I tell my family omg I&#39;m
+- [reddit, 4] Perspective [https://cryptokeyhole.com/dogecoin-power-law-chart/](https://cryptokeyhole.com/dogecoin-power-law-chart/)
+- [stocktwits, 3] $XRP.X $BTC.X $ETH.X $DOGE.X $SHIB.X well I&#39;m sure McDonald&#39;s applications are skyrocketing now that the little ponzi scheme is dumping
+
+### LTC/USD — most-engaged items, last 24h
+- [hackernews, 7] Ask HN: What use are the non-major cryptocurrencies? I am curious - what use are the cryptocurrencies&#x2F;tokens that are not one of the major ones (like USDT,
+- [stocktwits, 4] $XRP.X $XLM.X $BTC.X $ETH.X $LTC.X ...
+- [stocktwits, 2] Buy the fear 💎🤲  $BTC.X $ETH.X $DOGE.X $SOL.X $LTC.X
+- [reddit, 2] What is going on this week? What is your play - hold, sell, buy - what are you targeting most? Got a good recovery, then every little spike we had every day, ju
+- [stocktwits, 0] $XRP.X $BTC.X $LTC.X
+
+### AAPL — most-engaged items, last 24h
+- [reddit, 35] After Tim Cook took over Nvidia
+- [stocktwits, 10] $SPY Ok, problem fixed    $BB $AAPL $NVDA $QQQ
+- [stocktwits, 8] $SPY $AMZN $AAPL $GOOGL Nothings more bullish for tech stocks than more promised soybean purchases that dont come to fruition. Get the rocket emojis ready boys
+- [stocktwits, 8] $RKLB $NVDA $CRWD $SPCX $ASTS   https://apple.news/AtBH1gQFqQEO02vvx9wCY0g  Am I the only person out there that thinks this is the most sus timing for this to h
+- [stocktwits, 7] $NVDA everyone using the Tim Cook succession, man he and this new dude still living off Jobs’ Iphone which Jobs barely had a chance to harvest that successful i
 
 ### Prediction markets (Polymarket, probability of YES)
-- 8% — Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
-- 3% — Will there be no change in Fed interest rates after the December 2026 meeting?
-- 88% — Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- 0% — Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
+- 9% — Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
+- 4% — Will there be no change in Fed interest rates after the December 2026 meeting?
 - 98% — Israel x Iran ceasefire continues through November 15?
+- 100% — Will Bitcoin dip to $65,000 by December 31, 2026?
+- 56% — Will Bitcoin dip to $60,000 by December 31, 2026?
+- 16% — Will Bitcoin dip to $50,000 by December 31, 2026?
 - 0% — Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
-- 46% — Will Bitcoin dip to $60,000 by December 31, 2026?
-- 82% — Will Bitcoin dip to $65,000 by December 31, 2026?
+- 41% — Will Bitcoin dip to $64,000 November 9-15?
+- 13% — Will Bitcoin dip to $55,000 in November?
+- 28% — Will Bitcoin dip to $55,000 by December 31, 2026?
+- 1% — FAA outage attributed to Iran?
+- 84% — Will Ethereum dip to $1,800 in November?
 - 0% — Will the Fed decrease interest rates by 50+ bps after the January 2027 meeting?
-- 12% — Will Bitcoin dip to $50,000 by December 31, 2026?
-- 44% — Will Bitcoin dip to $66,000 November 9-15?
-- 13% — Will Bitcoin dip to $64,000 November 9-15?
-- 5% — Will Bitcoin dip to $62,000 November 9-15?
-- 2% — FAA outage attributed to Iran?
-- 10% — Will Bitcoin dip to $55,000 in November?
-- 24% — Will Bitcoin dip to $55,000 by December 31, 2026?
-- 8% — Bitcoin Up or Down on November 14?
-- 1% — US announces end of Iranian blockade by November 15, 2026?
-- 24% — US x Iran Effective Ceasefire by November 8?
+- 60% — Will Bitcoin dip to $62,500 in November?
+- 0% — Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
 - 6% — Will Bitcoin reach $90,000 by December 31, 2026?
+- 76% — Will Ethereum dip to $1,750 by December 31, 2026?
+- 9% — Will Bitcoin dip to $45,000 by December 31, 2026?
+- 18% — Will Bitcoin dip to $64,000 on November 14?
+- 1% — US announces end of Iranian blockade by November 15, 2026?
+- 16% — Will Bitcoin dip to $62,000 November 9-15?
 - 100% — Israel x Iran ceasefire continues through November 13?
-- 93% — Will the price of Bitcoin be above $66,000 on November 14?
-- 7% — Will Bitcoin dip to $45,000 by December 31, 2026?
-- 22% — Will the price of Bitcoin be above $68,000 on November 14?
-- 0% — Will the price of Bitcoin be above $74,000 on November 14?
+- 28% — US x Iran Effective Ceasefire by November 8?
+- 6% — US announces end of Iranian blockade by November 30, 2026?
+- 23% — Will Bitcoin dip to $57,500 in November?

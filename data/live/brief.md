@@ -1,188 +1,181 @@
-# Signal brief — 2026-11-26 21:56 UTC
+# Signal brief — 2026-11-27 09:02 UTC
 
 Attention = mentions in the last 24h vs the previous 72h (per source). z24 = sum of hourly z-scores over 24h.
 Tilt = (bullish - bearish) / mentions, from Stocktwits labels and keyword sentiment. Catalysts = tagged headline types.
 
 Mentions and the ratio exclude Stocktwits (its history is too short for a baseline); tilt includes it. geo share = geopolitics share of catalyst tags.
 
-Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 43 symbols with activity, plus held positions.
+Ranked by score = 24h growth vs prior 72h x log(mentions). Showing top 20 of 38 symbols with activity, plus held positions.
 
 | symbol | 24h mentions | vs prior 72h avg/day | z24 | tilt | catalysts (24h) | geo share | score |
 |---|---|---|---|---|---|---|---|
-| TSLA | 8 (+191 stocktwits) | 2.2x | +26.5 | +0.23 | earnings:8, geopolitics:6, policy:5, fed:2 | 25% | 4.8 |
-| BTC/USD | 98 (+772 stocktwits) | 1.0x | +27.2 | +0.26 | macro_data:14, flows:12, policy:8, price_level:8 | 9% | 4.5 |
-| PLTR | 5 (+13 stocktwits) | n/a (no baseline) | +0.0 | +0.28 | earnings:1 | 0% | 1.8 |
-| QQQ | 28 (+726 stocktwits) | 0.5x | -0.3 | +0.14 | macro_data:29, fed:25, geopolitics:23, policy:20 | 19% | 1.7 |
-| GOOGL | 6 (+33 stocktwits) | 0.8x | +6.5 | +0.26 | earnings:2, price_level:1, policy:1, geopolitics:1 | 20% | 1.6 |
-| MET | 3 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 1.4 |
-| PANW | 3 (+2 stocktwits) | n/a (no baseline) | +0.0 | -0.20 | macro_data:1 | 0% | 1.4 |
-| SPY | 25 (+1496 stocktwits) | 0.4x | -4.8 | +0.14 | macro_data:44, geopolitics:43, fed:43, policy:19 | 24% | 1.2 |
-| VOO | 2 (+4 stocktwits) | n/a (no baseline) | +0.0 | +0.50 | - | 0% | 1.1 |
-| IWM | 2 (+42 stocktwits) | n/a (no baseline) | -0.3 | +0.09 | macro_data:6, geopolitics:4, policy:2, fed:2 | 29% | 1.1 |
-| ADBE | 2 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 1.1 |
-| AMD | 2 (+104 stocktwits) | n/a (no baseline) | +4.8 | +0.49 | price_level:4, fed:4, geopolitics:4, macro_data:2 | 22% | 1.1 |
-| BLK | 2 (+2 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | flows:3, price_level:1 | 0% | 1.1 |
-| META | 2 (+25 stocktwits) | n/a (no baseline) | +13.2 | +0.19 | geopolitics:2, earnings:1 | 67% | 1.1 |
-| SMCI | 2 (+52 stocktwits) | n/a (no baseline) | +0.0 | +0.20 | geopolitics:13, policy:2, earnings:1, fed:1 | 76% | 1.1 |
-| GME | 2 (+5 stocktwits) | n/a (no baseline) | +0.0 | -0.14 | flows:1 | 0% | 1.1 |
-| RKLB | 2 (+1 stocktwits) | n/a (no baseline) | +0.0 | +0.33 | policy:1, geopolitics:1 | 50% | 1.1 |
-| ASTS | 2 (+1 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | policy:1 | 0% | 1.1 |
-| DOGE/USD | 2 (+14 stocktwits) | n/a (no baseline) | +12.7 | +0.69 | flows:1 | 0% | 1.1 |
-| MSTR | 3 (+90 stocktwits) | 0.8x | +4.6 | +0.14 | fed:1, policy:1, price_level:1, macro_data:1 | 0% | 1.0 |
-
-### TSLA — most-engaged items, last 24h
-- [reddit, 15263] Korean news anchor tears up over Nasdaq losses on live tv. "It’s a very difficult market, and you must overcome it well." South Korean "Seohak ants" hold heavy 
-- [telegram, 9040] JUST IN: 🇺🇸 Elon Musk pledges to donate a share of his SpaceX $SPCX stock to every child in America every year.  @WatcherGuru
-- [reddit, 1102] Remember the 2026 WSB Index? Well, the pie got cooked. Since we’re approaching the end of the year, I figured I’d check how our collective financial genius has 
-- [reddit, 594] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
-- [stocktwits, 89] $SPY $TSLA $NVDA     Happy Thanksgiving to all my subs and followers    I hope you have a wonderful time with family and friends.     And to those who don&#39;t
+| BTC/USD | 79 (+760 stocktwits) | 0.8x | +15.6 | +0.22 | macro_data:12, flows:12, price_level:9, policy:6 | 8% | 3.4 |
+| TSLA | 6 (+180 stocktwits) | 1.5x | +18.2 | +0.25 | earnings:10, geopolitics:4, policy:4, macro_data:2 | 19% | 2.9 |
+| AAPL | 4 (+35 stocktwits) | 1.0x | +11.2 | +0.31 | geopolitics:3, earnings:2, policy:1, macro_data:1 | 43% | 1.6 |
+| QQQ | 26 (+793 stocktwits) | 0.4x | -5.5 | +0.19 | macro_data:34, geopolitics:20, fed:16, earnings:14 | 19% | 1.4 |
+| SPY | 28 (+1685 stocktwits) | 0.4x | -4.2 | +0.18 | macro_data:51, geopolitics:39, fed:33, policy:17 | 23% | 1.4 |
+| VOO | 3 (+4 stocktwits) | n/a (no baseline) | +0.0 | +0.57 | - | 0% | 1.4 |
+| META | 3 (+26 stocktwits) | n/a (no baseline) | +19.0 | +0.21 | earnings:1, geopolitics:1 | 50% | 1.4 |
+| ETH/USD | 6 (+128 stocktwits) | 0.6x | +1.9 | +0.31 | flows:4, earnings:1, geopolitics:1 | 17% | 1.3 |
+| GOOGL | 5 (+29 stocktwits) | 0.7x | +9.8 | +0.29 | earnings:2, policy:1, geopolitics:1 | 25% | 1.2 |
+| IWM | 2 (+28 stocktwits) | n/a (no baseline) | -0.9 | +0.00 | fed:2, geopolitics:2, policy:2, macro_data:1 | 29% | 1.1 |
+| AMD | 2 (+116 stocktwits) | n/a (no baseline) | +3.8 | +0.64 | earnings:5, geopolitics:3, policy:2, price_level:2 | 25% | 1.1 |
+| JPM | 2 (+9 stocktwits) | n/a (no baseline) | +0.0 | +0.09 | flows:1, price_level:1, earnings:1 | 0% | 1.1 |
+| SMCI | 2 (+52 stocktwits) | n/a (no baseline) | +6.5 | +0.30 | geopolitics:10, policy:1, fed:1, earnings:1 | 77% | 1.1 |
+| AMZN | 3 (+13 stocktwits) | 0.8x | +8.2 | +0.38 | policy:1, geopolitics:1, macro_data:1, earnings:1 | 25% | 1.0 |
+| ADBE | 1 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 0.7 |
+| BLK | 1 (+2 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | flows:2, price_level:1 | 0% | 0.7 |
+| BRK.B | 1 (+1 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 0.7 |
+| DIS | 1 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 0.7 |
+| MET | 1 (+0 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 0.7 |
+| NFLX | 1 (+8 stocktwits) | n/a (no baseline) | +0.0 | +0.00 | - | 0% | 0.7 |
 
 ### BTC/USD — most-engaged items, last 24h
-- [polymarket, 2023424] Will the price of Bitcoin be between $60,000 and $62,000 on November 27?
-- [polymarket, 123386] Will Bitcoin dip to $50,000 by December 31, 2026?
-- [polymarket, 108707] Will Bitcoin dip to $50,000 in November?
-- [polymarket, 91457] Will Bitcoin reach $72,500 in November?
-- [telegram, 85100] JUST IN: Bitcoin reclaims $61,000  @WatcherGuru
+- [polymarket, 2031221] Will the price of Bitcoin be between $60,000 and $62,000 on November 27?
+- [polymarket, 163340] Will Bitcoin dip to $50,000 by December 31, 2026?
+- [polymarket, 134084] Will Bitcoin dip to $50,000 in November?
+- [polymarket, 100276] Will Bitcoin reach $500,000 by December 31, 2026?
+- [polymarket, 95884] Will Bitcoin reach $62,500 in November?
 
-### PLTR — most-engaged items, last 24h
-- [reddit, 1102] Remember the 2026 WSB Index? Well, the pie got cooked. Since we’re approaching the end of the year, I figured I’d check how our collective financial genius has 
-- [reddit, 606] Michael Burry says he’s now almost entirely long. Is it real? JUST NOW🚨: Michael Burry says he’s now almost entirely long  He:  1. Sold his remaining #Nasdaq 10
-- [stocktwits, 21] $MU BREAKING: JPMorgan expects AI spending to nearly double to $1,400,000,000,000.00 in 2027. $NVDA $SPCX $PLTR
-- [stocktwits, 13] $PLTR man , seeing Palantir co-founder l/chairman Peter Thiel put $122 million into his own company in a market like this—that’s conviction. 🚀$NVDA $TSLA $SPY $
-- [stocktwits, 10] $MU $NVDA $PLTR $SPCX
+### TSLA — most-engaged items, last 24h
+- [telegram, 62000] JUST IN: 🇺🇸 Elon Musk pledges to donate a share of his SpaceX $SPCX stock to every child in America every year.  @WatcherGuru
+- [reddit, 1014] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
+- [stocktwits, 107] $AMFN if you believe in the Texatron and American Fusion. Hit that like button for me trying to see all my fellow bulls and wish you a happy thanksgiving 🦃 🍽 pl
+- [reddit, 23] Elon Musk pledges to give away SpaceX shares to every American child
+- [stocktwits, 22] Scary 🫣  Are y’all ready?   $TSLA $SPCX $AMD $MU $NBIS
+
+### AAPL — most-engaged items, last 24h
+- [telegram, 8029] 📉 📉 📉 Food delivery app previously linked to crypto-stealing malware returns to Apple App Store under new publisher Read Analysis
+- [reddit, 1014] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
+- [reddit, 29] High Risk Tolerance Portfolio Advice at 18 What do you guys think of my portfolio at 18, I have a fairly high risk tolerance and im not planning on pulling mone
+- [reddit, 14] Buying a bitcoin gift card in 2026? Wondering if it’s possible to purchase a bitcoin gift card of  to someone similar to Apple or Walmart that you would send so
+- [stocktwits, 10] $QQQ $SPY $AAPL Apple market cap is 42% higher than 2nd place MSFT.  That&#39;s the biggest gap since Sept 2012...and here is what happened in 2012.    This has
 
 ### QQQ — most-engaged items, last 24h
-- [polymarket, 381168] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 268945] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- [polymarket, 268350] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 207492] Will there be no change in Fed interest rates after the December 2026 meeting?
-- [polymarket, 172418] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
-
-### GOOGL — most-engaged items, last 24h
-- [reddit, 1102] Remember the 2026 WSB Index? Well, the pie got cooked. Since we’re approaching the end of the year, I figured I’d check how our collective financial genius has 
-- [reddit, 738] Google Stock Hits 52-Week Low at $262.73 as Search Growth Slows and AI Costs Surge
-- [reddit, 594] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
-- [stocktwits, 8] $NVDA trump said us government might buy a huge stake in NVDA. This is literally our weapon against foreign powers and our hope to win the Ai race… $SPY $ANT $G
-- [stocktwits, 8] $ANT   What a time to be alive and use AI #itshappening  $NVDA $SPCX $GOOGL $META
-
-### MET — most-engaged items, last 24h
-- [reddit, 606] Michael Burry says he’s now almost entirely long. Is it real? JUST NOW🚨: Michael Burry says he’s now almost entirely long  He:  1. Sold his remaining #Nasdaq 10
-- [reddit, 2] Michael Burry says he’s now almost entirely long after selling the rest of his bearish Nasdaq 100 puts. &#x200B;  “Globally, my portfolio is more long, and less
-- [reddit, 2] BREAKING: Michael Burry says he’s now almost entirely long after selling the rest of his bearish Nasdaq 100 puts “Globally, my portfolio is more long, and less 
-
-### PANW — most-engaged items, last 24h
-- [reddit, 73] Palo Alto Networks Accused by Ex-Manager of Accounting Fraud My portfolio is down bigly right now with memory stocks dumping then NVDA scandal brought it down e
-- [reddit, 2] Palo Alto Networks Accused by Ex-Manager of Accounting Fraud [removed]
-- [stocktwits, 1] $NVDA account irregularities are a major problem. PANW just crashed as an executive reported account irregularities and cooking books. Circular financing is ano
-- [stocktwits, 1] $NVDA $PANW $DE $SPY $QQQ  **Market update — 12:30pm CT** (1/7)
-- [reddit, 1] Palo Alto Networks Accused by Ex-Manager of Accounting Fraud [removed]
+- [polymarket, 636379] Will there be no change in Fed interest rates after the December 2026 meeting?
+- [polymarket, 301727] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
+- [polymarket, 264405] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 176131] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 149014] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
 
 ### SPY — most-engaged items, last 24h
-- [polymarket, 381168] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 268945] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
-- [polymarket, 268350] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
-- [polymarket, 207492] Will there be no change in Fed interest rates after the December 2026 meeting?
-- [polymarket, 172418] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 636379] Will there be no change in Fed interest rates after the December 2026 meeting?
+- [polymarket, 301727] Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
+- [polymarket, 264405] Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 176131] Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
+- [polymarket, 149014] Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
 
 ### VOO — most-engaged items, last 24h
+- [reddit, 29] High Risk Tolerance Portfolio Advice at 18 What do you guys think of my portfolio at 18, I have a fairly high risk tolerance and im not planning on pulling mone
+- [reddit, 17] The Perfect Portfolio: 50% VOO + 50% GPIX I am 32 years old. In my opinion, after doing a ton of research, you generally can't beat the market in the long term.
 - [stocktwits, 6] $VOO $QQQ $NVDA  Happy Thanksgiving Degens 🦃 🦃 🦃 🍺 🍺 🍺
-- [stocktwits, 4] $BTC.X $SPY $QQQ $VOO $SCHD   $13T (Trillion) AUM ….  Vanguard Advisory Arm reports they bought Bitcoin for the first time ever …  Now they hold $2.6B worth of 
 - [stocktwits, 3] $QQQ $SPY $VOO $GOOG  Up from here or more pain ahead?
-- [reddit, 1] VOO down 8% from highs, below the 200-day - who's actually buying this dip? [removed]
-- [reddit, 1] High Risk Tolerance Portfolio Advice at 18 What do you guys think of my portfolio at 18, I have a fairly high risk tolerance and im not planning on pulling mone
+- [stocktwits, 1] $QQQ $VOO
+
+### META — most-engaged items, last 24h
+- [reddit, 1014] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
+- [telegram, 458] Japan's Jera aims to build Anthropic and Meta data centers near power plants - Nikkei $META|FJ
+- [stocktwits, 22] 🦃 Happy Thanksgiving, Stocktwits fam! 🍁  Whether you’re a bull, a bear, a bagholder, or sitting in cash, today is about appreciating what we have.  May your tur
+- [stocktwits, 14] $AMFN $NVDA $META
+- [stocktwits, 6] $META $NVDA $SNDK Me looking at futures..
+
+### ETH/USD — most-engaged items, last 24h
+- [polymarket, 46703] Will the price of Ethereum be above $1,800 on November 27?
+- [polymarket, 46668] Will Ethereum reach $3,100 in November?
+- [telegram, 7620] 📉 📉 📉 Ethereum falls 29% in a month as spot ETF outflows continue for eight straight sessions Read Analysis
+- [telegram, 7520] 📉 📉 📉 Attacker linked to October Binance hack moves $35.52 million in ETH as $1.9 billion in crypto remains unfrozen Read Analysis
+- [stocktwits, 6] $ETH.X make no mistake. Long term this will be the best performing asset over the next decade. All my short term trades are just that. Short term. We could 50x 
+
+### GOOGL — most-engaged items, last 24h
+- [reddit, 1014] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
+- [telegram, 452] Jera Global CEO and Chair: The energy group is in discussions with Amazon, Microsoft, and Google - Nikkei. $GOOGL $AMZN $MSFT|FJ
+- [reddit, 40] Google - could the share price fall be due to something very basic? There are a lot of theories about why Alphabet shares are falling, mostly related to capex a
+- [reddit, 29] High Risk Tolerance Portfolio Advice at 18 What do you guys think of my portfolio at 18, I have a fairly high risk tolerance and im not planning on pulling mone
+- [reddit, 17] Discrete Logarithms in Finite Fields of Fixed Characteristic in Sub-Quasi-Polynomial Time (new AI paper from google) Here the link to the paper form yesterday! 
 
 ### IWM — most-engaged items, last 24h
-- [reddit, 15] Are half-day market moves even worth taking seriously? US markets reopen Friday for just 3.5 hours after Thanksgiving. Wednesday was already mixed, with SPY dow
-- [stocktwits, 9] $QQQ $SPY $IWM This is good. And true if you have been in this game more than a few cycles.
-- [stocktwits, 7] $SPY $QQQ $DIA $IWM $TLT
-- [stocktwits, 6] $SPY $QQQ $IWM $NVDA
+- [reddit, 28] Are half-day market moves even worth taking seriously? US markets reopen Friday for just 3.5 hours after Thanksgiving. Wednesday was already mixed, with SPY dow
+- [stocktwits, 11] $QQQ $SPY $IWM This is good. And true if you have been in this game more than a few cycles.
+- [stocktwits, 6] $SPY $QQQ $IWM thanks brother
 - [stocktwits, 6] $SPY $QQQ $IWM $DIA Happy Thanksgiving all!    🍂✝️🍂
-
-### ADBE — most-engaged items, last 24h
-- [reddit, 606] Michael Burry says he’s now almost entirely long. Is it real? JUST NOW🚨: Michael Burry says he’s now almost entirely long  He:  1. Sold his remaining #Nasdaq 10
-- [reddit, 9] Intuit at $272 bests any stock in my watchlist . **Intuit at $272: why I prefer it to Adobe and the rest of my shortlist.** At the November 25 closing reference
+- [stocktwits, 4] $SPY $QQQ $IWM   Some idiot followed my $705 Calls yesterday and made stupid money 💰
 
 ### AMD — most-engaged items, last 24h
 - [reddit, 35] Explain why AMD put went up so much Can someone explain why the 200 AMD put option went up so much on wed. AMD261127P00200000   The options at other prices abov
-- [stocktwits, 19] $QQQ $SPY $SOXL $NVDA $AMD looks like Santa Claus is coming to town. Sucks for those who forgot to do their Christmas shopping today. You won&#39;t be enjoy the
-- [stocktwits, 19] $MU $NVDA $AMD $NBIS $TSLA
-- [reddit, 15] If you own Nvidia / AMD right now you're probably looking at chip demand and completely missing the debt piling up underneath it. If you own Nvidia / AMD right 
-- [stocktwits, 12] $BB $AMD $NVDA $SPY $QQQ
+- [stocktwits, 22] Scary 🫣  Are y’all ready?   $TSLA $SPCX $AMD $MU $NBIS
+- [stocktwits, 21] $SPY $MU $TSLA $AMD $NBIS
+- [stocktwits, 13] $QQQ $SPY $AMD $ATOM.X Happy Thanksgiving to all my US friends. I hope you return a little bit less divided than before. Best wishes from Germany.
+- [stocktwits, 13] $AMD $NVDA $INTC $SPY $QQQ  Happy Thanksgiving
 
-### BLK — most-engaged items, last 24h
-- [telegram, 1830] U.S. Bitcoin and Ether ETFs Shed $522 Million, Led by BlackRock  According to SoSoValue, U.S. spot Bitcoin ETFs recorded $453 million in net outflows on Novembe
-- [telegram, 1110] JPMorgan: Strategy’s mNAV Hits Record Low of 0.88x, Below Previous Low in Late June  JPMorgan analysts said Strategy’s valuation relative to its bitcoin holding
-- [stocktwits, 1] $COIN $MSTR $SOL.X BlackRock ETF clients sell $329.71 million worth of $BTC.X and $68.51 million worth of $ETH.X.😳😳
-- [stocktwits, 0] $ETH.X holds near $1,700 after touching $1,730 on Thanksgiving. U.S. spot Ether ETFs logged an eighth straight day of outflows, led by BlackRock&#39;s ETHA.
-
-### META — most-engaged items, last 24h
-- [reddit, 594] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
-- [reddit, 45] The average person's crypto knowledge Canadian here. I feel like people in crypto spaces get way too caught up in technical details and forget what the average 
-- [stocktwits, 22] 🦃 Happy Thanksgiving, Stocktwits fam! 🍁  Whether you’re a bull, a bear, a bagholder, or sitting in cash, today is about appreciating what we have.  May your tur
-- [stocktwits, 8] $ANT   What a time to be alive and use AI #itshappening  $NVDA $SPCX $GOOGL $META
-- [stocktwits, 5] $MU $QQQ $SNDK $SOXX   It’s thanksgiving and in Canada where fk up and already had it but to you and your family ❤️  https://www.facebook.com/share/r/19VyiAzKjU
+### JPM — most-engaged items, last 24h
+- [telegram, 2000] JPMorgan: Strategy’s mNAV Hits Record Low of 0.88x, Below Previous Low in Late June  JPMorgan analysts said Strategy’s valuation relative to its bitcoin holding
+- [stocktwits, 9] $SPY $NVDA $MU $SNDK   BREAKING: JPMorgan and Citi are reportedly trying to sell off parts of their AI loan portfolios to cut their exposure to AI debt, per Sem
+- [stocktwits, 7] $SOXX $NVDA $SOXL $QQQ $SPY     JP Morgan forecasts continuing AI capex growth in 2027 and 2028.
+- [stocktwits, 6] $COIN $MSTR $BTC.X $SPY $QQQ JPMorgan says bitcoin &#39;capitulation&#39; signaled by Strategy&#39;s record-low NAV multiple.😳😳
+- [stocktwits, 2] JPMorgan says a Tesla and SpaceX merger could let S&amp;P waive some index rules and fast track SpaceX into the S&amp;P 500, possibly sparking passive buying of
 
 ### SMCI — most-engaged items, last 24h
-- [reddit, 450] Breaking: Nvidia halts chip shipments to south-east Asia Nvidia halts chip shipments to Southeast Asia as the US tightens export controls, per FT.  Nvidia has r
 - [stocktwits, 16] $SMCI $SPY $NVDA $APLD   Happy thanksgiving all 🇺🇸 have a great day. So much to be thankful for.
-- [stocktwits, 11] $NVDA ~ Nov 2026. $CRWV $QQQ $SPY $SMCI
-- [stocktwits, 11] $NVDA $AMD $MU $SKHY $SMCI     9PM EST Futures    Aftermarket continued the climb.    ~
-- [stocktwits, 8] Oh the horror $NVDA head of global sales dated and then married an ethnically Chinese senior exec at $SMCI. It’s almost unfathomable to think two succesful and 
+- [stocktwits, 12] $NVDA $AMD $MU $SKHY $SMCI     ~
+- [stocktwits, 11] $QQQ $SMCI  tech about to go parabolic
+- [stocktwits, 10] $NVDA $AMD $MU $SKHY $SMCI     Hope everyone has had or is having a wonderful Thanksgiving Day    6:05PM Futures    ~
+- [stocktwits, 9] $NVDA $AMD $MU $SKHY $SMCI     If you didn&#39;t take advantage of the pullbacks from the FUD and drama to get in on the cheap. Then you might want to go back t
 
-### GME — most-engaged items, last 24h
-- [stocktwits, 5] $EH Watchlist:    $EH BIG NEWS ✅:  https://www.themorning.lk/articles/HDymfJM2W0HyLTYKDOl0    Marketcap: $150 million only    $AMC     $GME     $TSLA     $NVDA
-- [stocktwits, 2] $SPY whats the play folks? im in $GME FDs and leaps and spy calls rn and eyeing $NVDA $AMD puts closely . unfortunately i go back to work monday so no more scal
-- [stocktwits, 1] $GME $AMC $SPY $EBAY   Fiduciary CEO Crooks! 💩 No supply &amp; demand 6 years Zero complaints for share integrity
-- [reddit, 1] Did the GameStop short squeeze ever happen? Did someone who hadn’t sold by mid 2021 make a large profit? Back in early 2021 I met a guy who owned a shitton of G
-- [stocktwits, 0] $SPY $GME $NXH 💩
+### AMZN — most-engaged items, last 24h
+- [reddit, 1014] Apple is outperforming every other Mag 7 stock this year by a huge margin. It is up 31%, almost 4x more than Amazon, the next best.  1. $AAPL: +31.21%  2. $AMZN
+- [telegram, 452] Jera Global CEO and Chair: The energy group is in discussions with Amazon, Microsoft, and Google - Nikkei. $GOOGL $AMZN $MSFT|FJ
+- [reddit, 29] High Risk Tolerance Portfolio Advice at 18 What do you guys think of my portfolio at 18, I have a fairly high risk tolerance and im not planning on pulling mone
+- [stocktwits, 5] $QQQ Vix went multiple times over 35 and youre not buying....Fear greed was at 10 as well. P/Es crazy cheap. 3rd year presidency strongest. So many bullish fact
+- [stocktwits, 5] $AAPL $AMZN $NVDA $TSLA China and other US trading partners hit back at Trump’s new tariff plans
 
-### RKLB — most-engaged items, last 24h
-- [reddit, 1102] Remember the 2026 WSB Index? Well, the pie got cooked. Since we’re approaching the end of the year, I figured I’d check how our collective financial genius has 
-- [reddit, 56] Trump has ruined my trading career and hopes, what should I do? 36M  I began trading 2 years ago, and got off to a great start on fire.   My first big gains wer
-- [stocktwits, 1] $RKLB $FPS $CRCL $NVDA According to reports from CNN and IranWire, Iran&#39;s Supreme Leader Mojtaba Khamenei issued a written statement on November 24, 2026, d
+### ADBE — most-engaged items, last 24h
+- [reddit, 881] Michael Burry says he’s now almost entirely long. Is it real? JUST NOW🚨: Michael Burry says he’s now almost entirely long  He:  1. Sold his remaining #Nasdaq 10
 
-### ASTS — most-engaged items, last 24h
-- [reddit, 1102] Remember the 2026 WSB Index? Well, the pie got cooked. Since we’re approaching the end of the year, I figured I’d check how our collective financial genius has 
-- [reddit, 56] Trump has ruined my trading career and hopes, what should I do? 36M  I began trading 2 years ago, and got off to a great start on fire.   My first big gains wer
-- [stocktwits, 2] $SPY $SNDK $NBIS $ASTS $NVDA I think there will be a small window for this to happen based on my chart on SPY
+### BLK — most-engaged items, last 24h
+- [telegram, 2000] JPMorgan: Strategy’s mNAV Hits Record Low of 0.88x, Below Previous Low in Late June  JPMorgan analysts said Strategy’s valuation relative to its bitcoin holding
+- [stocktwits, 1] $ETH.X holds near $1,700 after touching $1,730 on Thanksgiving. U.S. spot Ether ETFs logged an eighth straight day of outflows, led by BlackRock&#39;s ETHA.
+- [stocktwits, 1] $COIN $MSTR $SOL.X BlackRock ETF clients sell $329.71 million worth of $BTC.X and $68.51 million worth of $ETH.X.😳😳
 
-### DOGE/USD — most-engaged items, last 24h
-- [stocktwits, 11] $LTC.X  $1,000-$2000 one day soon and I will finally be rich !!!   I will look back at the days I was a broke ass little kid living in a shoe box sized apartmen
-- [stocktwits, 8] Bulls, pop a Red Bull!!! It’s time to fly!!!!  $BTC.X $DOGE.X $ETH.X $SOL.X $LTC.X   Only you guys can set off the short squeeze!!!￼￼  Let’s goooooooooooooooooo
-- [stocktwits, 5] 🚨To all my amazing followers 🫶🫶🐺 Announcement 📣👇👀👀👀🐺 I’m going to long these crypto currencies, I will be willing to add any further dip and  I will not be sell
-- [stocktwits, 5] $SPCX $TSLA   Gregisfire  @gregonfire  ·  11h  USAID FILES RELEASED PT 1: How they spent YOUR tax dollars , WHERE and WHY. And I’ll give you a hint: They wouldn
-- [stocktwits, 4] My big 3 this bullrun are going to be $SAND.X $GALA.X &amp; $ADA.X Dont miss out on the hest gains this bullrun. Get ready for it, 2027 is going to be up up up 
+### BRK.B — most-engaged items, last 24h
+- [reddit, 29] High Risk Tolerance Portfolio Advice at 18 What do you guys think of my portfolio at 18, I have a fairly high risk tolerance and im not planning on pulling mone
+- [stocktwits, 2] $SPY ~ These YouTube thumbnails since this new Jensen 2.0 era are legendary. Frame it 🖼️. You only know who is swimming naked when the tide goes out” ~ Warren B
 
-### MSTR — most-engaged items, last 24h
-- [telegram, 1870] Highlight Clip: Michael Saylor on Strategy's Worst-Case Scenario: Unable to Raise Capital for Three Consecutive Years  Michael Saylor on Strategy's Worst-Case S
-- [stocktwits, 31] $MSTR $BTC.X  Happy Thanksgiving friends   Bull or Bear, I wish you a blessed day.
-- [stocktwits, 5] $BTC.X $MSTR I swear this a Stockholm syndrome stock.
-- [stocktwits, 4] $ETH.X $BTC.X $MSTR $COIN $SPY 🚨BREAKING: $7,400,000,000 in Bitcoin and Ethereum options will expire tomorrow.  High volatility expected.😳😳🤷‍♂️🤷‍♂️
-- [stocktwits, 4] $COIN $MSTR $BTC.X $SPY $QQQ JPMorgan says bitcoin &#39;capitulation&#39; signaled by Strategy&#39;s record-low NAV multiple.😳😳
+### DIS — most-engaged items, last 24h
+- [reddit, 3536] Former Disney Boss Bob Iger Got Employee Pregnant During Extramarital Affair, New Book Claims
+
+### MET — most-engaged items, last 24h
+- [reddit, 881] Michael Burry says he’s now almost entirely long. Is it real? JUST NOW🚨: Michael Burry says he’s now almost entirely long  He:  1. Sold his remaining #Nasdaq 10
+
+### NFLX — most-engaged items, last 24h
+- [stocktwits, 4] $NFLX I swear Netflix can give me notifications about everything but the game I missed yesterday.   $SPY
+- [stocktwits, 3] funny to see CZ so mad at $NFLX     https://x.com/cz_binance/status/2123927005863563713    they did do him wrong with the accent     but I liked the way they di
+- [stocktwits, 3] $NFLX Well I hope Netflix is ready for another wave of cancellations because of their unhinged thanksgiving post on X..  Who the fuck is in charge of the social
+- [stocktwits, 2] $NFLX After that post on X I’m just about done with this company, it’s seems the goal here is to run this company into the ground $SPY
+- [stocktwits, 2] $NFLX $SPY Looks like NFLX is achieving what they set out to do. Perhaps they&#39;re promoting a show that&#39;s about to be announced. Whatever the case is, I 
 
 ### Prediction markets (Polymarket, probability of YES)
-- 58% — Will the price of Bitcoin be between $60,000 and $62,000 on November 27?
-- 0% — Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
-- 94% — Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
+- 52% — Will the price of Bitcoin be between $60,000 and $62,000 on November 27?
+- 3% — Will there be no change in Fed interest rates after the December 2026 meeting?
 - 2% — Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?
-- 4% — Will there be no change in Fed interest rates after the December 2026 meeting?
-- 94% — Israel x Iran ceasefire continues through November 30?
+- 94% — Will the Fed increase interest rates by 25 bps after the December 2026 meeting?
 - 0% — Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?
-- 28% — Will Bitcoin dip to $50,000 by December 31, 2026?
+- 26% — Will Bitcoin dip to $50,000 by December 31, 2026?
+- 96% — Israel x Iran ceasefire continues through November 30?
+- 0% — Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?
 - 1% — Will Bitcoin dip to $50,000 in November?
-- 2% — Will Bitcoin reach $72,500 in November?
+- 0% — Will Bitcoin reach $500,000 by December 31, 2026?
+- 80% — Will Bitcoin reach $62,500 in November?
+- 2% — Will Bitcoin dip to $52,500 in November?
 - 2% — Will the Iranian regime fall before 2027?
-- 0% — Will Bitcoin dip to $45,000 in November?
-- 1% — Will Bitcoin reach $64,000 on November 26?
-- 0% — Will Bitcoin reach $65,000 on November 26?
-- 13% — Will Bitcoin dip to $45,000 by December 31, 2026?
-- 1% — Will Bitcoin reach $75,000 in November?
+- 11% — Will Bitcoin dip to $45,000 by December 31, 2026?
+- 1% — Will Bitcoin dip to $45,000 in November?
+- 5% — Will the price of Bitcoin be above $64,000 on November 27?
+- 40% — Will the price of Bitcoin be above $62,000 on November 27?
 - 74% — Israel x Iran ceasefire continues through December 31?
-- 3% — Will Bitcoin dip to $52,500 in November?
-- 4% — Will Bitcoin reach $70,000 in November?
-- 48% — Will Bitcoin dip to $55,000 by December 31, 2026?
-- 2% — Kharg Island no longer under Iranian control by December 31?
-- 6% — Will Bitcoin reach $66,000 November 23-29?
-- 1% — Will Bitcoin dip to $58,000 on November 26?
-- 6% — Will the U.S. invade Iran before 2027?
-- 14% — Will Bitcoin reach $62,000 on November 26?
+- 0% — Will the price of Bitcoin be above $68,000 on November 27?
+- 42% — Will Bitcoin dip to $55,000 by December 31, 2026?
+- 92% — Will the price of Bitcoin be above $60,000 on November 27?
+- 7% — Will Bitcoin dip to $55,000 in November?
+- 99% — Will the price of Bitcoin be above $58,000 on November 27?
+- 6% — Will the price of Ethereum be above $1,800 on November 27?
+- 0% — Will Ethereum reach $3,100 in November?
